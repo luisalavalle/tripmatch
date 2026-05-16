@@ -6,6 +6,18 @@
 <title>TripMatch — Trova la destinazione che fa per te</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XKB4SBHSSC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XKB4SBHSSC');
+</script>
+
+
+
 <style>
 :root {
   --cream: #F5F0E8;
@@ -807,11 +819,14 @@ body {
   padding: 0.9rem 1rem;
   cursor: pointer;
   transition: all 0.15s;
+  display: flex;
+  flex-direction: column;
 }
 .mese-card:hover { border-color: var(--rust-muted); }
 .mese-card.selected { border-color: var(--rust); box-shadow: 0 0 0 1.5px var(--rust); background: #fffaf7; }
 .mese-card-nome { font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 0.88rem; color: var(--ink); margin-bottom: 0.35rem; }
-.mese-card-clima { font-size: 0.76rem; color: var(--ink-light); line-height: 1.45; margin-bottom: 0.5rem; }
+.mese-card-clima { font-size: 0.76rem; color: var(--ink-light); line-height: 1.45; margin-bottom: 0.5rem; flex: 1; }
+.mese-card-bottom { margin-top: auto; display: flex; flex-direction: column; gap: 0.3rem; }
 .mese-clima-tag {
   display: inline-block;
   font-family: 'Barlow Condensed', sans-serif;
@@ -824,6 +839,7 @@ body {
 .mese-clima-tag.Caldo  { background: rgba(139,58,30,0.1);  color: var(--rust); border: 0.5px solid rgba(139,58,30,0.25); }
 .mese-clima-tag.Mite   { background: rgba(45,106,63,0.09); color: var(--excellent); border: 0.5px solid rgba(45,106,63,0.22); }
 .mese-clima-tag.Freddo { background: rgba(60,80,140,0.09); color: #2E4080; border: 0.5px solid rgba(60,80,140,0.22); }
+.mese-hint { font-size: 0.62rem; color: var(--warm-gray); letter-spacing: 0.04em; margin-top: 0.4rem; }
 .mese-detail {
   background: var(--cream);
   border: 0.5px solid var(--border-strong);
@@ -1033,7 +1049,7 @@ body {
    1. Aggiungi il tag GA4 nel <head> (codice fornito da Google)
    2. Cambia TRACKING_LIVE = true qui sotto
    ============================================================ */
-const TRACKING_LIVE = false;
+const TRACKING_LIVE = true;
 
 function track(eventName, params) {
   if (TRACKING_LIVE && typeof gtag === 'function') {
@@ -13548,9 +13564,9 @@ function buildCountryItem(country, idx) {
     </div>
     <div class="country-right-col">
       <div class="country-badges">
-        <span class="badge ${ratingClass(country.sicurezza)}"><span class="badge-label">Sicurezza</span>${country.sicurezza}</span>
-        <span class="badge ${ratingClass(country.sanita)}"><span class="badge-label">Sanità</span>${country.sanita}</span>
-        <span class="badge ${ratingClass(country.infrastrutture)}"><span class="badge-label">Infrastrutture</span>${country.infrastrutture}</span>
+        <span class="badge ${ratingClass(country.sicurezza)}"><span class="badge-label">SICUREZZA: </span>${country.sicurezza}</span>
+        <span class="badge ${ratingClass(country.sanita)}"><span class="badge-label">SANITÀ: </span>${country.sanita}</span>
+        <span class="badge ${ratingClass(country.infrastrutture)}"><span class="badge-label">INFRASTRUTTURE: </span>${country.infrastrutture}</span>
       </div>
       <span class="expand-icon"><span class="expand-chevron"></span></span>
     </div>
@@ -13729,7 +13745,10 @@ function buildMesi(country) {
     card.innerHTML = `
       <div class="mese-card-nome">${m.nome}</div>
       <div class="mese-card-clima">${m.clima}</div>
-      <span class="mese-clima-tag ${m.climaTag}">${m.climaTag}</span>
+      <div class="mese-card-bottom">
+        <span class="mese-clima-tag ${m.climaTag}">${m.climaTag}</span>
+        <div class="mese-hint">Feste · Fenomeni ›</div>
+      </div>
     `;
 
     card.addEventListener('click', () => {
