@@ -608,7 +608,8 @@ body {
 .lingua-text { font-size: 0.85rem; color: var(--ink-light); }
 
 .curator-note {
-  background: var(--cream);
+  /*background: var(--cream); cambiare qua*/
+  background: #fffaf5;
   border-left: 3px solid var(--rust-muted);
   padding: 1.1rem 1.3rem;
   margin-top: 1rem;
@@ -841,7 +842,8 @@ body {
 .mese-clima-tag.Freddo { background: rgba(60,80,140,0.09); color: #2E4080; border: 0.5px solid rgba(60,80,140,0.22); }
 .mese-hint { font-size: 0.62rem; color: var(--warm-gray); letter-spacing: 0.04em; margin-top: 0.4rem; }
 .mese-detail {
-  background: var(--cream);
+  /*background: var(--cream); cambiare qua*/  
+  background: #fffaf5;
   border: 0.5px solid var(--border-strong);
   border-radius: 10px;
   padding: 1.4rem 1.6rem;
@@ -4409,10 +4411,10 @@ const countries = [
   ],
   linguaDesc: `Greco moderno (alfabeto greco — la lettura di segnali e menu in aree non turistiche può risultare difficile). Inglese molto diffuso nelle destinazioni principali (Atene, Santorini, Mykonos, Creta, Rodi, Corfù); i medici parlano generalmente inglese. Italiano sorprendentemente diffuso nelle Isole Ionie (Corfù, Cefalonia, Zante) e a Creta — non raro trovare menu in italiano. I traduttori online funzionano bene anche con l'alfabeto greco per la lettura di testi.`,
   sources: [
-    { label: `MAECI – Scheda Paese Grecia (viaggiaresicuri.it, 15/03/2026)`, url: '#' },
+    { label: `viaggiaresicuri.it, 15/03/2026)`, url: '#' },
     { label: `Ambasciata d'Italia Atene`, url: '#' },
     { label: `DFAE Svizzero (ottobre 2025)`, url: '#' },
-    { label: `Opensignal – Greece Mobile Network Experience Report (gennaio 2025)`, url: '#' },
+    { label: `Greece Mobile Network Experience Report (gennaio 2025)`, url: '#' },
     { label: `Worlddata.info`, url: '#' },
     { label: `Commissione Europea – Digital Connectivity`, url: '#' },
     { label: `INSETE – Statistical Bulletin 2024`, url: '#' },
@@ -4957,13 +4959,13 @@ const countries = [
   curatorNote: `Valuta: Euro. Prese: Tipo G (tre pin piatti — la stessa del Regno Unito). Necessario adattatore per spine italiane tipo C/F/L: acquistarlo prima della partenza, semplice da trovare. L'Irlanda è nell'UE ma NON nello spazio Schengen: controlli documentali alla frontiera. I cittadini non-UE residenti in Italia devono richiedere visto separato. Chi intende visitare anche l'Irlanda del Nord (UK) necessita di ETA (Electronic Travel Authorization) dal 2 aprile 2025. Costo della vita elevato. Aeroporto di Dublino: controlli di sicurezza molto approfonditi, presentarsi con largo anticipo.`,
   sicurezzaDesc: [
     `Paese sicuro per i viaggiatori: la criminalità grave è rara e non coinvolge tipicamente i turisti. I rischi principali si limitano a furti e borseggi nelle aree urbane più frequentate, con qualche attenzione in più richiesta sui percorsi naturalistici esposti alle condizioni atlantiche.`,
-    `Criminalità: microcriminalità limitata a furti, scippi e borseggi nel centro di Dublino, Dublino Nord, aeroporto e mezzi pubblici. Criminalità grave rara e non coinvolge tipicamente i turisti. Allerte Farnesina (aggiornamento 3/09/2025): nessuna allerta specifica. Dopo i disordini nel centro di Dublino nel novembre 2023 (episodio isolato e non ripetuto), raccomanda prudenza generale e di monitorare i media locali. Prudenza durante i fine settimana per diffuso consumo di alcolici.`,
+    `Criminalità: microcriminalità limitata a furti, scippi e borseggi nel centro di Dublino, Dublino Nord, aeroporto e mezzi pubblici. Criminalità grave rara e non coinvolge tipicamente i turisti. Farnesina (aggiornamento 3/09/2025): nessuna allerta specifica. Dopo i disordini nel centro di Dublino nel novembre 2023 (episodio isolato e non ripetuto), raccomanda prudenza generale e di monitorare i media locali. Prudenza durante i fine settimana per diffuso consumo di alcolici.`,
     `Rischi naturali: alle Cliffs of Moher e Isole di Aran — scogliere altissime, scivolose, in alcuni punti prive di barriere; monitorare allerte meteo Met Éireann (livelli yellow, orange, red).`,
-    `Rischi epidemiologici: nessuno. Standard sanitari europei. Nessun vaccino obbligatorio per l'ingresso.`,
+    `Rischi epidemiologici: nessuno.`,
   ],
   sanDesc: [
-    `Sistema sanitario pubblico di standard europeo, con eccellenze a Dublino. La TEAM copre le urgenze per i cittadini UE, ma è bene portare scorte sufficienti di farmaci abituali: senza ricetta medica locale è difficile ottenerli in loco.`,
-    `Sistema sanitario pubblico (HSE) adeguato agli standard europei; strutture di eccellenza a Dublino. Pronto soccorso operativi ma con lunghi tempi di attesa. TEAM valida per le cure d'urgenza. Costi elevati per le prestazioni non coperte dalla TEAM. Farmaci praticamente impossibili da acquistare senza ricetta medica — portare scorte sufficienti. Nessun vaccino obbligatorio per l'ingresso.`,
+    `Sistema sanitario pubblico di buon livello, con eccellenze a Dublino. La TEAM copre le urgenze per i cittadini UE, ma è bene portare scorte sufficienti di farmaci abituali: senza ricetta medica locale è difficile ottenerli in loco.`,
+    `Il sistema sanitario pubblico (HSE) è in linea con gli standard europei; strutture di eccellenza a Dublino. Pronto soccorso operativi ma con lunghi tempi di attesa. TEAM valida per le cure d'urgenza. Costi elevati per le prestazioni non coperte dalla TEAM. Farmaci molto difficili da acquistare senza ricetta medica — portare scorte sufficienti. Nessun vaccino obbligatorio per l'ingresso.`,
   ],
   infraDesc: [
     `Infrastrutture di trasporto ben sviluppate nelle aree urbane, con treni, tram e bus che collegano le principali città. Per esplorare le coste e le zone rurali — dove si trova il meglio dell'Irlanda — l'auto a noleggio è decisamente utile. Pagamenti digitali ovunque, connettività eccellente nelle città e discreta anche nelle zone più remote.`,
@@ -4974,16 +4976,16 @@ const countries = [
   ],
   linguaDesc: `Inglese (praticamente unica lingua in uso). Gaelico parlato come lingua principale solo nelle zone Gaeltacht (costa ovest) e alcune isole — segnaletica bilingue. L'inglese irlandese ha un accento caratteristico (brogue) che richiede breve adattamento. Gli irlandesi sono notoriamente comunicativi e accoglienti con i turisti, rendendo le interazioni facili. Il turpiloquio è comune nella conversazione quotidiana irlandese e non è inteso come offesa — dato culturale da non fraintendere.`,
   sources: [
-    { label: `Farnesina – Viaggiare Sicuri, scheda Irlanda (aggiornamento 3/09/2025)`, url: '#' },
-    { label: `Commissione Europea – Relazione Paese Irlanda 2025 (Decennio Digitale)`, url: '#' },
+    { label: `Viaggiare Sicuri, scheda Irlanda (aggiornamento 3/09/2025)`, url: '#' },
     { label: `CSO Ireland – Inbound Tourism December 2025`, url: '#' },
     { label: `Tourism Ireland Press Release 2024`, url: '#' },
     { label: `Fáilte Ireland – Key Tourism Facts 2024`, url: '#' },
     { label: `Ookla Q2 2025`, url: '#' },
+    { label: `Commissione Europea – Relazione Paese Irlanda 2025 (Decennio Digitale)`, url: '#' },
   ],
   tags: {
       lingua: [`inglese`],
-      natura: [`#PatrimonioUnesco`, `#MeravigliaGeologia`, `#Iconico`, `#DaCartolina`, `#Wildlife`, `#AvvistamentoAnimali`, `#EsperienzaUnica`, `#Trekking`, `#Mare`, `#NaturaSelvaggia`, `#Hiking`, `#PaesaggiEstremi`, `#RuraleEArmonica`, `#KayakAdventure`, `#EsperienzaEstrema`, `#Avventura`, `#Snorkeling`, `#Diving`, `#ParchiUrbani`],
+      natura: [`#PatrimonioUnesco`, `#MeravigliaGeologia`, `#Iconico`, `#DaCartolina`, `#Wildlife`, `#AvvistamentoAnimali`, `#EsperienzaUnica`, `#Trekking`, `#Mare`, `#NaturaSelvaggia`, `#Hiking`, `#PaesaggiEstremi`, `#RuraleEArmonica`, `#KayakAdventure`, `#EsperienzaEstrema`, `#Avventura`],
       arte: [`#Capolavoro`, `#museiegallerie`, `#arteearchitetturasacra`, `#sitoarcheologico`, `#PatrimonioUnesco`, `#architettura`, `#palazzistorici`, `#perappassionati`, `#streetart`, `#artepubblica`, `#installazione`, `#artetradizionale`, `#artigianato`, `#galleriadarte`],
       cultura: [`#PatrimonioUnesco`, `#musica`, `#tradizionilocali`, `#vitasociale`, `#ritiecerimonie`, `#danza`, `#raccontipopolari`, `#storiaememoria`, `#mercati`, `#cucinaeproduzionelocale`, `#workshop`],
       relax: [`#città`, `#socialità`, `#esperienzaunica`, `#slow_travel`, `#benessere`, `#mare`, `#sport`, `#cenaspeciale`, `#natura`, `#rooftop`, `#cielonotturno`, `#alloggiospeciale`]
@@ -4992,10 +4994,10 @@ const countries = [
     intro: `L'Irlanda non è solo verde. È il tipo di verde che pulsa, che trasuda pioggia e millenni, che ti si appiccica agli stivali e all'anima. È un'isola piccola con una costa sproporzionatamente grande — oltre 2.500 km di faraglioni, fiordi mancati, spiagge di sabbia bianca e scogliere vertiginose sull'Atlantico. Ma quello che davvero sorprende gli appassionati di natura non è la cartolina: è la stratigrafia. Il Burren ospita orchidee artiche e mediterranee fianco a fianco sullo stesso calcare — un'anomalia botanica che non si ripete altrove sulla Terra. I cetacei: un terzo di tutte le specie di balene e delfini conosciute al mondo transita nelle acque irlandesi, senza che quasi nessuno fuori dal circuito naturalistico lo sappia. Le torbiere atlantiche di Wild Nephin sono tra le ultime distese di paesaggio primordiale d'Europa occidentale. E poi ci sono i puffin di Skellig Michael, le aquile reali reintrodotte nel Donegal, le foche grigie delle Blasket Islands, i cervi rossi di Kerry — discendenti diretti da prima dell'ultima glaciazione. C'è tanto da scoprire per chi ha la pazienza di uscire dalla strada principale.`, 
     items: [ 
     {
-      icon: `🪨`,
+      icon: `🌊`,
       name: `Giant's Causeway — La Cattedrale Basaltica`,
       desc: `Quarantamila colonne di basalto esagonale, incastonate come un mosaico di giganti sulla riva dell'Atlantico, risultato di un'eruzione vulcanica di 60 milioni di anni fa, raffreddata così lentamente da cristallizzarsi in forme perfette. Il Giant's Causeway è patrimonio UNESCO dal 1986 ed è considerato uno dei siti chiave a livello mondiale per la comprensione della geologia vulcanica. Camminare sulle colonne — alcune alte fino a 12 metri — dà una sensazione strana: come se la terra stesse ancora cercando un ordine geometrico nel caos.`,
-      note: `È il sito più visitato dell'Irlanda del Nord: d'estate può essere affollato, specialmente nelle ore centrali. Arriva all'alba o a settembre-ottobre. La passeggiata sul Causeway Coastal Route permette di contestualizzarlo in un paesaggio magnifico di falesie e insenature quasi sempre vuote — e fa capire perché il sito non è solo le colonne, ma l'intero contesto geologico.`,
+      note: `È il sito più visitato dell'Irlanda del Nord.  D'estate è affollato: la versione migliore si vive all'alba, con la luce radente sulle colonne e il rumore dell'Atlantico come unica colonna sonora. La passeggiata sul Causeway Coastal Route permette di contestualizzarlo in un paesaggio magnifico di falesie e insenature quasi sempre vuote — e fa capire perché il sito non è solo le colonne, ma l'intero contesto geologico. Percorri il Causeway Coastal Route in auto da Ballycastle a Bushmills: è uno dei tratti costieri più drammatici d'Europa, quasi sconosciuto ai non-britannici. A pochi km si trova Carrick-a-Rede, un ponte di corda sospeso su un precipizio di 30 metri — prenotazione obbligatoria online.`,
       tags: [`#PatrimonioUnesco`, `#MeravigliaGeologia`, `#Iconico`, `#DaCartolina`],
     },
     {
@@ -5008,7 +5010,7 @@ const countries = [
     {
       icon: `🌿`,
       name: `The Burren — Il Deserto Fiorito`,
-      desc: `Un altopiano di calcare carbonifero che si estende per 300 km² — nudo, grigio, quasi lunare. Ma tra le fessure di questa roccia di 300 milioni di anni fa fioriscono orchidee artiche e piante mediterranee l'una accanto all'altra, in una coesistenza botanica che non si verifica in nessun altro punto della Terra. L'effetto microclima creato dalla pietra che trattiene il calore solare ha prodotto un ecosistema anomalo: qui il genziano vernal e l'elleboro si trovano a 50 cm di distanza. Il Burren è anche uno dei pochi luoghi europei dove la martora — il mammifero più raro d'Irlanda — si può avvistare in pieno giorno.`,
+      desc: `Un altopiano di calcare carbonifero che si estende per 300 km² — nudo, grigio, quasi lunare. Ma tra le fessure di questa roccia di 300 milioni di anni fa fioriscono orchidee artiche e piante mediterranee l'una accanto all'altra, in una coesistenza botanica che non si verifica in nessun altro punto della Terra. L'effetto microclima creato dalla pietra che trattiene il calore solare ha prodotto un ecosistema anomalo: qui la genziana primaverile e l'elleboro si trovano a 50 cm di distanza. Il Burren è anche uno dei pochi luoghi europei dove la martora — il mammifero più raro d'Irlanda — si può avvistare in pieno giorno.`,
       note: `Il picco botanico è tra aprile e giugno. I sentieri non sono sempre segnalati: utile una mappa cartacea. I tour guidati botanici (esistono operatori specializzati) trasformano completamente la visita — senza guida si cammina su un'enciclopedia senza saperla leggere. È una delle esperienze più sottovalutate dell'intera isola.`,
       tags: [`#MeravigliaGeologia`, `#NaturaSelvaggia`, `#PatrimonioUnesco`, `#Hiking`, `#Wildlife`],
     },
@@ -5029,7 +5031,7 @@ const countries = [
     {
       icon: `🐋`,
       name: `Whale Watching in West Cork — Il Santuario dei Cetacei`,
-      desc: `Nel 1991 l'Irlanda ha dichiarato le sue acque il primo santuario europeo per balene e delfini. Oggi un terzo di tutte le specie di cetacei conosciute al mondo transita qui — 25 specie registrate, tra cui balenottere comuni, megattere, balenottere minori e delfini. Le acque del West Cork tra settembre e novembre sono particolarmente ricche: i rib-boats escono ogni giorno con condizioni accettabili, e il tasso di incontro con i cetacei è tra i più alti d'Europa. Non è un parco: è oceano aperto, con tutti gli imprevisti meravigliosi del caso.`,
+      desc: `Nel 1991 l'Irlanda ha dichiarato le sue acque il primo santuario europeo per balene e delfini. Oggi un terzo di tutte le specie di cetacei conosciute al mondo transita qui — 25 specie registrate, tra cui balenottere comuni, megattere, balenottere minori e delfini. Le acque del West Cork tra settembre e novembre sono particolarmente ricche: i gommoni escono ogni giorno con condizioni accettabili, e il tasso di incontro con i cetacei è tra i più alti d'Europa. Non è un parco: è oceano aperto, con tutti gli imprevisti meravigliosi del caso.`,
       note: `Il mal di mare è una possibilità reale: l'oceano aperto irlandese non è un lago. Le probabilità di avvistamento sono alte ma non garantite — questo è wildlife watching autentico, non uno show. Il periodo migliore per le grandi balene è settembre-novembre.`,
       tags: [`#AvvistamentoAnimali`, `#Wildlife`, `#EsperienzaUnica`, `#Mare`],
     },
@@ -5045,7 +5047,7 @@ const countries = [
       name: `Wild Swimming — Il Rito Quotidiano Irlandese`,
       desc: `In Irlanda il nuoto in acque libere non è un'attività di nicchia: è una pratica quasi identitaria, esercitata tutto l'anno da una comunità che fa dell'immersione nell'Atlantico a 10°C una meditazione quotidiana. Il Forty Foot a Sandycove è il punto più famoso — aperto 365 giorni l'anno, con habitués che si tuffano all'alba. Ma le spiagge più belle per nuotare sono quelle deserte di Achill Island o Barleycove: acque che sembrano caraibiche, temperatura che non lascia dubbi su dove ti trovi.`,
       note: `Le temperature dell'acqua raramente superano i 16°C anche in piena estate. Le correnti possono essere imprevedibili nelle spiagge selvagge: informarsi in loco. Il wild swimming ha una comunità attiva e organizzata in Irlanda — i gruppi locali sono il modo migliore per vivere l'esperienza in sicurezza e con persone del posto.`,
-      tags: [`#Mare`, `#EsperienzaUnica`, `#NaturaSelvaggia`, `#RuraleEArmonica`],
+      tags: [`#Mare`, `#EsperienzaUnica`, `#NaturaSelvaggia`],
     },
     {
       icon: `🦌`,
@@ -5086,19 +5088,19 @@ const countries = [
   ]
     },
   arte: { 
-    intro: `L'Irlanda non è la destinazione ovvia per un appassionato d'arte. Eppure, Newgrange è stata costruita 500 anni prima di Stonehenge e 1.000 anni prima delle piramidi di Giza: le spirali triplici scolpite sulla pietra d'ingresso non hanno una spiegazione condivisa ancora oggi. Il Book of Kells è un manoscritto del IX secolo in cui i monaci irlandesi hanno riempito ogni margine, ogni lettera, ogni spazio bianco con un sistema decorativo così denso e coerente da sembrare generato da una logica matematica. Le croci celtiche alte-medievali combinano scultura figurativa e geometria ornamentale in un modo che non ha paralleli nello stesso periodo in nessun altro posto d'Europa. Due avvertenze oneste prima di partire: l'Irlanda non ha una grande stagione rinascimentale o barocca; Dublino concentra la maggior parte delle gallerie e dei musei — chi vuole esplorare l'Irlanda artistica rurale deve noleggiare un'auto e accettare strade strette.`, 
+    intro: `L'Irlanda non è la destinazione ovvia per un appassionato d'arte. Eppure, Newgrange è stata costruita 500 anni prima di Stonehenge e 1.000 anni prima delle piramidi di Giza: le spirali triplici scolpite sulla pietra d'ingresso non hanno una spiegazione condivisa ancora oggi. Il Book of Kells è un manoscritto del IX secolo in cui i monaci irlandesi hanno riempito ogni margine, ogni lettera, ogni spazio bianco con un sistema decorativo così denso e coerente da sembrare generato da una logica matematica. Le croci celtiche alto-medievali combinano scultura figurativa e geometria ornamentale in un modo che non ha paralleli nello stesso periodo in nessun altro posto d'Europa. Due avvertenze oneste prima di partire: l'Irlanda non ha una grande stagione rinascimentale o barocca; Dublino concentra la maggior parte delle gallerie e dei musei — chi vuole esplorare l'Irlanda artistica rurale deve noleggiare un'auto e accettare strade strette.`, 
     items: [ 
     {
       icon: `📜`,
       name: `Book of Kells — Il Manoscritto più Prezioso d'Occidente`,
       desc: `Quattro volumi di Vangeli miniati intorno all'800 d.C., probabilmente nell'abbazia di Iona, riportati in Irlanda dai monaci in fuga dai Vichinghi. Ogni pagina è un universo a sé: spirali che si moltiplicano all'infinito, figure umane che si dissolvono nell'ornamento, animali intrecciati in nodi impossibili. La pagina del Chi Rho — monogramma di Cristo — è forse l'immagine più elaborata mai prodotta dall'arte insulare. Iscritto nel 2011 nel Registro UNESCO della Memoria del Mondo.`,
-      note: `Si vedono al massimo due pagine aperte per volta. L'esperienza è breve ma intensa; il museo contestuale nella stessa sede aiuta a comprendere le tecniche. Prenotare in anticipo, soprattutto in alta stagione. Nella stessa visita si trova l'arpa medievale di Brian Boru — il simbolo ufficiale d'Irlanda — rendendo il percorso ancora più denso.`,
+      note: `Si vedono al massimo due pagine aperte per volta. L'esperienza è breve ma intensa; il museo contestuale nella stessa sede aiuta a comprendere le tecniche. Prenotare in anticipo, soprattutto in alta stagione. Nella stessa visita si trova l'arpa medievale di Brian Boru — il simbolo ufficiale d'Irlanda — rendendo il percorso ancora più ricco.`,
       tags: [`#Capolavoro`, `#museiegallerie`, `#arteearchitetturasacra`],
     },
     {
       icon: `🌀`,
       name: `Newgrange e Knowth — Arte Megalitica ai Limiti del Comprensibile`,
-      desc: `Costruito intorno al 3200 a.C. — 500 anni prima delle piramidi di Giza — Newgrange è un tumulo a corridoio orientato con precisione millimetrica: al solstizio d'inverno, un fascio di luce penetra per 19 minuti fino alla camera interna. La grande kerbstone incisa con la triplice spirale è una delle immagini più iconiche dell'arte preistorica europea. A pochi passi, il tumulo di Knowth contiene da solo un terzo di tutta l'arte megalitica dell'Europa occidentale: 127 pietre decorate con spirali, rombi e zigzag di un'astrazione che non ha paragoni nel Neolitico.`,
+      desc: `Costruito intorno al 3200 a.C. — 500 anni prima delle piramidi di Giza — Newgrange è un tumulo a corridoio orientato con precisione millimetrica: al solstizio d'inverno, un fascio di luce penetra per 19 minuti fino alla camera interna. La grande pietra incisa con la triplice spirale è una delle immagini più iconiche dell'arte preistorica europea. A pochi passi, il tumulo di Knowth contiene da solo un terzo di tutta l'arte megalitica dell'Europa occidentale: 127 pietre decorate con spirali, rombi e zigzag di un'astrazione che non ha paragoni nel Neolitico.`,
       note: `La visita a Newgrange prevede un tour guidato (da prenotare mesi prima) con simulacro del fenomeno del solstizio. Knowth offre più arte visibile e meno fila — ed è per gli specialisti il sito artisticamente più ricco dei due. Il vero solstizio d'inverno è accessibile per estrazione a sorte annuale.`,
       tags: [`#PatrimonioUnesco`, `#Capolavoro`, `#sitoarcheologico`],
     },
@@ -5112,7 +5114,7 @@ const countries = [
     {
       icon: `🏰`,
       name: `Rock of Cashel — La Roccia dei Re e dei Vescovi`,
-      desc: `Su un affioramento calcareo di 60 metri si ammassa uno degli insiemi di architettura medievale più densi e meglio conservati d'Irlanda: una torre rotonda dell'XI secolo, la cattedrale gotica del XIII secolo, e soprattutto la Cappella di Cormac (1127–1134), l'unica vera chiesa romanica d'Irlanda, con portali riccamente scolpiti e i resti di affreschi policromi di straordinaria rarità. Il sito è stato sede dei Re del Munster e poi del potere ecclesiastico: ogni pietra racconta una trattativa tra potere e fede.`,
+      desc: `Su un affioramento calcareo di 60 metri si ammassa uno degli insiemi di architettura medievale più ricchi e meglio conservati d'Irlanda: una torre rotonda dell'XI secolo, la cattedrale gotica del XIII secolo, e soprattutto la Cappella di Cormac (1127–1134), l'unica vera chiesa romanica d'Irlanda, con portali riccamente scolpiti e i resti di affreschi policromi di straordinaria rarità. Il sito è stato sede dei Re del Munster e poi del potere ecclesiastico: ogni pietra racconta una trattativa tra potere e fede.`,
       note: `Gli affreschi nella Cappella di Cormac sono visibili solo con tour guidato — non saltarlo. Il complesso può essere molto affollato in estate; la visita al tramonto, quando la luce dora la pietra calcarea, è consigliata sia per la qualità della luce sia per la riduzione della folla.`,
       tags: [`#palazzistorici`, `#arteearchitetturasacra`, `#architettura`],
     },
@@ -5148,7 +5150,7 @@ const countries = [
       icon: `✝️`,
       name: `Clonmacnoise — La Città Monastica sul Shannon`,
       desc: `Fondata nel 544 d.C., Clonmacnoise fu per secoli uno dei più importanti centri religiosi e artistici d'Europa. Le rovine includono una cattedrale, due torri rotonde, nove chiese e oltre 700 lastre funerarie paleocristiane. Il pezzo forte è la Croce delle Scritture (originale al coperto nel Visitor Centre), un'opera di scultura narrativa del X secolo che rivaleggia con Muiredach's Cross. La Nun's Church (1167) è uno degli esempi più raffinati di architettura ibrido-romanica in Irlanda.`,
-      note: `I tre originali delle croci sono esposti al coperto — non fermarsi alle sole repliche all'aperto. Vale dedicare almeno mezza giornata. Clonmacnoise è uno dei pochi siti in Irlanda dove la densità storica e artistica è paragonabile ai grandi siti continentali, con un decimo della folla.`,
+      note: `I tre originali delle croci sono esposti al coperto — non fermarsi alle sole repliche all'aperto. Vale dedicare almeno mezza giornata. Clonmacnoise è uno dei pochi siti in Irlanda dove la ricchezza storica e artistica è paragonabile ai grandi siti continentali, con un decimo della folla.`,
       tags: [`#arteearchitetturasacra`, `#sitoarcheologico`, `#architettura`],
     },
     {
@@ -5175,19 +5177,19 @@ const countries = [
     {
       icon: `🧶`,
       name: `Aran Knitwear — Geometria Tessuta contro l'Atlantico`,
-      desc: `I maglioni Aran non sono souvenir: sono sistemi visivi. Ogni punto — il cavo, la radice di vita, il nido d'ape — ha una struttura geometrica precisa, tramandata oralmente tra generazioni di knitters delle isole. Il risultato è un oggetto in cui funzione e ornamento sono indistinguibili. I pezzi autentici, ancora realizzati a mano nelle isole, costano proporzionalmente al lavoro richiesto. La differenza con le imitazioni industriali è immediatamente percepibile al tatto.`,
-      note: `Per acquistare pezzi autenticamente hand-knit, verificare l'etichetta 'Made in Ireland' e il tipo di punto — toccare il tessuto è già un test. I negozi di Inis Mór vendono lavori originali. I maglioni nelle catene souvenir di Dublino sono quasi sempre prodotti industriali importati: costano meno per una buona ragione.`,
+      desc: `I maglioni Aran non sono souvenir: sono sistemi visivi. Ogni punto — il cavo, la radice di vita, il nido d'ape — ha una struttura geometrica precisa, tramandata oralmente tra generazioni di magliaie delle isole. Il risultato è un oggetto in cui funzione e ornamento sono indistinguibili. I pezzi autentici, ancora realizzati a mano nelle isole, costano proporzionalmente al lavoro richiesto. La differenza con le imitazioni industriali è immediatamente percepibile al tatto.`,
+      note: `Per acquistare pezzi autenticamente fatti a mano, verificare l'etichetta 'Made in Ireland' e il tipo di punto — toccare il tessuto è già un test. I negozi di Inis Mór vendono lavori originali. I maglioni nelle catene souvenir di Dublino sono quasi sempre prodotti industriali importati: costano meno per una buona ragione.`,
       tags: [`#artigianato`, `#artetradizionale`],
     },
   ]
     },
   cultura: { 
-    intro: `L'Irlanda è uno dei luoghi d'Europa dove la cultura orale non è ancora un reperto da museo: qui i racconti, la musica e le cerimonie conviviali sono ancora il tessuto vivo della vita quotidiana. Entrare in un pub di villaggio durante una session spontanea di musica tradizionale vale più di cento libri di storia. Il paese è piccolo ma straordinariamente denso: in pochi giorni si può passare da Dublino medievale e post-coloniale alle Aran Islands dove si parla ancora gaelico, alle coste selvagge del Connemara dove il paesaggio e la cultura sembrano un'unica cosa. Avvertenza onesta: alcune esperienze culturali sono più turistificate di quanto appaiano, specialmente le 'Irish Nights' nelle grandi città. Per trovare l'Irlanda autentica bisogna allontanarsi dai circuiti principali, preferire i festival locali alle attrazioni confezionate, e avere la pazienza di aspettare che la 'session' (serata di musica improvvisata al pub) cominci davvero — di solito tardi.`, 
+    intro: `L'Irlanda è uno dei luoghi d'Europa dove la cultura orale non è ancora un reperto da museo: qui i racconti, la musica e le cerimonie conviviali sono ancora il tessuto vivo della vita quotidiana. Entrare in un pub di villaggio durante una session spontanea di musica tradizionale vale più di cento libri di storia. Il paese è piccolo ma straordinariamente ricco: in pochi giorni si può passare da Dublino medievale e post-coloniale alle Aran Islands dove si parla ancora gaelico, alle coste selvagge del Connemara dove il paesaggio e la cultura sembrano un'unica cosa. Avvertenza onesta: alcune esperienze culturali sono più turistificate di quanto appaiano, specialmente le 'Irish Nights' nelle grandi città. Per trovare l'Irlanda autentica bisogna allontanarsi dai circuiti principali, preferire i festival locali alle attrazioni confezionate, e avere la pazienza di aspettare che la 'session' (serata di musica improvvisata al pub) cominci davvero — di solito tardi.`, 
     items: [ 
     {
       icon: `🪈`,
       name: `Uilleann Piping — La Voce Segreta dell'Irlanda`,
-      desc: `Le uilleann pipes sono le cornamuse irlandesi, uno strumento di una complessità e una delicatezza sonora senza paragoni nel mondo celtico: suonate a gomito anziché a bocca, capaci di sfumature quasi vocali. Classificate patrimonio UNESCO nel 2017, non sono una curiosità da folklore ma un linguaggio musicale vivo, coltivato in scuole, festival e session ogni settimana. Sentirle dal vivo — in un pub di Clare o Galway, accanto al fuoco — è uno di quei momenti in cui capisci perché la musica irlandese ha conquistato mezzo mondo.`,
+      desc: `Le uilleann pipes sono le cornamuse irlandesi, uno strumento di una complessità e una delicatezza sonora senza paragoni nel mondo celtico: suonate a gomito anziché a bocca, capaci di sfumature quasi vocali. Classificate patrimonio UNESCO nel 2017, non sono una curiosità da folclore ma un linguaggio musicale vivo, coltivato in scuole, festival e session ogni settimana. Sentirle dal vivo — in un pub di Clare o Galway, accanto al fuoco — è uno di quei momenti in cui capisci perché la musica irlandese ha conquistato mezzo mondo.`,
       note: `Na Píobairí Uilleann a Dublino organizza eventi e masterclass aperti al pubblico. Per sentirle in contesto autentico, il Fleadh Cheoil e la Willie Clancy Summer School (Co. Clare) sono le occasioni migliori. Non aspettarti di sentirle nei pub di Temple Bar: la vera musica tradizionale si trova altrove.`,
       tags: [`#PatrimonioUnesco`, `#musica`, `#tradizionilocali`, `#vitasociale`],
     },
@@ -5203,14 +5205,14 @@ const countries = [
       name: `Fleadh Cheoil na hÉireann — Il più Grande Festival di Musica Tradizionale del Mondo`,
       desc: `Ogni anno, per una settimana intera, una cittadina irlandese si trasforma in un enorme strumento musicale vivente. Il Fleadh è il grande campionato nazionale della musica tradizionale: i migliori musicisti del paese si sfidano durante il giorno, mentre la notte ogni pub, ogni angolo di strada, ogni piazza diventa teatro di session spontanee che si prolungano all'alba. Mezzo milione di persone si radunano per quello che è al tempo stesso un torneo, una celebrazione e una festa di comunità.`,
       note: `Prenotare alloggio con mesi di anticipo. L'esperienza più autentica non sono i concerti ufficiali ma le session nei pub — molte gratuite e aperte a chi vuole semplicemente ascoltare. Evitare di aspettarsi spazio o silenzio: è rumoroso, caotico e meraviglioso.`,
-      tags: [`#ritiecerimonie`, `#vitasociale`, `#danza`, `#tradizionilocali`, `#raccontipopolari`],
+      tags: [`#ritiecerimonie`, `#vitasociale`, `#danza`, `#tradizionilocali`,`#musicatradizionale`],
     },
     {
       icon: `🔥`,
       name: `Session di Musica Tradizionale al Pub — La Liturgia Sociale Irlandese`,
       desc: `La session — 'seisiún' in gaelico — è la forma fondamentale della vita sociale irlandese: un gruppo di musicisti si raduna in un pub, senza palco, senza biglietto, senza scaletta fissa, e suona per ore. Il pubblico beve, ascolta, qualcuno canta, qualcuno balla. Non è uno spettacolo ma un rito comunitario in cui chiunque è benvenuto. Capire che la session è conversazione musicale — che i musicisti suonano tra loro più che per il pubblico — è capire qualcosa di profondo sul modo irlandese di stare insieme.`,
       note: `Le session autentiche iniziano tardi (spesso dopo le 21:30) e si auto-organizzano: non sempre sono pubblicizzate. Il sito thesession.org aiuta a trovare quella della settimana. Evita i pub con grandi cartelli 'Live Irish Music': la vera session non si annuncia così. La conversazione durante la musica è parte integrante — il silenzio assoluto non è richiesto né atteso.`,
-      tags: [`#tradizionilocali`, `#vitasociale`, `#danza`, `#raccontipopolari`],
+      tags: [`#tradizionilocali`, `#vitasociale`, `#danza`, `#musicatradizionale`],
     },
     {
       icon: `🪨`,
@@ -5291,14 +5293,14 @@ const countries = [
       icon: `🏄`,
       name: `Surf a Lahinch — La Capitale dell'Onda Irlandese`,
       desc: `Lahinch è il punto di riferimento del surf europeo che non vuole affollamenti e cerca onde vere. L'Atlantico qui è generoso e imprevedibile, la comunità di surfer è piccola e accogliente, e il paese dopo la sessione offre pub con falò e zuppe calde di granchio. Non serve essere esperti: le scuole locali insegnano con pazienza e umorismo irlandese. Anche solo sedersi sulla riva a guardare è un'esperienza ipnotica.`,
-      note: `La stagione migliore è settembre-novembre per onde consistenti. L'estate è più adatta ai principianti. Portati sempre uno strato termico extra — l'Atlantico è freddo anche ad agosto, e il vento non è negoziabile.`,
+      note: `La stagione migliore è settembre-novembre per onde consistenti. L'estate è più adatta ai principianti. Porta sempre uno strato termico extra — l'Atlantico è freddo anche ad agosto, e il vento non è negoziabile.`,
       tags: [`#mare`, `#sport`, `#esperienzaunica`, `#socialità`, `#slow_travel`],
     },
     {
       icon: `🥃`,
       name: `Whiskey Tasting nei Distillatori Storici Rinati`,
       desc: `L'Irlanda sta vivendo una rinascita del whiskey senza precedenti: distillerie chiuse per decenni hanno riaperto, nuove realtà artigianali spuntano in ogni contea. Un assaggio guidato nei locali storici di Kilbeggan — il distillatore con licenza più antico del mondo, dal 1757 — non è una visita museale: è un rito lento, sensoriale, pieno di storie di contrabbandieri e ruote ad acqua ancora in funzione.`,
-      note: `A Dublino, la Teeling Distillery nel Liberties offre tour moderni e ottimi cocktail a base whiskey. Kilbeggan è aperta tutto l'anno, 7 giorni su 7 (eccetto Natale e Capodanno), ed è facilmente raggiungibile sulla M6 tra Dublino e Galway.`,
+      note: `A Dublino, la Teeling Distillery nel Liberties offre tour moderni e ottimi cocktail a base di whiskey. Kilbeggan è aperta tutto l'anno, 7 giorni su 7 (eccetto Natale e Capodanno), ed è facilmente raggiungibile sulla M6 tra Dublino e Galway.`,
       tags: [`#città`, `#esperienzaunica`, `#socialità`, `#slow_travel`],
     },
     {
@@ -5325,7 +5327,7 @@ const countries = [
     {
       icon: `🛁`,
       name: `Day Spa tra le Montagne del Wicklow`,
-      desc: `A meno di trenta minuti da Dublino, immerso in 360 acri di campagna tra le montagne del Wicklow, il resort cinque stelle Druids Glen ha una spa pluripremiata con sette sale trattamenti, piscina da 18 metri, jacuzzi e sauna. I pacchetti day spa sono disponibili anche senza pernottamento e includono pranzo — perfetti per una giornata di detox urbano completa. È uno di quei posti dove entri teso alle undici e esci completamente azzerato alle cinque.`,
+      desc: `A meno di trenta minuti da Dublino, immerso in 360 acri di campagna tra le montagne del Wicklow, il resort cinque stelle Druids Glen ha una spa pluripremiata con sette sale trattamenti, piscina da 18 metri, jacuzzi e sauna. I pacchetti day spa sono disponibili anche senza pernottamento e includono pranzo — perfetti per una giornata di detox urbano completa. È uno di quei posti dove entri teso alle undici e esci completamente rinato alle cinque.`,
       note: `Il day spa package parte da €135 per 50 minuti di trattamento più accesso completo alle strutture. Prenota in anticipo nei weekend. Le fasce orarie 11–14 sono adult-only in piscina — dettaglio da non sottovalutare per chi cerca tranquillità.`,
       tags: [`#benessere`, `#natura`, `#slow_travel`],
     },
@@ -5469,22 +5471,22 @@ const countries = [
   sanita: `Eccellente`,
   infrastrutture: `Ben sviluppate`,
   flussi: `2,26 milioni di visitatori internazionali nel 2024 (+2,3% sul 2023; +12,4% sul 2019). A questi si aggiungono ~322.000 passeggeri di crociera. Principali mercati: USA (27,5%, 620.000 — di gran lunga il mercato dominante), Regno Unito (11,8%), Germania (6,3%). La destinazione è fortemente orientata al turismo anglofono nordamericano — offerta e comunicazione calibrate prevalentemente su quel pubblico. Mesi di punta: luglio (277.000) e agosto (281.000, massimo assoluto). Bassa stagione: dicembre-gennaio (aurora boreale, pochi turisti, prezzi bassi). Stagionalità marcata (rapporto 2,5:1 tra agosto e dicembre).`,
-  curatorNote: `Valuta: Corona islandese (ISK). Paese praticamente cashless: tenere poche ISK solo per emergenze in zone isolate. Prese: Tipo C e Tipo F (Schuko) — spine italiane a due poli compatibili; spine tipo L a tre poli potrebbero richiedere adattatore. Dal 2026: tassa chilometrica sui noleggi auto. Circolazione fuori dalle strade segnalate illegale e dannosa per l'ambiente — sanzioni. App 112 Iceland obbligatoria per chiunque si avventuri fuori dall'area urbana: GPS di emergenza, meteo, stato delle strade in tempo reale. Polizze assicurative standard spesso escludono le attività outdoor 'pericolose' (trekking su ghiacciaio, Highlands) — verificare prima di partire.`,
+  curatorNote: `Valuta: Corona islandese (ISK). Paese praticamente cashless: tenere poche ISK solo per emergenze in zone isolate. Prese: Tipo C e Tipo F (Schuko) — spine italiane a due poli compatibili; spine tipo L a tre poli potrebbero richiedere adattatore. Dal 2026: tassa chilometrica sui noleggi auto. Circolazione fuori dalle strade segnalate illegale e dannosa per l'ambiente — sanzioni. App 112 Iceland obbligatoria per chiunque si avventuri fuori dall'area urbana: GPS di emergenza, meteo, stato delle strade in tempo reale. Polizze assicurative standard spesso escludono le attività outdoor 'pericolose' (trekking su ghiacciaio, Highlands) — verificare prima di partire. Roaming UE senza sovraccosti con SIM italiana.`,
   sicurezzaDesc: [
     `Paese tra i più sicuri al mondo (1° Global Peace Index 2025). Criminalità quasi assente. Il rischio principale è naturale: vulcani attivi, meteo imprevedibile, strade chiuse. Monitorare app ufficiali.`,
-    `Criminalità praticamente inesistente — Islanda al primo posto del Global Peace Index 2025 per il diciottesimo anno consecutivo. Polizia generalmente disarmata; nessun esercito permanente. Il turista può muoversi liberamente a qualsiasi ora senza preoccupazioni particolari. Allerte Farnesina (24/03/2026): nessuna allerta specifica — normali precauzioni.`,
+    `L'Islanda è al primo posto del Global Peace Index 2025 per il diciottesimo anno consecutivo. Polizia generalmente disarmata; nessun esercito permanente. Criminalità praticamente inesistente. Il turista può muoversi liberamente a qualsiasi ora senza preoccupazioni particolari. Farnesina (24/03/2026): nessuna allerta specifica — normali precauzioni.`,
     `Il rischio reale è di natura naturale: penisola di Reykjanes soggetta a eruzioni vulcaniche frequenti con possibili chiusure di strade ed evacuazioni locali; meteo estremamente imprevedibile in ogni stagione (tempeste improvvise, neve, ghiaccio, venti fino a 50 m/s). Obbligatorio rispettare i cordoni e le zone vietate attorno ai vulcani. Monitorare: app 112 Iceland (governo islandese), safetravel.is, road.is, vedur.is.`,
-    `Rischi epidemiologici: nessuna malattia endemica; acqua del rubinetto potabile in tutto il paese; nessun vaccino obbligatorio per l'ingresso.`,
+    `Rischi epidemiologici: nessuna malattia endemica; acqua del rubinetto potabile in tutto il paese.`,
   ],
   sanDesc: [
-    `Sistema sanitario universale ed efficiente, concentrato a Reykjavík. Nelle zone remote i soccorsi sono lenti e costosi. TEAM valida solo per emergenze di base; nessun vaccino obbligatorio.`,
-    `Sistema sanitario universale, moderno ed efficiente. Concentrato principalmente nell'area di Reykjavík (Landspítali – National University Hospital). Farmacie (Apotek) diffuse; a Reykjavík una sempre aperta 24h. Nelle zone remote i tempi di soccorso possono essere lunghi e i costi — incluso trasporto in elicottero — molto elevati. TEAM valida per le cure d'emergenza di base e il pronto soccorso; non copre rimpatrio sanitario né trasporti in zone remote. Nessun vaccino obbligatorio per l'ingresso.`,
+    `Sistema sanitario universale ed efficiente, concentrato a Reykjavík. Nelle zone remote i soccorsi sono lenti e costosi. TEAM valida solo per emergenze di base.`,
+    `Le strutture sanitarie principali sono concentrate principalmente nell'area di Reykjavík (Landspítali – National University Hospital). Farmacie (Apotek) diffuse; a Reykjavík una sempre aperta 24h. Nelle zone remote i tempi di soccorso possono essere lunghi e i costi — incluso trasporto in elicottero — molto elevati. TEAM valida per le cure d'emergenza di base e il pronto soccorso; non copre rimpatrio sanitario né trasporti in zone remote. Nessun vaccino obbligatorio per l'ingresso.`,
   ],
   infraDesc: [
     `Nessuna ferrovia; ci si sposta in auto a noleggio. Ring Road asfaltata accessibile tutto l'anno; F-roads solo in estate con 4x4. Paese cashless, Wi-Fi diffuso, corrente stabile da fonti rinnovabili.`,
     `TRASPORTI: Nessuna rete ferroviaria. Mezzo principale: auto a noleggio. Ring Road (Route 1, ~1.340 km) asfaltata e percorribile tutto l'anno salvo meteo avverso. Strade delle Highlands (F-roads): sterrate, aperte solo in estate (generalmente da luglio), obbligatorio 4x4 omologato. Voli interni tra Reykjavík e destinazioni regionali (Akureyri, Ísafjörður, Egilsstaðir). Bus stagionali di tipo turistico per le zone rurali. Si guida a destra. Dal 1/01/2026 tassa chilometrica sui veicoli a noleggio (6,95 ISK/km) — costo totale per il turista sostanzialmente invariato. Circolazione fuori dalle strade segnalate illegale e punita.`,
-    `PAGAMENTI: Paese praticamente cashless. Visa e Mastercard accettate ovunque (negozi, stazioni di servizio, mercatini, parcheggi automatici). Contanti (ISK) raramente necessari.`,
-    `INTERNET: Wi-Fi gratuito quasi ovunque in hotel, B&B, caffè, ristoranti — soprattutto a Reykjavík. Copertura mobile buona nelle aree abitate e sulle strade principali; scarsa o assente nelle Highlands e nelle zone remote. eSIM disponibili.`,
+    `PAGAMENTI: Corona Islandese (ISK). Paese praticamente cashless. Visa e Mastercard accettate ovunque (negozi, stazioni di servizio, mercatini, parcheggi automatici). Contanti raramente necessari.`,
+    `INTERNET: Wi-Fi gratuito quasi ovunque in hotel, B&B, caffè, ristoranti — soprattutto a Reykjavík. Copertura mobile buona nelle aree abitate e sulle strade principali; scarsa o assente nelle Highlands e nelle zone remote. eSIM disponibili. Roaming UE senza sovraccosti con SIM italiana.`,
     `CORRENTE: 230V/50Hz. Rete tra le più stabili e pulite al mondo (geotermia e idroelettrico). Blackout rari.`,
   ],
   linguaDesc: `Islandese (lingua norrena arcaica, praticamente incomprensibile senza studio specifico). La barriera per i turisti è minima: la quasi totalità degli islandesi parla inglese eccellente — norma trasversale a tutte le fasce d'età. In hotel, musei, ristoranti e negozi la comunicazione in inglese è garantita al 100%. Ospitalità tradizionalmente elevata verso gli stranieri.`,
@@ -5540,7 +5542,7 @@ const countries = [
     {
       icon: `🌋`,
       name: `Mývatn — Dove tutta la geologia islandese converge`,
-      desc: `Un lago geotermico circondato da pseudocrater, colonne di lava solidificata (hoodoos), campi di fango bollente grigio grafite, sorgenti termali turchesi e caldere spente. In pochi chilometri quadrati convivono più fenomeni geologici distinti di qualsiasi altro posto in Islanda. Di notte, con l'aurora boreale che illumina le colonne di vapore dei soffioni, il paesaggio smette di sembrare terrestre. Le Mývatn Nature Baths — molto meno affollate della Blue Lagoon — permettono di fare il bagno geotermale guardando direttamente la caldera.`,
+      desc: `Un lago geotermico circondato da 'pseudocrateri', colonne di lava solidificata (hoodoos), campi di fango bollente grigio grafite, sorgenti termali turchesi e caldere spente. In pochi chilometri quadrati convivono più fenomeni geologici distinti di qualsiasi altro posto in Islanda. Di notte, con l'aurora boreale che illumina le colonne di vapore dei soffioni, il paesaggio smette di sembrare terrestre. Le Mývatn Nature Baths — molto meno affollate della Blue Lagoon — permettono di fare il bagno geotermale guardando direttamente la caldera.`,
       note: `La Hverfjall, la grande caldera nera che domina il lago, è scalabile in 20 minuti dal sentiero est — vista sul cratere dall'interno rara e quasi mai fotografata perché poco instagrammabile. Le zanzare di Mývatn (attratte dall'umidità del lago) in luglio–agosto sono leggendarie: porta una zanzariera da testa, non è un accessorio opzionale.`,
       tags: [`#MeravigliaGeologia`, `#AvvistamentoAnimali`, `#Wildlife`, `#PaesaggiEstremi`, `#Hiking`],
     },
@@ -5555,14 +5557,14 @@ const countries = [
       icon: `🐋`,
       name: `Whale watching a Húsavík — la capitale europea dell'avvistamento`,
       desc: `Húsavík non è la destinazione più famosa dell'Islanda, ma è considerata dagli esperti la capitale europea del whale watching. La baia protetta e i fondali ricchi garantiscono un tasso di avvistamento che in alta stagione supera il 95%. Si naviga su barche di legno tradizionali con biologi marini a bordo, a distanza ravvicinata da megattere, balenottere comuni e delfini. Indimenticabile.`,
-      note: `Il Gentle Giants e il North Sailing sono gli operatori storici con i migliori track record. Per avvistamenti più rari (orche, capodogli), scegli le uscite serali di luglio: i cetacei si avvicinano alla costa con la luce bassa del sole di mezzanotte. Il Húsavík Whale Museum — piccolo, poco noto, con un capodoglio in scala reale — è uno dei migliori musei di cetologia in Europa.`,
+      note: `Il Húsavík Whale Museum — piccolo, poco noto, con un capodoglio in scala reale — è uno dei migliori musei di cetologia in Europa.`,
       tags: [`#AvvistamentoAnimali`, `#Wildlife`, `#Mare`, `#EsperienzaUnica`],
     },
     {
       icon: `🦊`,
       name: `Hornstrandir — L'Islanda prima del turismo`,
       desc: `Non ci sono strade. Non ci sono negozi. Si raggiunge solo in barca da Ísafjörður, e una volta lì sei solo tu, il vento, le scogliere a strapiombo e le volpi artiche — l'unico mammifero indigeno dell'isola — che vengono ad annusarti gli stivali senza paura. Meno di 10.000 persone l'anno. È una delle riserve naturali più integre d'Europa, e lo si capisce subito.`,
-      note: `Le volpi artiche di Hornstrandir non hanno predatori e non sono mai state cacciate nella riserva: sono geneticamente non abituate all'uomo come minaccia. È uno dei rarissimi posti in Europa dove un mammifero selvatico si avvicina spontaneamente a pochi centimetri. Porta cibo in contenitori ermetici — le volpi aprono gli zaini con le zampe. I traghetti per Hornstrandir operano solo giugno–agosto; prenota con 2-3 mesi di anticipo.`,
+      note: `Le volpi artiche di Hornstrandir non hanno predatori e non sono mai state cacciate nella riserva: sono geneticamente non abituate all'uomo come minaccia. È uno dei rarissimi posti in Europa dove un mammifero selvatico si avvicina spontaneamente a pochi centimetri. Porta cibo in contenitori ermetici. I traghetti per Hornstrandir operano solo giugno–agosto; prenota con 2-3 mesi di anticipo.`,
       tags: [`#NaturaSelvaggia`, `#EsperienzaEstrema`, `#Avventura`, `#AvvistamentoAnimali`],
     },
     {
@@ -5650,7 +5652,7 @@ const countries = [
   ]
     },
   cultura: {
-    intro: `La cultura islandese è il risultato di un isolamento millenario che ha prodotto qualcosa di raro: una società piccola, coesa e profondamente originale. È il paese con il più alto numero di scrittori, musicisti e artisti pro capite al mondo — e anche quello che ha preservato la propria lingua con maggiore ostinazione, inventando nuovi vocaboli piuttosto che adottare anglicismi. Ma quello che colpisce di più un visitatore attento non è la produzione culturale in sé, bensì il modo in cui la cultura è vissuta collettivamente: le piscine geotermali come parlamento informale, il Þorrablót come banchetto di sopravvivenza collettiva, le saghe medievali ancora lette dai contemporanei come narrativa viva. Il lato meno raccontato è quello spirituale: l'Islanda è l'unico paese europeo dove la fede negli antichi dei norreni — Odino, Thor, Freya — è una religione riconosciuta dallo Stato in crescita, non un revival folkloristico.`,
+    intro: `La cultura islandese è il risultato di un isolamento millenario che ha prodotto qualcosa di raro: una società piccola, coesa e profondamente originale. È il paese con il più alto numero di scrittori, musicisti e artisti pro capite al mondo — e anche quello che ha preservato la propria lingua con maggiore ostinazione, inventando nuovi vocaboli piuttosto che adottare anglicismi. Ma quello che colpisce di più un visitatore attento non è la produzione culturale in sé, bensì il modo in cui la cultura è vissuta collettivamente: le piscine geotermali come parlamento informale, il Þorrablót come banchetto di sopravvivenza collettiva, le saghe medievali ancora lette dai contemporanei come narrativa viva. Il lato meno raccontato è quello spirituale: l'Islanda è l'unico paese europeo dove la fede negli antichi dei norreni — Odino, Thor, Freya — è una religione riconosciuta dallo Stato in crescita, non un revival folcloristico.`,
     items: [
     {
       icon: `🏊`,
@@ -5669,7 +5671,7 @@ const countries = [
     {
       icon: `🐑`,
       name: `Þorrablót — Il banchetto della sopravvivenza`,
-      desc: `Un banchetto collettivo che celebra la sopravvivenza all'inverno attraverso i cibi conservati dei secoli passati: squalo fermentato (hákarl), testa di pecora bollita (svið), sanguinaccio, testicoli di montone in aceto, agnello affumicato — innaffiati di brennivín, l'acquavite soprannominata 'Morte Nera'. Non è folklore per turisti: è un evento genuino di famiglie e comunità, con poesia, canzoni tradizionali e cabaret satirico di carattere politico. Il cibo è il veicolo; l'identità collettiva è il contenuto.`,
+      desc: `Un banchetto collettivo che celebra la sopravvivenza all'inverno attraverso i cibi conservati dei secoli passati: squalo fermentato (hákarl), testa di pecora bollita (svið), sanguinaccio, testicoli di montone in aceto, agnello affumicato — innaffiati di brennivín, l'acquavite soprannominata 'Morte Nera'. Non è folclore per turisti: è un evento genuino di famiglie e comunità, con poesia, canzoni tradizionali e cabaret satirico di carattere politico. Il cibo è il veicolo; l'identità collettiva è il contenuto.`,
       note: `Il Þorrablót si celebra principalmente tra la fine di gennaio e febbraio — periodo turisticamente basso, prezzi ridotti, pochi stranieri. Alcuni ristoranti di Reykjavík propongono menu Þorri aperti al pubblico (Cafe Loki, Matur og Drykkur). L'hákarl — lo squalo fermentato — ha un odore di ammoniaca potente che non lascia indifferenti: assaggiarlo è un atto di coraggio culturale con un significato che gli islandesi apprezzano genuinamente.`,
       tags: [`#ritiecerimonie`, `#cucinaeproduzionelocale`, `#vitasociale`, `#raccontipopolari`],
     },
@@ -5715,7 +5717,7 @@ const countries = [
     },
     {
       icon: `🍞`,
-      name: `Fontana Laugarvatn — Bagno nel lago e pane cotto sottoterra`,
+      name: `Laugarvatn — Bagno nel lago e pane cotto sottoterra`,
       desc: `Sul percorso del Golden Circle ma quasi mai incluso nei tour di massa, questo piccolo stabilimento balneare permette di alternare vasche geotermali con il bagno diretto nel lago Laugarvatn — glaciale e purissimo. Il dettaglio impossibile da non raccontare: il pane di segale che i gestori cuociono ogni mattina seppellendo le pentole nella sabbia nera bollente lungo la riva — il calore geotermale cuoce l'hverabrauð in 24 ore — servito con burro islandese e salmone affumicato. Non esiste niente di simile in Europa.`,
       note: `Il tour del pane geotermico (30 minuti, incluso nella visita) parte alle 11:30 e alle 14:30 — prenotare al momento dell'ingresso. Siggi, il gestore, ha imparato la ricetta dalla nonna e la condivide alla fine. Venendo da Þingvellir verso il Geysir, Fontana si trova esattamente a metà strada: la sosta ideale è di 2-3 ore, sufficienti per il bagno, il tour del pane e il pranzo.`,
       tags: [`#benessere`, `#natura`, `#esperienzaunica`, `#cenaspeciale`],
@@ -5724,7 +5726,7 @@ const countries = [
       icon: `♨️`,
       name: `Hot pots rurali lungo la Ring Road — le vasche degli islandesi veri`,
       desc: `Girando l'Islanda in auto si incontrano decine di vasche geotermali rurali quasi sconosciute al turismo di massa: alcune gratuite, molte a offerta libera, frequentate quasi solo da islandesi. Alcune richiedono una camminata di 20-40 minuti su paesaggio vulcanico. Entrare in acqua calda naturale a 40°C con montagne innevate intorno e nessun altro turista in vista è un'esperienza che non si può organizzare — si trova, per caso, girando.`,
-      note: `Le fonti migliori per trovarle sono la mappa di hotpoticeland.is e il sito naturalbathing.is — aggiornati con condizioni e accessibilità stagionale. Le hot pot più amate dagli islandesi: Reykjadalur (30 min a piedi da Hveragerði, un ruscello caldo naturale dove ci si immerge vestiti di costume), Hrunalaug (piccola, segreta, capacità 8 persone — vai all'alba), Fosslaug vicino a Reykholt. Non lasciare tracce; alcune sono in proprietà private.`,
+      note: `Cerca hot pot iceland o natural bathing iceland. Le hot pot più amate dagli islandesi: Reykjadalur (30 min a piedi da Hveragerði, un ruscello caldo naturale dove ci si immerge vestiti di costume), Hrunalaug (piccola, segreta, capacità 8 persone — vai all'alba), Fosslaug vicino a Reykholt. Non lasciare tracce; alcune sono in proprietà private.`,
       tags: [`#benessere`, `#natura`, `#esperienzaunica`, `#montagna`],
     },
     {
@@ -5751,7 +5753,7 @@ const countries = [
     {
       icon: `🎵`,
       name: `Il runtur del sabato sera — la ronda dei bar alla islandese`,
-      desc: `Il runtur è la tradizione islandese di girare da un bar all'altro il sabato sera — con regole proprie: si esce alle 23, si balla fino alle 5, e tutta la città si concentra in pochi isolati attorno a Laugavegur. I locali come Kiki (queer-friendly e profondamente inclusivo), Paloma e Dillon sono frequentati da islandesi veri. Il clima è collettivo e informale, con un senso di festa condivisa che ha radici nel buio dell'inverno polare. In Islanda non si va 'a un locale': si gira.`,
+      desc: `Il runtur è la tradizione islandese di girare da un bar all'altro il sabato sera — con regole proprie: si esce alle 23, si balla fino alle 5, e tutta la città si concentra in pochi isolati attorno a Laugavegur. I locali come Kiki (queer-friendly e profondamente inclusivo), Paloma e Dillon sono frequentati da islandesi veri. Il clima è collettivo e informale, con un senso di festa condivisa che ha radici nel buio dell'inverno polare. In Islanda non si va in 'un locale': si gira.`,
       note: `Kiki è il bar queer più famoso di Reykjavík — ma "queer" qui significa aperto, misto e senza gerarchie di stile: etero, gay, artisti, impiegati pubblici, diciottenni e cinquantenni. La scena musicale live è altissima: l'Iceland Airwaves (novembre) è uno dei festival di musica indipendente più importanti d'Europa, con concerti in venues inusuali (librerie, piscine, garage). I biglietti si vendono mesi prima.`,
       tags: [`#socialità`, `#città`, `#esperienzaunica`],
     },
@@ -5867,31 +5869,31 @@ const countries = [
   sanita: `Standard Europei`,
   infrastrutture: `Ben sviluppate`,
   flussi: `466,2 milioni di pernottamenti totali nel 2024 (terza destinazione mondiale). Circa 74 milioni di turisti stranieri (+6% sul 2023). Alta stagione: luglio–agosto per le coste; primavera e autunno per le città d'arte. Sovraffollamento significativo nelle mete più iconiche: Venezia ha introdotto la tassa d'ingresso (€5-10) nelle giornate ad alto traffico.`,
-  curatorNote: `Prese tipo L (italiane tripolari) — standard nazionale; i turisti stranieri hanno bisogno di adattatore. Sovraffollamento: prenotare musei e attrazioni principali online con anticipo, specialmente in alta stagione (Colosseo, Uffizi, Musei Vaticani).`,
+  curatorNote: `Prese tipo L (italiane tripolari) — standard nazionale. Sovraffollamento: prenotare musei e attrazioni principali online con anticipo, specialmente in alta stagione (Colosseo, Uffizi, Musei Vaticani).`,
   sicurezzaDesc: [
     `L'Italia è una destinazione sicura, ma la criminalità predatoria verso i turisti è in crescita nelle grandi città: restare vigili nelle zone affollate è la precauzione principale.`,
     `Destinazione sicura per il turismo. Nessun governo straniero principale sconsiglia il viaggio.`,
     `Criminalità predatoria in crescita: oltre 140.000 borseggi denunciati nel 2024 (+68% a Roma rispetto al 2019). Roma è seconda al mondo per borseggi citati nelle recensioni turistiche. Zone critiche: stazione Termini, metro A e B, Colosseo, Fontana di Trevi, Piazza del Duomo a Milano, Ponte Vecchio a Firenze. Truffe comuni: taxi non autorizzati nelle zone aeroportuali, ristoranti senza prezzi esposti, venditori di 'fiori', falsi funzionari.`,
     `Rischi naturali: sismi (centro-sud), eruzioni vulcaniche (Etna, Vesuvio, Campi Flegrei), alluvioni, incendi estivi.`,
-    `Rischi epidemiologici: nessun rischio specifico. Acqua potabile ovunque. Nessun vaccino obbligatorio per l'ingresso.`,
+    `Rischi epidemiologici: nessun rischio specifico. Acqua potabile ovunque.`,
   ],
   sanDesc: [
     `Sistema sanitario solido e capillare: i cittadini UE sono pienamente coperti con la tessera TEAM, le farmacie sono ovunque e ben fornite.`,
-    `Sistema sanitario di standard europeo-occidentale. Ospedali pubblici di alto livello nelle grandi città. La TEAM è valida per i cittadini UE. Farmacie capillari e ben fornite. Nessun vaccino obbligatorio per l'ingresso.`,
+    `Standard europeo-occidentale. Ospedali pubblici di alto livello nelle grandi città. La TEAM è valida per i cittadini UE. Farmacie capillari e ben fornite. Nessun vaccino obbligatorio per l'ingresso.`,
   ],
   infraDesc: [
     `Infrastrutture ben sviluppate: l'alta velocità ferroviaria collega le città principali in tempi competitivi con l'aereo, e la rete digitale è eccellente nelle aree urbane.`,
     `Trasporti: rete ferroviaria ad alta velocità (Frecciarossa, Italo) tra le migliori d'Europa. Reti metropolitane nelle grandi città. Ampia rete aeroportuale con hub internazionali (Roma Fiumicino, Milano Malpensa). Autostrade a pedaggio ben mantenute. Rete autobus interurbani capillare. Guida a destra.`,
-    `Pagamenti: carte accettate praticamente ovunque. Euro.`,
+    `Pagamenti: Euro. Carte accettate praticamente ovunque.`,
     `Internet: eccellente nelle città, buono nelle aree rurali. 5G diffuso nelle aree urbane. Roaming UE gratuito per i cittadini europei.`,
     `Corrente: 230V, 50Hz.`,
   ],
-  linguaDesc: `Italiano. L'inglese è parlato nelle strutture turistiche delle principali città e destinazioni. Fuori dai circuiti turistici la comunicazione in inglese può richiedere più sforzo. I turisti italiani ovviamente non hanno barriera linguistica.`,
+  linguaDesc: `Italiano. L'inglese è parlato nelle strutture turistiche delle principali città e destinazioni. Fuori dai circuiti turistici la comunicazione in inglese può richiedere più sforzo.`,
   sources: [
     { label: `ISTAT — Noi Italia 2025`, url: '#' },
-    { label: `Censis 2025`, url: '#' },
-    { label: `Radical Storage/Travel and Leisure Italia`, url: '#' },
     { label: `Numbeo Crime Index 2025`, url: '#' },
+    { label: `Radical Storage/Travel and Leisure Italia`, url: '#' },
+    { label: `Censis 2025`, url: '#' },
     { label: `Demoskopika ICST 2025`, url: '#' },
   ],
   tags: {
@@ -5905,11 +5907,11 @@ const countries = [
     intro: `L'Italia è un paese geologicamente giovane e ancora in movimento: vulcani attivi, montagne tra le più alte d'Europa, foreste antiche, coste calcaree perforate dal mare, la sua biodiversità più rara — l'orso marsicano, l'abete dei Nebrodi, la ginestra dell'Etna — è quasi sconosciuta fuori dai confini. Qui la natura è accessibile a chi sa dove guardare.`,
     items: [
     {
-      icon: `🏔️`,
-      name: `Dolomiti — l'enrosadira e le Alte Vie`,
-      desc: `Torri di roccia verticali che sembrano dipinte a mano, con colori che cambiano dall'alba al tramonto passando dall'arancio bruciato al viola profondo: è l'enrosadira, il fenomeno luminoso unicamente dolomitico che gli abitanti di queste valli narravano come magia antica. UNESCO le ha riconosciute nel 2009 per la loro eccezionalità geologica e geomorfologica: queste montagne erano una barriera corallina tropicale 250 milioni di anni fa, e ancora oggi raccontano quella storia nella roccia. Con oltre 1.400 km di sentieri segnalati, si incontrano a qualsiasi livello — da una passeggiata al lago di Braies a un'Alta Via alpinistica di undici tappe.`,
-      note: `L'enrosadira è reale ma fugace: dura pochi minuti e solo con certe condizioni atmosferiche. D'estate le zone più famose (Tre Cime, Alpe di Siusi) sono affollate dalle 9 in poi — arriva all'alba o spostatevi sulle Dolomiti di Brenta e le Pale di San Martino, meno frequentate e altrettanto spettacolari. Per l'Alta Via n.1 (Braies–Belluno), prenota i rifugi con mesi di anticipo a luglio–agosto.`,
-      tags: [`#PatrimonioUnesco`, `#DaCartolina`, `#Iconico`, `#Trekking`, `#Hiking`, `#MeravigliaGeologia`, `#PaesaggiEstremi`],
+      icon: `🤿`,
+      name: `Diving sulla Baia sommersa di Baia — archeologia subacquea unica al mondo`,
+      desc: `Sotto la superficie del Golfo di Pozzuoli giace una città romana: Baia, la Las Vegas dell'antichità, con terme, ville e mosaici ancora intatti sul fondo del mare. Il bradisismo — l'abbassamento del suolo causato dall'attività vulcanica dei Campi Flegrei — ha fatto scendere tutto sott'acqua nel corso dei secoli. Immergersi qui è fare rcheologia subacquea nel senso più letterale: colonne, pavimentazioni a mosaico, statue ancora in posizione, tutto avvolto da alghe e circondato da pesci. Non esiste nulla di comparabile nel Mediterraneo.`,
+      note: `Il sito è Area Marina Protetta e le immersioni sono consentite solo con centri diving autorizzati che conoscono i fondali. Per principianti esistono uscite guidate con brevetto open water; per i percorsi più profondi serve esperienza avanzata. I Campi Flegrei sono geologicamente attivi: tieniti aggiornato sullo stato dell'area prima di pianificare. L'acqua può essere torbida con mare mosso — le condizioni migliori sono in estate con mare calmo.`,
+      tags: [`#Diving`, `#EsperienzaUnica`, `#MeravigliaGeologia`, `#Mare`, `#Avventura`],
     },
     {
       icon: `🌋`,
@@ -5919,10 +5921,17 @@ const countries = [
       tags: [`#PatrimonioUnesco`, `#EsperienzaUnica`, `#EsperienzaEstrema`, `#MeravigliaGeologia`, `#NaturaSelvaggia`, `#Avventura`],
     },
     {
+      icon: `🏔️`,
+      name: `Dolomiti — l'enrosadira e le Alte Vie`,
+      desc: `Torri di roccia verticali che sembrano dipinte a mano, con colori che cambiano dall'alba al tramonto passando dall'arancio bruciato al viola profondo: è l'enrosadira, il fenomeno luminoso unicamente dolomitico che gli abitanti di queste valli narravano come magia antica. UNESCO le ha riconosciute nel 2009 per la loro eccezionalità geologica e geomorfologica: queste montagne erano una barriera corallina tropicale 250 milioni di anni fa, e ancora oggi raccontano quella storia nella roccia. Con oltre 1.400 km di sentieri segnalati, si incontrano a qualsiasi livello — da una passeggiata al lago di Braies a un'Alta Via alpinistica di undici tappe.`,
+      note: `L'enrosadira è reale ma fugace: dura pochi minuti e solo con certe condizioni atmosferiche. D'estate le zone più famose (Tre Cime, Alpe di Siusi) sono affollate dalle 9 in poi — arriva all'alba o spostatevi sulle Dolomiti di Brenta e le Pale di San Martino, meno frequentate e altrettanto spettacolari. Per l'Alta Via n.1 (Braies–Belluno), prenota i rifugi con mesi di anticipo a luglio–agosto.`,
+      tags: [`#PatrimonioUnesco`, `#DaCartolina`, `#Iconico`, `#Trekking`, `#Hiking`, `#MeravigliaGeologia`, `#PaesaggiEstremi`],
+    },
+    {
       icon: `🌿`,
       name: `Foreste Vetuste — le faggete dell'Appennino`,
       desc: `Boschi che non hanno visto una scure da secoli: alberi di faggio monumentali, legno morto che marcisce lentamente e nutre decine di specie di funghi, licheni e insetti rari, silenzio spezzato solo da picchi e pettirossi. Queste foreste fanno parte di un sito transnazionale UNESCO (2017, esteso al 2021) che include le faggete più antiche d'Europa. Nel Parco Nazionale d'Abruzzo, i nuclei più integri sono l'habitat dell'orso marsicano e del lupo appenninico. Camminare qui è come fare un passo indietro nell'Europa pre-industriale — e capire cosa si è perso ovunque altrove.`,
-      note: `I nuclei più integri sono in riserve integrali con accesso regolamentato: verifica sempre i permessi prima di addentrarsi. La migliore stagione è ottobre (colori autunnali straordinari) o tarda primavera. D'inverno i sentieri sono spesso innevati e isolati. Abbina la visita alla foresta con il wildlife watching per l'orso: la mattina presto in maggio–giugno aumenta le probabilità di avvistamento.`,
+      note: `I nuclei più integri sono in riserve integrali con accesso regolamentato: verifica sempre i permessi prima di addentrarti. La migliore stagione è ottobre (colori autunnali straordinari) o tarda primavera. D'inverno i sentieri sono spesso innevati e isolati. Abbina la visita alla foresta con il wildlife watching per l'orso: la mattina presto in maggio–giugno aumenta le probabilità di avvistamento.`,
       tags: [`#PatrimonioUnesco`, `#NaturaSelvaggia`, `#Wildlife`, `#Hiking`, `#AvvistamentoAnimali`],
     },
     {
@@ -5935,7 +5944,7 @@ const countries = [
     {
       icon: `🐻`,
       name: `Avvistamento dell'Orso Marsicano — il plantigrado più raro d'Europa`,
-      desc: `Esiste nel mondo un orso che non vive da nessun'altra parte: l'orso marsicano, sottospecie geneticamente isolata dell'orso bruno, sopravvissuta sull'Appennino centrale con una popolazione di 50–60 individui — è uno degli animali più rari d'Europa. Il Parco Nazionale d'Abruzzo è il suo ultimo rifugio sicuro. Al mattino presto o al tramonto, con guida locale esperta, le probabilità di incrociarlo — o almeno le sue tracce — sono reali. Un'esperienza che non offre garanzie, ma che fa capire cosa significa un ecosistema che funziona ancora.`,
+      desc: `Esiste nel mondo un orso che non vive da nessun'altra parte: l'orso marsicano, sottospecie geneticamente isolata dell'orso bruno, sopravvissuta sull'Appennino centrale con una popolazione di 50–60 individui — è uno degli animali più rari d'Europa. Il Parco Nazionale d'Abruzzo è il suo ultimo rifugio sicuro. Al mattino presto o al tramonto, con guida locale esperta, le probabilità di incrociarlo — o almeno di trovare le sue tracce — sono reali. Un'esperienza che non offre garanzie, ma che fa capire cosa significa un ecosistema che funziona ancora.`,
       note: `L'avvistamento non è garantito: l'orso è selvatico e schivo. Le probabilità aumentano con guide locali esperte nei mesi di maggio–giugno e settembre–ottobre. Alcune zone del parco sono chiuse per proteggere i siti di riproduzione. Preferisci i tour di wildlife watching organizzati ai safari improvvisati. Il parco organizza anche uscite notturne con bioacustica per ascoltare i lupi.`,
       tags: [`#AvvistamentoAnimali`, `#Wildlife`, `#NaturaSelvaggia`, `#EsperienzaUnica`, `#Hiking`],
     },
@@ -5954,25 +5963,18 @@ const countries = [
       tags: [`#KayakAdventure`, `#Mare`, `#Avventura`, `#EsperienzaUnica`, `#NaturaSelvaggia`, `#DaCartolina`],
     },
     {
-      icon: `🚣`,
-      name: `Val Grande — la natura selvaggia più remota d'Italia`,
-      desc: `La Val Grande è il parco nazionale più selvaggio e spopolato d'Italia: un labirinto di valli senza strade, villaggi abbandonati inghiottiti dalla foresta, torrenti senza nome e creste dove il GPS può essere l'unico filo con il mondo. Non ci sono rifugi aperti tutto l'anno nelle zone più interne, non ci sono sentieri segnalati ovunque, non ci sono bar. È una delle ultime vere wildernesses europee, a poche ore da Milano — un posto dove ritrovare qualcosa di primitivo che la modernità non ha ancora trovato.`,
-      note: `AVVERTENZA SERIA: la Val Grande è pericolosa per chi non ha esperienza in montagna e navigazione con carta topografica. Ogni anno si registrano episodi di dispersi o soccorsi. Entra sempre con guide locali certificate o con solida esperienza alpinistica. Porta cibo per più giorni di quello previsto, bivacco di emergenza, e informa sempre qualcuno del tuo itinerario. Non è una meta per uscite improvvisate.`,
-      tags: [`#NaturaSelvaggia`, `#EsperienzaEstrema`, `#Avventura`, `#Trekking`, `#PaesaggiEstremi`],
-    },
-    {
       icon: `🌺`,
       name: `Fioritura di Castelluccio di Norcia — un altopiano di colori impossibili`,
       desc: `Tra giugno e luglio, il Piano Grande ai piedi dei Monti Sibillini si trasforma in uno dei paesaggi floreali più spettacolari d'Europa: lenticchie, papaveri e fiordalisi creano un tappeto di rosso, giallo, viola e azzurro su un altopiano a 1.400 metri che tocca il cielo. È un evento naturale stagionale che dura poche settimane e non si ripete mai uguale. Una delle esperienze visive più potenti che l'Italia offra — e ancora relativamente poco conosciuta fuori dall'Italia centrale.`,
-      note: `Il periodo esatto varia ogni anno in base alle temperature: monitora le previsioni della fioritura sui siti locali (es. fiorituradeimonti.it). Castelluccio è in fase di ricostruzione dopo il terremoto del 2016. Arriva all'alba per luce e solitudine. Fuori dal periodo di fioritura il Piano Grande è bellissimo e quasi deserto: è uno dei più grandi altopiani d'Italia.`,
+      note: `Il periodo esatto varia ogni anno in base alle temperature: monitora le previsioni della fioritura sui siti locali. Castelluccio è in fase di ricostruzione dopo il terremoto del 2016. Arriva all'alba per luce e solitudine. Fuori dal periodo di fioritura il Piano Grande è bellissimo e quasi deserto: è uno dei più grandi altopiani d'Italia.`,
       tags: [`#DaCartolina`, `#EsperienzaUnica`, `#NaturaSelvaggia`, `#RuraleEArmonica`],
     },
     {
-      icon: `🤿`,
-      name: `Diving sulla Baia sommersa di Baia — archeologia subacquea unica al mondo`,
-      desc: `Sotto la superficie del Golfo di Pozzuoli giace una città romana: Baia, la Las Vegas dell'antichità, con terme, ville e mosaici ancora intatti sul fondo del mare. Il bradisismo — l'abbassamento del suolo causato dall'attività vulcanica dei Campi Flegrei — ha fatto scendere tutto sott'acqua nel corso dei secoli. Immergersi qui è fare archaeology diving nel senso più letterale: colonne, pavimentazioni a mosaico, statue ancora in posizione, tutto avvolto da alghe e circondato da pesci. Non esiste nulla di comparabile nel Mediterraneo.`,
-      note: `Il sito è Area Marina Protetta e le immersioni sono consentite solo con centri diving autorizzati che conoscono i fondali. Per principianti esistono uscite guidate con brevetto open water; per i percorsi più profondi serve esperienza advanced. I Campi Flegrei sono geologicamente attivi: tieniti aggiornato sullo stato dell'area prima di pianificare. L'acqua può essere torbida con mare mosso — le condizioni migliori sono in estate con mare calmo.`,
-      tags: [`#Diving`, `#EsperienzaUnica`, `#MeravigliaGeologia`, `#Mare`, `#Avventura`],
+      icon: `🚣`,
+      name: `Val Grande — la natura selvaggia più remota d'Italia`,
+      desc: `La Val Grande è il parco nazionale più selvaggio e spopolato d'Italia: un labirinto di valli senza strade, villaggi abbandonati inghiottiti dalla foresta, torrenti senza nome e creste dove il GPS può essere l'unico filo con il mondo. Non ci sono rifugi aperti tutto l'anno nelle zone più interne, non ci sono sentieri segnalati ovunque, non ci sono bar. È una delle ultime vere aree selvagge europee, a poche ore da Milano — un posto dove ritrovare qualcosa di primitivo che la modernità spesso dimentica.`,
+      note: `AVVERTENZA SERIA: la Val Grande è pericolosa per chi non ha esperienza in montagna e navigazione con carta topografica. Ogni anno si registrano episodi di dispersi o soccorsi. Entra sempre con guide locali certificate o con solida esperienza alpinistica. Porta cibo per più giorni di quello previsto, bivacco di emergenza, e informa sempre qualcuno del tuo itinerario. Non è una meta per uscite improvvisate.`,
+      tags: [`#NaturaSelvaggia`, `#EsperienzaEstrema`, `#Avventura`, `#Trekking`, `#PaesaggiEstremi`],
     },
   ]
     },
@@ -6106,7 +6108,7 @@ const countries = [
     {
       icon: `🥬`,
       name: `Mercato di Ballarò a Palermo — il più antico d'Italia, vivo da mille anni`,
-      desc: `Il mercato più antico di Palermo, attivo dall'epoca della dominazione araba (IX secolo), si estende per centinaia di metri tra i vicoli dell'Albergheria. Le 'abbaniate' — i richiami cantilenati dei venditori — sono un genere musicale a sé. Oltre alla spesa quotidiana dei palermitani, Ballarò offre street food da mangiare in piedi: panelle, cazzilli, quarume, panino con la meusa. Non è uno spettacolo allestito per turisti: è un mercato di quartiere dove la mescolanza culturale siciliana, nordafricana e subsahariana riflette secoli di storia mediterranea.`,
+      desc: `Il mercato più antico di Palermo, attivo dall'epoca della dominazione araba (IX secolo), si estende per centinaia di metri tra i vicoli dell'Albergheria. Le 'abbaniate' — i richiami cantilenati dei venditori — sono un genere musicale a sé. Oltre alla spesa quotidiana dei palermitani, Ballarò offre street food da mangiare in piedi: panelle, cazzilli, quarume, panino ca' meusa. Non è uno spettacolo allestito per turisti: è un mercato di quartiere dove la mescolanza culturale siciliana, nordafricana e subsahariana riflette secoli di storia mediterranea.`,
       note: `Il cibo da strada ai banchi di cucina al momento è autentico ed economico: porta contanti. Evita i ristoranti ai bordi del mercato: prezzi gonfiati e qualità non garantita. Attenzione ai borseggiatori nella calca. Il mercato è al massimo della vivacità tra le 8 e le 13. Abbina con una visita al Rione Kalsa nelle prime ore del pomeriggio.`,
       tags: [`#mercati`, `#cucinaeproduzionelocale`, `#vitasociale`, `#storiaememoria`],
     },
@@ -6147,7 +6149,7 @@ const countries = [
       icon: `🌟`,
       name: `Notte in un rifugio alpino — le Dolomiti, il silenzio, il cielo stellato`,
       desc: `Pernottare in un rifugio alpino a 2.000–2.500 metri — come il Rifugio Lagazuoi, il Rifugio Nuvolau o il Rifugio Scotoni — significa cena con canederli e gulasch, tramonto sulle Dolomiti rosse, e poi la notte più stellata della vita. I rifugi italiani sono attrezzati, accoglienti, gestiti spesso da famiglie alpine. Molti sono raggiungibili in ovovia senza impegno fisico. L'impatto emotivo è totale, indipendentemente dall'esperienza alpinistica di chi arriva.`,
-      note: `Il Rifugio Lagazuoi (Passo Falzarego) è il più scenografico e accessibile in ovovia. Prenota con mesi di anticipo in estate: i posti letto sono limitati e si esauriscono presto. Porta uno strato termico anche ad agosto: le notti in quota sono fredde. All'alba, il panorama sull'enrosadira illumina le pareti dolomitiche di rosso — alzati presto.`,
+      note: `Il Rifugio Lagazuoi (Passo Falzarego) è il più scenografico e accessibile in ovovia. Prenota con mesi di anticipo in estate: i posti letto sono limitati e si esauriscono presto. Porta qualche indumento caldo anche ad agosto: le notti in quota sono fredde. All'alba, il panorama sull'enrosadira illumina le pareti dolomitiche di rosso — alzati presto.`,
       tags: [`#montagna`, `#alloggiospeciale`, `#esperienzaunica`, `#cielonotturno`, `#slow_travel`],
     },
     {
@@ -6167,7 +6169,7 @@ const countries = [
     {
       icon: `🥂`,
       name: `Spritz in Campo Santa Margherita — Venezia senza turismo`,
-      desc: `Campo Santa Margherita è la piazza dove vivono i veneziani veri — studenti universitari, artigiani, anziani sul gradino. Ogni sera si riempie di gente con bicchieri di spritz comprati all'osteria e bevuti seduti sugli scalini delle chiese o ai tavolini all'aperto. È la Venezia senza maschere e senza gondolieri: rumorosa, gioviale, economica. Un'ora qui vale più di qualsiasi visita al Palazzo Ducale per capire come vive chi a Venezia ci abita davvero.`,
+      desc: `Campo Santa Margherita è la piazza dove vivono i veneziani veri — studenti universitari, artigiani, anziani sul gradino. Ogni sera si riempie di gente con bicchieri di spritz comprati all'osteria e bevuti seduti sugli scalini delle chiese o ai tavolini all'aperto. È la Venezia senza maschere e senza gondolieri: rumorosa, gioviale, economica. Un'ora qui ti dà un'idea di come vive chi a Venezia ci abita davvero.`,
       note: `I locali di riferimento sono 'Il Caffè Rosso' e 'Osteria do Torri'. Lo spritz veneziano autentico si fa con Aperol o Campari e vino bianco locale — mai chiedere lo Spritz Hugo, è considerato un sacrilegio. Per un pranzo ai minimi termini e massima autenticità, il bacaro con cicchetti (tapas veneziane) al banco è la risposta giusta.`,
       tags: [`#città`, `#socialità`, `#slow_travel`, `#esperienzaunica`],
     },
@@ -10036,10 +10038,10 @@ Carte di credito accettate nelle città, ma portare contanti. WhatsApp chiamate 
   curatorNote: `ETA OBBLIGATORIA per i cittadini italiani dal 2 aprile 2025: £16, validità 2 anni, soggiorni multipli fino a 6 mesi. Richiederla tramite l'app ufficiale 'UK ETA' o su www.gov.uk/eta/apply. Le compagnie aeree rifiutano l'imbarco senza ETA — numerosi siti truffaldini la offrono a prezzi maggiorati. Presa tipo G: adattatore obbligatorio (acquistare in Italia prima della partenza, ~€3-10). Post-Brexit: roaming UE non valido nel UK — SIM locale o eSIM raccomandata. Euro non accettati. Guida a sinistra. Prezzi ferroviari altissimi: prenotare in anticipo, valutare tessere sconto e se spezzare il viaggio. Clima imprevedibile: ombrello/poncho sempre con sé.`,
   sicurezzaDesc: [
     `Microcriminalità nelle aree affollate (borseggi, truffe) a Londra e grandi città; violenza verso turisti rara. Allerta terrorismo al livello SUBSTANTIAL. Clima variabile con rischio alluvioni. Nessun rischio epidemiologico.`,
-    `Microcriminalità nelle aree affollate, soprattutto a Londra: borseggi sul Tube. Principale hot spot: Londra (metropolitana, stazioni Victoria/King's Cross, Oxford Street, mercati di Camden e Portobello, West End). Sono stati segnalati alcuni hackeraggi mirati a furti di documenti. Violenza fisica verso i turisti rara. Manchester, Birmingham, Glasgow e Liverpool: aree periferiche da evitare di sera; centri storici e zone turistiche sicuri. Truffe comuni: taxi non autorizzati (usare sempre Uber o taxi con licenza TfL), biglietti falsi per spettacoli, siti web fraudolenti per l'ETA.`,
+    `Principali hot spot per microcriminalità: Londra (metropolitana, stazioni Victoria/King's Cross, Oxford Street, mercati di Camden e Portobello, West End). Sono stati segnalati alcuni hackeraggi mirati a furti di documenti. Violenza fisica verso i turisti rara. Manchester, Birmingham, Glasgow e Liverpool: aree periferiche da evitare di sera; centri storici e zone turistiche sicuri. Truffe comuni: taxi non autorizzati (usare sempre Uber o taxi con licenza TfL), biglietti falsi per spettacoli, siti web fraudolenti per l'ETA.`,
     `Allerta terrorismo: classificata SUBSTANTIAL (terzo livello su cinque) da MI5/JTAC — significa 'probabile'. Livello strutturale, non un'allerta improvvisa: si traduce in forte presenza delle forze di sicurezza in stazioni, aeroporti, luoghi affollati e attrazioni turistiche. Analogo livello per l'Irlanda del Nord. La Farnesina non sconsiglia il viaggio; invita alla normale vigilanza.`,
-    `Rischi naturali: clima principale variabile — piogge frequenti e imprevedibili tutto l'anno. Alluvioni in autunno-inverno (Galles, zone pianeggianti inglesi). Ondate di calore in estate (luglio 2022: oltre 40°C), poco sistema di condizionamento nei trasporti.`,
-    `Rischi epidemiologici: nessun rischio rilevante. Nessun vaccino obbligatorio per l'ingresso dall'Italia.`,
+    `Rischi naturali: clima principale variabile — piogge frequenti e imprevedibili tutto l'anno. Alluvioni in autunno-inverno (Galles, zone pianeggianti inglesi). Ondate di calore in estate possibili (luglio 2022: oltre 40°C), poco sistema di condizionamento nei trasporti.`,
+    `Rischi epidemiologici: nessun rischio rilevante.`,
   ],
   sanDesc: [
     `Sistema sanitario avanzato. Pronto soccorso gratuito in emergenza per tutti. TEAM italiana riconosciuta post-Brexit per cure urgenti. Assicurazione viaggio raccomandata. Nessun vaccino obbligatorio.`,
@@ -10072,15 +10074,8 @@ Carte di credito accettate nelle città, ma portare contanti. WhatsApp chiamate 
       relax: [`#benessere`, `#esperienzaunica`, `#città`, `#socialità`, `#mare`, `#natura`, `#sport`, `#cenaspeciale`]
     },
   natura: { 
-    intro: `Il Regno Unito nasconde una natura che sorprende chi arriva aspettandosi solo città e pioggia. Dalle colonie di sule più grandi d'Europa agli arcipelaghi remoti dove il sole d'estate non tramonta mai, dai boschi di giacinti selvatici — metà della popolazione mondiale intera — ai dark sky parks dove la Via Lattea è visibile a occhio nudo: c'è una natura ancora vera, accessibile, e straordinariamente varia in uno spazio geografico piccolo. Quel che è meno noto è che il UK è all'avanguardia in Europa nel rewilding: specie estinte tornano, ecosistemi si ricostruiscono, e il paesaggio cambia a velocità visibile. Chi arriva con spirito curioso, non trova solo cartoline.`, 
+    intro: `Il Regno Unito nasconde una natura che sorprende chi arriva aspettandosi solo città e pioggia. Dalle colonie di sule più grandi d'Europa agli arcipelaghi remoti dove il sole d'estate non tramonta mai, dai boschi di giacinti selvatici — metà della popolazione mondiale intera — ai dark sky parks dove la Via Lattea è visibile a occhio nudo: c'è una natura ancora vera, accessibile, e straordinariamente varia in uno spazio geografico piccolo. Quel che è meno noto è che il Regno Unito è all'avanguardia in Europa nel 'rewilding': specie estinte tornano, ecosistemi si ricostruiscono, e il paesaggio cambia a velocità visibile. Chi arriva con spirito curioso, non trova solo cartoline.`, 
     items: [ 
-    {
-      icon: `🌊`,
-      name: `Giant's Causeway`,
-      desc: `Sessantamilioni di anni fa un'eruzione vulcanica ha prodotto, raffreddandosi lentamente, circa 40.000 colonne di basalto esagonali perfette — come se la natura avesse progettato un pavimento. Il risultato è un paesaggio così preciso da sembrare costruito a mano, e invece è puramente geologico. Patrimonio UNESCO dal 1986. D'estate è affollato: la versione migliore si vive all'alba, con la luce radente sulle colonne e il rumore dell'Atlantico come unica colonna sonora.`,
-      note: `Percorri il Causeway Coastal Route in auto da Ballycastle a Bushmills: è uno dei tratti costieri più drammatici d'Europa, quasi sconosciuto ai non-britannici. A pochi km si trova Carrick-a-Rede, un ponte di corda sospeso su un precipizio di 30 metri — prenotazione obbligatoria online.`,
-      tags: [`#PatrimonioUnesco`, `#MeravigliaGeologia`, `#DaCartolina`, `#Iconico`],
-    },
     {
       icon: `🦅`,
       name: `St Kilda`,
@@ -10092,7 +10087,7 @@ Carte di credito accettate nelle città, ma portare contanti. WhatsApp chiamate 
       icon: `🦅`,
       name: `Red Kite nel Galles`,
       desc: `Uno dei più grandi successi di rewilding europeo: il nibbio reale era estinto in Inghilterra e Scozia, e ridotto a poche decine di coppie in Galles. Oggi migliaia sorvolano il mid-Wales. A Rhayader, nel cuore del Galles rurale, si radunano ogni pomeriggio a centinaia attorno ai feeding station — uno spettacolo di volo acrobatico garantito, non una questione di fortuna. Vedere decine di grandi rapaci in volo ravvicinato è qualcosa che non si dimentica facilmente.`,
-      note: `Il Red Kite Feeding Centre di Gigrin Farm (Rhayader) è gestito dalla stessa famiglia da generazioni. La sessione del pomeriggio (14:00 in inverno, 15:00 in estate) è quella più densa. Da lì, un'ora d'auto porta alle Elan Valley, un sistema di bacini artificiali vittoriani in una valle spettacolare — quasi ignota al turismo internazionale.`,
+      note: `Il Red Kite Feeding Centre di Gigrin Farm (Rhayader) è gestito dalla stessa famiglia da generazioni. La sessione del pomeriggio (14:00 in inverno, 15:00 in estate) è quella più affascinante. Da lì, un'ora d'auto porta alle Elan Valley, un sistema di bacini artificiali vittoriani in una valle spettacolare — quasi ignota al turismo internazionale.`,
       tags: [`#AvvistamentoAnimali`, `#Wildlife`, `#EsperienzaUnica`],
     },
     {
@@ -10105,9 +10100,9 @@ Carte di credito accettate nelle città, ma portare contanti. WhatsApp chiamate 
     {
       icon: `🌊`,
       name: `Farne Islands`,
-      desc: `A soli 15 minuti di barca da Seahouses nel Northumberland, queste isolette basse ospitano uno dei migliori spettacoli wildlife marini del nord Europa: foche grigie curiosissime che vengono a interagire spontaneamente con i kayak, colonie di pulcinella di mare (puffin) a portata di fotocamera, cormorani e sterne artiche nidificanti. L'esperienza in kayak è accessibile a tutti i livelli e porta dentro il paesaggio in modo che le barche non permettono.`,
+      desc: `A soli 15 minuti di barca da Seahouses nel Northumberland, queste isolette basse ospitano uno dei migliori spettacoli di animali selvatici marini del nord Europa: foche grigie curiosissime che vengono a interagire spontaneamente con i kayak, colonie di pulcinella di mare (puffin) a portata di fotocamera, cormorani e sterne artiche nidificanti. L'esperienza in kayak è accessibile a tutti i livelli e porta dentro il paesaggio in modo che le barche non permettono.`,
       note: `Le foche partoriscono in autunno (ottobre-novembre): il periodo migliore per vederle con i cuccioli, meno conosciuto del picco estivo. L'operatore Farne Island Kayaking offre tour guidati con guide marine certificate. Le sterne artiche proteggono i nidi in modo aggressivo in estate: cappello obbligatorio.`,
-      tags: [`#Snorkeling`, `#KayakAdventure`, `#Wildlife`, `#AvvistamentoAnimali`, `#Mare`, `#EsperienzaUnica`],
+      tags: [`#KayakAdventure`, `#Wildlife`, `#AvvistamentoAnimali`, `#Mare`, `#EsperienzaUnica`],
     },
     {
       icon: `🌌`,
@@ -10166,14 +10161,14 @@ Carte di credito accettate nelle città, ma portare contanti. WhatsApp chiamate 
     {
       icon: `🪨`,
       name: `Stonehenge — e il paesaggio che nessuno racconta`,
-      desc: `Il monumento megalitico preistorico più iconico del mondo. La sua funzione astronomica e rituale resta in parte misteriosa, e la capacità di colpire chi lo visita — indipendentemente dalla preparazione culturale — è un fatto documentato da secoli di testimonianze. Quello che però quasi nessuna guida dice è che Stonehenge è solo la punta visibile di un paesaggio sacro neolitico molto più vasto: tumuli, fossati, viali cerimoniali si estendono per km intorno.`,
+      desc: `Il monumento megalitico preistorico più iconico del mondo. La sua funzione astronomica e rituale resta in parte misteriosa, e la capacità di colpire chi lo visita — indipendentemente dalla preparazione culturale — è un fatto documentato da secoli di testimonianze. Quello che però in pochi dicono è che Stonehenge è solo la punta visibile di un paesaggio sacro neolitico molto più vasto: tumuli, fossati, viali cerimoniali si estendono per km intorno.`,
       note: `Prenotare l'accesso all'alba o al tramonto (Stone Circle Access): permette di entrare nel cerchio quando è chiuso al pubblico generale, toccare le pietre, vivere il sito in silenzio. I posti sono limitatissimi — prenotare mesi prima su english-heritage.org.uk. Aveli (a 3 km) è un cerchio di pietre ancora più grande, quasi senza visitatori, con un piccolo museo eccellente.`,
       tags: [`#PatrimonioUnesco`, `#sitoarcheologico`],
     },
     {
       icon: `🎨`,
       name: `Tate Modern — arte contemporanea nella centrale elettrica`,
-      desc: `Il museo nazionale britannico di arte moderna e contemporanea occupa la ex-centrale elettrica di Bankside sul Tamigi: uno degli adattamenti architettonici più riusciti del XX secolo. La Turbine Hall — alta 35 metri, lunga 155 — ospita installazioni site-specific create appositamente da artisti di primo piano. La collezione permanente copre da Cézanne a Matisse, Rothko, Pollock e Warhol. Ingresso gratuito alle collezioni permanenti.`,
+      desc: `Il museo nazionale britannico di arte moderna e contemporanea occupa la ex-centrale elettrica di Bankside sul Tamigi: uno degli adattamenti architettonici più riusciti del XX secolo. La Turbine Hall — alta 35 metri, lunga 155 — ospita installazioni create appositamente da artisti di primo piano. La collezione permanente copre da Cézanne a Matisse, Rothko, Pollock e Warhol. Ingresso gratuito alle collezioni permanenti.`,
       note: `Le installazioni della Turbine Hall — uno spazio senza equivalenti al mondo — cambiano ogni anno e sono spesso le opere più discusse nell'arte contemporanea globale. Verificare cosa è in mostra al momento della visita: può determinare l'intera esperienza. La terrazza al 10° piano offre una delle migliori viste gratuite su Londra.`,
       tags: [`#museiegallerie`, `#installazione`],
     },
@@ -10195,13 +10190,13 @@ Carte di credito accettate nelle città, ma portare contanti. WhatsApp chiamate 
       icon: `🌿`,
       name: `Studley Royal e l'abbazia di Fountains`,
       desc: `Un giardino georgiano d'acqua — con laghi, cascate, templi classici e viali alberati — costruito nel XVIII secolo attorno alle rovine di un'abbazia cistercense del XII: il risultato è un'opera d'arte totale in cui paesaggio, architettura e rovina si combinano in modo irripetibile. Patrimonio UNESCO, relativamente poco frequentato rispetto alla sua bellezza eccezionale.`,
-      note: `Arrivare all'apertura (10:00) per avere i viali quasi per sé. La luce autunnale trasforma il sito in qualcosa di straordinario — ottobre è il mese migliore. Il percorso completo richiede 3-4 ore: portare scarpe adatte e picnic, i servizi di ristorazione sono limitati.`,
+      note: `Arrivare all'apertura (10:00) per avere i viali quasi per sé. La luce autunnale trasforma il sito in qualcosa di straordinario — ottobre è il mese migliore. Il percorso completo richiede 3-4 ore: portare scarpe adatte e attrezzatura da picnic, i servizi di ristorazione sono limitati.`,
       tags: [`#PatrimonioUnesco`, `#giardini`, `#arteearchitetturasacra`],
     },
   ]
     },
   cultura: { 
-    intro: `La cultura britannica è stratificata, contraddittoria e meravigliosamente viva. E' un insieme di pratiche quotidiane ancora in uso — campane suonate matematicamente ogni domenica mattina, muretti a secco costruiti senza malta nel Peak District, tombole trasformate in rave notturni. È anche la cultura che ha generato i Beatles, Shakespeare, la BBC, il fish & chips, e il concetto stesso di pub come istituzione sociale. Quel che spesso sfugge al visitatore è la profondità regionale: Galles, Scozia, Irlanda del Nord e le diverse Inghilterre sono paesi culturali distinti, con lingue, festival e identità che non si sovrappongono. Vale la pena scegliere un pezzo di questo mosaico e immergersi davvero, invece di sfiorare tutto.`, 
+    intro: `La cultura britannica è stratificata, contraddittoria e meravigliosamente viva. E' un insieme di pratiche quotidiane ancora in uso — campane suonate matematicamente ogni domenica mattina, muretti a secco costruiti senza malta nel Peak District, tombole trasformate in rave notturni. È anche la cultura che ha generato i Beatles, Shakespeare, la BBC, il fish & chips, e il concetto stesso di pub come istituzione sociale. Quel che spesso sfugge al visitatore è la profondità regionale: Galles, Scozia, Irlanda del Nord e Inghilterra sono paesi culturali distinti, con lingue, festival e identità che non si sovrappongono. Vale la pena scegliere un pezzo di questo mosaico e immergersi davvero, invece di sfiorare tutto.`, 
     items: [ 
     {
       icon: `🔥`,
@@ -10220,7 +10215,7 @@ Carte di credito accettate nelle città, ma portare contanti. WhatsApp chiamate 
     {
       icon: `🏴󠁧󠁢󠁷󠁬󠁳󠁿`,
       name: `Eisteddfod Nazionale del Galles`,
-      desc: `Ogni anno nella prima settimana di agosto, migliaia di gallesi si riuniscono per la più grande celebrazione delle arti e della cultura in lingua gallese. Le cerimonie bardiche — dove l'Archidruido in vesti bianche presiede all'incoronazione del poeta vincitore, tra druidi in blu e verde — sono tra gli spettacoli rituali più singolari d'Europa. Non è folklore per turisti: è il grande rituale annuale di affermazione identitaria di un popolo che ha resistito per secoli all'assimilazione.`,
+      desc: `Ogni anno nella prima settimana di agosto, migliaia di gallesi si riuniscono per la più grande celebrazione delle arti e della cultura in lingua gallese. Le cerimonie bardiche — dove l'Archidruido in vesti bianche presiede all'incoronazione del poeta vincitore, tra druidi in blu e verde — sono tra gli spettacoli rituali più singolari d'Europa. Non è folclore per turisti: è il grande rituale annuale di affermazione identitaria di un popolo che ha resistito per secoli all'assimilazione.`,
       note: `Traduzione simultanea in inglese disponibile per le cerimonie principali — l'Eisteddfod è in gallese al 95%, ma questo non preclude la partecipazione. Il Maes (il grande campo festival) è aperto a tutti. I biglietti giornalieri sono economici. Cambia sede ogni anno, alternando tra nord e sud del Galles.`,
       tags: [`#ritiecerimonie`, `#teatro`, `#danza`, `#raccontipopolari`, `#tradizionilocali`],
     },
@@ -10267,21 +10262,21 @@ Carte di credito accettate nelle città, ma portare contanti. WhatsApp chiamate 
     {
       icon: `♨️`,
       name: `Thermae Bath Spa — le terme romane di oggi`,
-      desc: `Il Thermae Bath Spa è l'unico stabilimento termale all'aperto del Regno Unito alimentato da acque geotermali naturali — le stesse sorgenti calde usate dai Romani duemila anni fa, ancora attive. La rooftop pool panoramica è il cuore dell'esperienza: ci si nuota immersi nell'acqua termale tiepida mentre ci si affaccia sui tetti georgiani di Bath, a qualsiasi stagione. Un'esperienza fisicamente e visivamente irripetibile in Europa.`,
-      note: `Prenotare con settimane d'anticipo nei weekend — i turni sono di 2 ore e si esauriscono rapidamente. Il momento migliore è il primo turno del mattino (in apertura) oppure la sera quando la luce cambia. Abbinare con la visita ai Roman Baths (sito arqueologico adiacente, a pagamento): vedere le terme romane originali e poi usare l'acqua della stessa sorgente è un'esperienza fuori dal tempo.`,
+      desc: `Il Thermae Bath Spa è l'unico stabilimento termale all'aperto del Regno Unito alimentato da acque geotermali naturali — le stesse sorgenti calde usate dai Romani duemila anni fa, ancora attive. La rooftop pool panoramica è il cuore dell'esperienza: ci si nuota immersi nell'acqua termale tiepida mentre ci si affaccia sui tetti georgiani di Bath, in qualsiasi stagione. Un'esperienza fisicamente e visivamente irripetibile in Europa.`,
+      note: `Prenotare con settimane d'anticipo nei weekend — i turni sono di 2 ore e si esauriscono rapidamente. Il momento migliore è il primo turno del mattino (in apertura) oppure la sera quando la luce cambia. Abbinare con la visita ai Roman Baths (sito archeologico adiacente, a pagamento): vedere le terme romane originali e poi usare l'acqua della stessa sorgente è un'esperienza fuori dal tempo.`,
       tags: [`#benessere`, `#esperienzaunica`, `#città`],
     },
     {
       icon: `🌊`,
-      name: `Wild swimming nelle cove della Cornovaglia`,
-      desc: `Le cove della Cornovaglia — Kynance, Porthcurno, Carne Beach — hanno acque turchesi che smentiscono ogni stereotipo sul clima britannico. Il wild swimming, nuotare liberamente in mare aperto senza attrezzatura, è un fenomeno culturale esploso dopo la pandemia e ora profondamente radicato nella cultura britannica. Non è snorkeling o surf: è immergersi in un'acqua fredda e cristallina in calette raggiungibili solo a piedi, con la sensazione di possedere un angolo di mare tutto per sé.`,
+      name: `Wild swimming nelle baie della Cornovaglia`,
+      desc: `Le baie della Cornovaglia — Kynance, Porthcurno, Carne Beach — hanno acque turchesi che smentiscono ogni stereotipo sul clima britannico. Il wild swimming, nuotare liberamente in mare aperto senza attrezzatura, è un fenomeno culturale esploso dopo la pandemia e ora profondamente radicato nella cultura britannica. Non è snorkeling o surf: è immergersi in un'acqua fredda e cristallina in calette raggiungibili solo a piedi, con la sensazione di possedere un angolo di mare tutto per sé.`,
       note: `L'acqua della Cornovaglia è più calda di quanto ci si aspetti in estate (16-18°C), ma una muta di neoprene sottile (2mm) prolunga il piacere enormemente. Kynance Cove è raggiungibile solo a piedi (30 minuti dall'auto): arrivare prima delle 9:00 per averla quasi vuota. L'app Outdoor Swimmer mappa i migliori spot con informazioni su correnti e sicurezza.`,
       tags: [`#mare`, `#natura`, `#esperienzaunica`, `#sport`],
     },
     {
       icon: `🧖`,
       name: `Float therapy — galleggiare nel silenzio`,
-      desc: `Vasche di acqua salata densa come il Mar Morto, in silenzio e oscurità totali: il corpo galleggia senza sforzo per 60-90 minuti, senza stimoli visivi o sonori. L'effetto sul sistema nervoso è paragonabile a ore di meditazione profonda — molti lo descrivono come "la cosa più strana che abbia mai fatto, e tornerò domani". Il UK è il mercato europeo più maturo per questa pratica, con centri specializzati di alto livello nelle principali città.`,
+      desc: `Vasche di acqua salata densa come il Mar Morto, in silenzio e oscurità totali: il corpo galleggia senza sforzo per 60-90 minuti, senza stimoli visivi o sonori. L'effetto sul sistema nervoso è paragonabile a ore di meditazione profonda — molti lo descrivono come 'la cosa più strana che abbia mai fatto, e tornerò domani'. Il UK è il mercato europeo più maturo per questa pratica, con centri specializzati di alto livello nelle principali città.`,
       note: `Floatworks a Londra (Vauxhall) è uno dei centri meglio attrezzati in Europa: vasche di nuova generazione, staff formato, buon sistema di onboarding per i principianti. La prima sessione può essere disorientante i primi 10 minuti — normale. Controllare le avvertenze. Sessione da 90 minuti raccomandata per la prima volta.`,
       tags: [`#benessere`, `#esperienzaunica`, `#città`],
     },
