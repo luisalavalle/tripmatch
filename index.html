@@ -13594,6 +13594,33 @@ function buildCountryItem(country, idx) {
     </div>
   `;
 
+  const panel = document.createElement('div');
+  panel.className = 'country-panel';
+  const inner = document.createElement('div');
+  inner.className = 'panel-inner';
+
+  inner.innerHTML = `
+    <p class="country-tagline">${country.tagline}</p>
+    <div class="panel-nav-wrapper">
+    <nav class="panel-nav">
+      <div class="panel-nav-item active" data-tab="paese">Il Paese</div>
+      <div class="panel-nav-item" data-tab="natura">Natura <span class="count">${country.natura.items.length}</span></div>
+      <div class="panel-nav-item" data-tab="arte">Arte <span class="count">${country.arte.items.length}</span></div>
+      <div class="panel-nav-item" data-tab="cultura">Cultura <span class="count">${country.cultura.items.length}</span></div>
+      <div class="panel-nav-item" data-tab="relax">Relax &amp; Divertimenti <span class="count">${country.relax.items.length}</span></div>
+      <div class="panel-nav-item" data-tab="mesi">Mese x Mese</div>
+    </nav>
+    <span class="panel-nav-more">›</span>
+    </div>
+    <div id="${country.id}-tabs"></div>
+  `;
+
+  panel.appendChild(inner);
+
+  item.appendChild(header);
+  item.appendChild(panel);
+
+  // Click handler registered after panel is in the DOM so scrollHeight is reliable on mobile
   header.addEventListener('click', () => {
     const isOpen = item.classList.contains('open');
     if (!isOpen) {
@@ -13624,32 +13651,6 @@ function buildCountryItem(country, idx) {
     }
     track(isOpen ? 'paese_chiuso' : 'paese_aperto', { paese: country.name, area: country.area });
   });
-
-  const panel = document.createElement('div');
-  panel.className = 'country-panel';
-  const inner = document.createElement('div');
-  inner.className = 'panel-inner';
-
-  inner.innerHTML = `
-    <p class="country-tagline">${country.tagline}</p>
-    <div class="panel-nav-wrapper">
-    <nav class="panel-nav">
-      <div class="panel-nav-item active" data-tab="paese">Il Paese</div>
-      <div class="panel-nav-item" data-tab="natura">Natura <span class="count">${country.natura.items.length}</span></div>
-      <div class="panel-nav-item" data-tab="arte">Arte <span class="count">${country.arte.items.length}</span></div>
-      <div class="panel-nav-item" data-tab="cultura">Cultura <span class="count">${country.cultura.items.length}</span></div>
-      <div class="panel-nav-item" data-tab="relax">Relax &amp; Divertimenti <span class="count">${country.relax.items.length}</span></div>
-      <div class="panel-nav-item" data-tab="mesi">Mese x Mese</div>
-    </nav>
-    <span class="panel-nav-more">›</span>
-    </div>
-    <div id="${country.id}-tabs"></div>
-  `;
-
-  panel.appendChild(inner);
-
-  item.appendChild(header);
-  item.appendChild(panel);
 
   setTimeout(() => {
     const tabsContainer = inner.querySelector(`#${country.id}-tabs`);
