@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🇱🇹 Lituania — Itinerario 7 Giorni</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XKB4SBHSSC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XKB4SBHSSC');
+</script>
+
+<style>
+  :root {
+    --amber: #C8861A;
+    --amber-light: #F5B942;
+    --forest: #1E3A2F;
+    --forest-mid: #2D5240;
+    --forest-light: #3D6B52;
+    --cream: #F7F2E8;
+    --cream-dark: #EDE5D0;
+    --text: #1A1A18;
+    --text-soft: #4A4A42;
+    --fire: #E8521A;
+    --parchment: #FAF6EE;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--parchment);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--forest);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(200,134,26,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 20%, rgba(232,82,26,0.1) 0%, transparent 50%);
+  }
+
+  .hero-flames {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to top, rgba(232,82,26,0.3), transparent);
+    pointer-events: none;
+  }
+
+  .hero-flag {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--cream);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+
+  .hero h1 span {
+    color: var(--amber-light);
+    font-style: italic;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: rgba(247,242,232,0.7);
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .hero-tag {
+    background: rgba(247,242,232,0.1);
+    border: 1px solid rgba(247,242,232,0.2);
+    color: var(--cream);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    position: relative;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--amber-light);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: rgba(247,242,232,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* INTRO */
+  .intro {
+    background: var(--cream);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--cream-dark);
+  }
+
+  .intro-inner {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--forest);
+    margin-bottom: 1rem;
+  }
+
+  .intro p {
+    color: var(--text-soft);
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  .route-arrow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: center;
+  }
+
+  .route-city {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 0.4rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .route-sep {
+    color: var(--amber);
+    font-size: 1.2rem;
+  }
+
+  /* DAYS */
+  .days-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--forest);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-title span {
+    color: var(--amber);
+  }
+
+  .day-card {
+    background: white;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(30,58,47,0.08);
+    border: 1px solid var(--cream-dark);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .day-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(30,58,47,0.15);
+  }
+
+  .day-header {
+    background: var(--forest);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .day-header.special {
+    background: linear-gradient(135deg, var(--fire), var(--amber));
+  }
+
+  .day-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: rgba(247,242,232,0.2);
+    font-weight: 700;
+    line-height: 1;
+    min-width: 60px;
+  }
+
+  .day-info {
+    flex: 1;
+  }
+
+  .day-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(247,242,232,0.5);
+    margin-bottom: 0.25rem;
+  }
+
+  .day-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--cream);
+  }
+
+  .day-subtitle {
+    font-size: 0.85rem;
+    color: rgba(247,242,232,0.6);
+    margin-top: 0.2rem;
+    font-weight: 300;
+  }
+
+  .day-toggle {
+    color: rgba(247,242,232,0.5);
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+  }
+
+  .day-toggle.open {
+    transform: rotate(180deg);
+  }
+
+  .day-body {
+    display: none;
+    padding: 2rem;
+  }
+
+  .day-body.open {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.4rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--forest-light), var(--cream-dark));
+  }
+
+  .tl-item {
+    position: relative;
+    margin-bottom: 1.75rem;
+    padding-left: 1.5rem;
+  }
+
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -1.65rem;
+    top: 0.4rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--forest);
+    border: 2px solid var(--cream);
+    box-shadow: 0 0 0 2px var(--forest-light);
+  }
+
+  .tl-item.highlight::before {
+    background: var(--fire);
+    box-shadow: 0 0 0 3px rgba(232,82,26,0.3);
+    width: 14px;
+    height: 14px;
+    left: -1.75rem;
+    top: 0.2rem;
+  }
+
+  .tl-time {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--amber);
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.05em;
+  }
+
+  .tl-name {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+
+  .tl-note {
+    font-size: 0.875rem;
+    color: var(--text-soft);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .tl-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+  }
+
+  .tl-tag {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-weight: 500;
+  }
+
+  .tag-free { background: #E8F5E9; color: #2E7D32; }
+  .tag-food { background: #FFF3E0; color: #E65100; }
+  .tag-museum { background: #E3F2FD; color: #1565C0; }
+  .tag-nature { background: #F1F8E9; color: #33691E; }
+  .tag-transport { background: #F3E5F5; color: #6A1B9A; }
+  .tag-special { background: #FFF8E1; color: #F57F17; }
+  .tag-sleep { background: #FCE4EC; color: #880E4F; }
+
+  /* DAY FOOTER */
+  .day-footer {
+    background: var(--cream);
+    padding: 1rem 2rem;
+    border-top: 1px solid var(--cream-dark);
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .day-footer-item {
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .day-footer-item strong {
+    color: var(--forest);
+  }
+
+  /* TIPS */
+  .tips-section {
+    background: var(--forest);
+    padding: 4rem 2rem;
+    color: var(--cream);
+  }
+
+  .tips-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .tips-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--amber-light);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .tip-card {
+    background: rgba(247,242,232,0.06);
+    border: 1px solid rgba(247,242,232,0.1);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: background 0.3s;
+  }
+
+  .tip-card:hover {
+    background: rgba(247,242,232,0.1);
+  }
+
+  .tip-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tip-title {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--amber-light);
+    font-size: 0.95rem;
+  }
+
+  .tip-text {
+    font-size: 0.85rem;
+    color: rgba(247,242,232,0.7);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* FOOD */
+  .food-section {
+    padding: 4rem 2rem;
+    background: var(--cream);
+  }
+
+  .food-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .food-card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    border: 1px solid var(--cream-dark);
+    text-align: center;
+    transition: transform 0.2s;
+  }
+
+  .food-card:hover { transform: translateY(-3px); }
+
+  .food-emoji { font-size: 2rem; margin-bottom: 0.5rem; }
+
+  .food-name {
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+    color: var(--forest);
+  }
+
+  .food-where {
+    font-size: 0.78rem;
+    color: var(--text-soft);
+    font-weight: 300;
+  }
+
+  .food-price {
+    display: inline-block;
+    margin-top: 0.5rem;
+    background: var(--forest);
+    color: var(--cream);
+    font-size: 0.72rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--text);
+    color: rgba(247,242,232,0.5);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  footer span { color: var(--amber-light); }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .hero-stats { gap: 1.5rem; }
+    .day-header { padding: 1rem 1.25rem; }
+    .day-body { padding: 1.25rem; }
+    .timeline { padding-left: 1.5rem; }
+  }
+
+  /* MAP */
+  .map-section {
+    background: var(--forest);
+    padding: 4rem 2rem;
+  }
+
+  .map-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .map-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--amber-light);
+    text-align: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .map-subtitle {
+    text-align: center;
+    color: rgba(247,242,232,0.6);
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  #map {
+    width: 100%;
+    height: 520px;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid rgba(247,242,232,0.1);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  }
+
+  .map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: rgba(247,242,232,0.7);
+  }
+
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-flames"></div>
+  <div class="hero-flag">🇱🇹</div>
+  <h1>Lituania<br><span>in 7 giorni</span></h1>
+  <p class="hero-subtitle">Un viaggio tra folklore, storia e la notte più magica dell'anno</p>
+  <div class="hero-tags">
+    <span class="hero-tag">🔥 Joninės · 23 giugno</span>
+    <span class="hero-tag">👨‍👧‍👦 3 persone</span>
+    <span class="hero-tag">🚌 Solo mezzi pubblici</span>
+    <span class="hero-tag">🏰 4 città</span>
+    <span class="hero-tag">🌊 Mar Baltico</span>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">7</span>
+      <span class="stat-label">Giorni</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">22+</span>
+      <span class="stat-label">Attrazioni</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">4</span>
+      <span class="stat-label">Città</span>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="intro-inner">
+    <h2>Il percorso</h2>
+    <p>Un loop perfetto: si parte e si torna a Vilnius, senza mai tornare indietro. Il cuore del viaggio è la notte della <strong>Joninės a Kernavė</strong> — la festa pagana di San Giovanni, la più autentica d'Europa. Attorno a quella notte, tutto il resto si incastra.</p>
+    <div class="route-arrow">
+      <span class="route-city">Vilnius</span>
+      <span class="route-sep">→</span>
+      <span class="route-city">Trakai</span>
+      <span class="route-sep">→</span>
+      <span class="route-city">Kernavė</span>
+      <span class="route-sep">→</span>
+      <span class="route-city">Rumšiškės</span>
+      <span class="route-sep">→</span>
+      <span class="route-city">Kaunas</span>
+      <span class="route-sep">→</span>
+      <span class="route-city">Klaipėda</span>
+      <span class="route-sep">→</span>
+      <span class="route-city">Nida</span>
+      <span class="route-sep">→</span>
+      <span class="route-city">Šiauliai</span>
+      <span class="route-sep">→</span>
+      <span class="route-city">Vilnius</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section">
+  <div class="map-inner">
+    <h2 class="map-title">🗺️ La mappa del viaggio</h2>
+    <p class="map-subtitle">Clicca sui marker per vedere i dettagli di ogni tappa</p>
+    <div id="map"></div>
+    <div class="map-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#4A90D9"></div> Gg. 1–2 Vilnius</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#E8521A"></div> Gg. 3 Trakai + Kernavė 🔥</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#8B5CF6"></div> Gg. 4 Rumšiškės + Kaunas</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#10B981"></div> Gg. 5 Klaipėda + Spit</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#F59E0B"></div> Gg. 6 Šiauliai</div>
+    </div>
+  </div>
+</section>
+
+<!-- DAYS -->
+<div class="days-container">
+  <h2 class="section-title">L'<span>itinerario</span></h2>
+
+  <!-- GIORNO 1 -->
+  <div class="day-card reveal">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">01</div>
+      <div class="day-info">
+        <div class="day-label">Giorno 1 · Vilnius</div>
+        <div class="day-title">Primo impatto</div>
+        <div class="day-subtitle">Mercato · Old Town · Užupis · Sant'Anna · Bernardine</div>
+      </div>
+      <div class="day-toggle">▼</div>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">08:00</div>
+          <div class="tl-name">🛒 Mercato Halės</div>
+          <div class="tl-note">Colazione autentica tra i locali. Formaggi, miele, succhi freschi, salumi affumicati. Pylimo g. 58 — chiuso il lunedì.</div>
+          <div class="tl-tags"><span class="tl-tag tag-food">Cibo</span><span class="tl-tag tag-free">Gratuito</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">09:15</div>
+          <div class="tl-name">📚 Via Literatų</div>
+          <div class="tl-note">Galleria d'arte all'aperto dedicata agli scrittori lituani: targhe in metallo, legno e vetro sui muri di un vicolo nascosto.</div>
+          <div class="tl-tags"><span class="tl-tag tag-free">Gratuito</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">09:45</div>
+          <div class="tl-name">🏰 Città Vecchia di Vilnius</div>
+          <div class="tl-note">La Old Town UNESCO più grande del Nord Europa. Perdetevi nei vicoli, corteggiate i cortili nascosti, scoprite le chiese gotiche.</div>
+          <div class="tl-tags"><span class="tl-tag tag-free">Gratuito</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">11:30</div>
+          <div class="tl-name">🎨 Repubblica di Užupis</div>
+          <div class="tl-note">La repubblica degli artisti con la propria costituzione, presidente e bandiera. Fatevi timbrare il passaporto al confine! Paupio g. 3A.</div>
+          <div class="tl-tags"><span class="tl-tag tag-free">Gratuito</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">13:30</div>
+          <div class="tl-name">🍺 Pranzo da Šnekutis</div>
+          <div class="tl-note">Pub autentico, pieno di locali. Kepta duona (pane fritto all'aglio), zuppa fredda di barbabietola, pancake di patate. Šv. Mikalojaus g. 15.</div>
+          <div class="tl-tags"><span class="tl-tag tag-food">€6–12 p.p.</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">15:00</div>
+          <div class="tl-name">⛪ Chiesa di Sant'Anna</div>
+          <div class="tl-note">Il gioiello gotico di Vilnius. Napoleone voleva portarla a Parigi sul palmo della mano. Foto obbligatoria! Maironio g. 8.</div>
+          <div class="tl-tags"><span class="tl-tag tag-free">Gratuito</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">15:45</div>
+          <div class="tl-name">🌿 Giardini Bernardine</div>
+          <div class="tl-note">Il parco più antico di Vilnius (1469). Fontane musicali, roseto e la quercia più vecchia della città — oltre 300 anni.</div>
+          <div class="tl-tags"><span class="tl-tag tag-free">Gratuito</span><span class="tl-tag tag-nature">Natura</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">19:00</div>
+          <div class="tl-name">🥟 Cena da Etno Dvaras</div>
+          <div class="tl-note">Cantina medievale, primo ristorante certificato dal Patrimonio Culinario Lituano. Cepelinai, zuppa di barbabietola, birra lituana. Pilies g. 16.</div>
+          <div class="tl-tags"><span class="tl-tag tag-food">€8–15 p.p.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer">
+      <div class="day-footer-item">🛏️ <strong>Notte:</strong> Vilnius</div>
+      <div class="day-footer-item">🚶 <strong>Tutto a piedi</strong></div>
+      <div class="day-footer-item">💡 <strong>Tip:</strong> Il Mercato è chiuso il lunedì</div>
+    </div>
+  </div>
+
+  <!-- GIORNO 2 -->
+  <div class="day-card reveal">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">02</div>
+      <div class="day-info">
+        <div class="day-label">Giorno 2 · Vilnius</div>
+        <div class="day-title">Storia e simboli</div>
+        <div class="day-subtitle">Cattedrale · Palazzo dei Granduchi · Gediminas · Porta dell'Alba</div>
+      </div>
+      <div class="day-toggle">▼</div>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">09:00</div>
+          <div class="tl-name">⛪ Piazza della Cattedrale</div>
+          <div class="tl-note">Il cuore simbolico della Lituania. Cercate la mattonella "Stebuklas" — se ci girate sopra esprimendo un desiderio, si avvera. Ci credono davvero.</div>
+          <div class="tl-tags"><span class="tl-tag tag-free">Gratuito</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">09:30</div>
+          <div class="tl-name">🏛️ Palazzo dei Granduchi di Lituania</div>
+          <div class="tl-note">Il luogo di nascita di Vilnius — primo insediamento umano IV-VIII sec. Fate i percorsi 1 e 2. Audioguida inglese €1. Chiuso il lunedì! Katedros a. 4.</div>
+          <div class="tl-tags"><span class="tl-tag tag-museum">~€8 adulti</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">12:00</div>
+          <div class="tl-name">🗼 Torre di Gediminas</div>
+          <div class="tl-note">Salite con la funicolare (€2 A/R) o a piedi (10 min, un po' ripido). Vista panoramica a 360° su Vilnius dall'unico bastione del castello medievale rimasto. Arsenalo g. 5.</div>
+          <div class="tl-tags"><span class="tl-tag tag-museum">~€6 adulti</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">13:30</div>
+          <div class="tl-name">🥣 Pranzo da Senolių Tradicija</div>
+          <div class="tl-note">La mensa dei locali e degli studenti. Zuppa €1, piatto principale €3. Il posto più economico e autentico di Vilnius in assoluto. Gedimino pr. 17.</div>
+          <div class="tl-tags"><span class="tl-tag tag-food">€3–6 p.p.</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">14:30</div>
+          <div class="tl-name">🚪 Porta dell'Alba (Aušros Vartai)</div>
+          <div class="tl-note">L'unica delle 9 porte originali superstite (1522). Salite nella cappella: l'icona della Madonna attira pellegrini da tutto il mondo. Candele accese giorno e notte. Aušros Vartų g. 14.</div>
+          <div class="tl-tags"><span class="tl-tag tag-free">Gratuito</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">19:00</div>
+          <div class="tl-name">🍖 Cena leggera</div>
+          <div class="tl-note">Riposatevi! Domani sera è la notte più lunga dell'anno. Mangiate qualcosa di sostanzioso ma non troppo pesante — ne avrete bisogno.</div>
+          <div class="tl-tags"><span class="tl-tag tag-food">Cibo</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer">
+      <div class="day-footer-item">🛏️ <strong>Notte:</strong> Vilnius</div>
+      <div class="day-footer-item">🚶 <strong>Tutto a piedi</strong></div>
+      <div class="day-footer-item">⚠️ <strong>Palazzo chiuso il lunedì!</strong></div>
+    </div>
+  </div>
+
+  <!-- GIORNO 3 -->
+  <div class="day-card reveal">
+    <div class="day-header special" onclick="toggleDay(this)">
+      <div class="day-number">03</div>
+      <div class="day-info">
+        <div class="day-label">Giorno 3 · 23 giugno · DA FISSARE</div>
+        <div class="day-title">🔥 La notte più magica</div>
+        <div class="day-subtitle">Trakai · Kibinai · Kernavė UNESCO · Joninės fino all'alba</div>
+      </div>
+      <div class="day-toggle">▼</div>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">10:00</div>
+          <div class="tl-name">🏰 Castello di Trakai</div>
+          <div class="tl-note">Treno da Vilnius (30 min, ~€2). Il castello medievale più bello del Baltico, su un'isola nel Lago Galvė. Arrivate appena apre per evitare le folle. Karaimų g. 43C.</div>
+          <div class="tl-tags"><span class="tl-tag tag-museum">~€10 adulti / €5 ragazzi</span><span class="tl-tag tag-transport">🚂 30 min</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">12:30</div>
+          <div class="tl-name">🥟 Kibinai sul lago</div>
+          <div class="tl-note">I pasticcini ripieni della comunità Karaim — specialità unica al mondo, solo a Trakai. Mangiateli seduti sul lungolago con vista sul castello. €2–3 a pezzo.</div>
+          <div class="tl-tags"><span class="tl-tag tag-food">€2–3 a pezzo</span></div>
+        </div>
+        <div class="tl-item highlight">
+          <div class="tl-time">19:00 → Alba (~04:30)</div>
+          <div class="tl-name">🔥 JONINĖS a Kernavė</div>
+          <div class="tl-note">La notte più magica dell'anno. Sito UNESCO, antica capitale medievale. Falò sui tumuli storici, corone di fiori, sutartinės (canti polifonici UNESCO), ricerca del fiore di felce nella foresta. La festa inizia al tramonto e dura TUTTA LA NOTTE. Portate coperte, giacca, e uno spirito avventuroso. Ingresso gratuito.</div>
+          <div class="tl-tags"><span class="tl-tag tag-special">🔥 Evento unico</span><span class="tl-tag tag-free">Gratuito</span><span class="tl-tag tag-transport">~40 min da Vilnius</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer">
+      <div class="day-footer-item">⚠️ <strong>Data fissa:</strong> 23 giugno</div>
+      <div class="day-footer-item">🛏️ <strong>Nessuna notte</strong> — si fa l'alba!</div>
+      <div class="day-footer-item">💡 <strong>Tip:</strong> Prenotate il taxi/bus ritorno in anticipo</div>
+    </div>
+  </div>
+
+  <!-- GIORNO 4 -->
+  <div class="day-card reveal">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">04</div>
+      <div class="day-info">
+        <div class="day-label">Giorno 4 · Rumšiškės + Kaunas</div>
+        <div class="day-title">La Lituania in miniatura</div>
+        <div class="day-subtitle">Museo all'aperto · Museo dei Diavoli · Kaunas Old Town</div>
+      </div>
+      <div class="day-toggle">▼</div>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">10:30</div>
+          <div class="tl-name">🏚️ Museo Etnografico di Rumšiškės</div>
+          <div class="tl-note">Bus Vilnius→Kaunas, scendete a Rumšiškės (~1h). Uno dei musei all'aperto più grandi d'Europa: 195 ettari, 150 edifici ricostruiti, la Lituania pre-industriale in miniatura. Scarpe comode obbligatorie! L. Lekavičiaus g. 2.</div>
+          <div class="tl-tags"><span class="tl-tag tag-museum">~€7 adulti</span><span class="tl-tag tag-transport">🚌 Bus</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">15:30</div>
+          <div class="tl-name">😈 Museo dei Diavoli — Kaunas</div>
+          <div class="tl-note">Bus a Kaunas (~30 min). 3.000 diavoli, streghe e creature soprannaturali da tutto il mondo su 3 piani. Tutt'altro che sinistro — è giocoso e folkloristico. I ragazzi impazziranno! V. Putvinskio g. 64. Chiuso il lunedì!</div>
+          <div class="tl-tags"><span class="tl-tag tag-museum">~€5</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">17:30</div>
+          <div class="tl-name">🏙️ Kaunas Old Town</div>
+          <div class="tl-note">Passeggiata nella seconda città della Lituania, ex capitale temporanea degli anni '20. Capitale Europea della Cultura 2022. Tappa al #KAUNAS sign per la foto!</div>
+          <div class="tl-tags"><span class="tl-tag tag-free">Gratuito</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">19:30</div>
+          <div class="tl-name">🥩 Cena da Bernelių Užeiga</div>
+          <div class="tl-note">Catena lituana popolarissima tra i locali. Stufato di maiale, cepelinai, gira fatta in casa (bevanda fermentata al pane). Atmosfera casalinga.</div>
+          <div class="tl-tags"><span class="tl-tag tag-food">€7–13 p.p.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer">
+      <div class="day-footer-item">🛏️ <strong>Notte:</strong> Kaunas</div>
+      <div class="day-footer-item">🚌 <strong>Bus Vilnius→Kaunas</strong> ~1h20</div>
+      <div class="day-footer-item">⚠️ <strong>Museo Diavoli chiuso lunedì!</strong></div>
+    </div>
+  </div>
+
+  <!-- GIORNO 5 -->
+  <div class="day-card reveal">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">05</div>
+      <div class="day-info">
+        <div class="day-label">Giorno 5 · Klaipėda + Curonian Spit</div>
+        <div class="day-title">Il Mare Baltico</div>
+        <div class="day-subtitle">Klaipėda · Traghetto · Collina delle Streghe · Dune di Nida</div>
+      </div>
+      <div class="day-toggle">▼</div>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">Mattina</div>
+          <div class="tl-name">🚌 Bus Kaunas → Klaipėda</div>
+          <div class="tl-note">~2 ore di bus. Arrivate a Klaipėda, terza città della Lituania, con architettura tedesca e porto sul Baltico.</div>
+          <div class="tl-tags"><span class="tl-tag tag-transport">🚌 ~2h</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">11:00</div>
+          <div class="tl-name">⛴️ Traghetto per la Curonian Spit</div>
+          <div class="tl-note">Il traghetto per l'isola parte ogni pochi minuti dal centro di Klaipėda. Pochi minuti di traversata. Dall'altra parte: un altro mondo.</div>
+          <div class="tl-tags"><span class="tl-tag tag-transport">⛴️ Traghetto</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">12:00</div>
+          <div class="tl-name">🧙‍♀️ Collina delle Streghe (Juodkrantė)</div>
+          <div class="tl-note">80 sculture folk in legno nella foresta: streghe, diavoli, giganti e personaggi del folklore lituano. Creato dal 1979 da artisti locali. Ingresso incluso nel ticket Curonian Spit. L. Rėzos g., Neringa.</div>
+          <div class="tl-tags"><span class="tl-tag tag-free">Incluso nel ticket</span><span class="tl-tag tag-nature">Natura</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">15:30</div>
+          <div class="tl-name">🏖️ Nida e le Grandi Dune</div>
+          <div class="tl-note">Le dune di sabbia più alte d'Europa (fino a 60m). Spiaggia baltica cristallina, pesce affumicato al mercatino locale, tramonto sulle dune. Paesaggio marziano e indimenticabile.</div>
+          <div class="tl-tags"><span class="tl-tag tag-nature">UNESCO</span><span class="tl-tag tag-food">Pesce locale</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer">
+      <div class="day-footer-item">🛏️ <strong>Notte:</strong> Nida o Klaipėda</div>
+      <div class="day-footer-item">💡 <strong>Tip:</strong> Ticket Curonian Spit ~€5 p.p.</div>
+      <div class="day-footer-item">🐟 <strong>Da assaggiare:</strong> pesce affumicato locale</div>
+    </div>
+  </div>
+
+  <!-- GIORNO 6 -->
+  <div class="day-card reveal">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">06</div>
+      <div class="day-info">
+        <div class="day-label">Giorno 6 · Šiauliai + Ritorno Vilnius</div>
+        <div class="day-title">La Collina delle Croci</div>
+        <div class="day-subtitle">200.000 croci · Simbolo della resistenza lituana · Ritorno a Vilnius</div>
+      </div>
+      <div class="day-toggle">▼</div>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">Mattina</div>
+          <div class="tl-name">🚌 Bus/Treno Klaipėda → Šiauliai</div>
+          <div class="tl-note">~2 ore. Šiauliai è la quarta città della Lituania. Da qui si raggiunge la Collina delle Croci in 20 minuti.</div>
+          <div class="tl-tags"><span class="tl-tag tag-transport">🚌 ~2h</span></div>
+        </div>
+        <div class="tl-item highlight">
+          <div class="tl-time">11:00</div>
+          <div class="tl-name">✝️ Collina delle Croci (Kryžių Kalnas)</div>
+          <div class="tl-note">Prendete un Bolt o noleggio con conducente da Šiauliai (12 km, ~20 min). Oltre 200.000 croci portate da pellegrini di tutto il mondo. Il governo sovietico le abbatteva ripetutamente — e i lituani le rimettevano in piedi. Simbolo di resistenza e fede unico al mondo. Ingresso gratuito. Jurgaičiai, Šiauliai dist.</div>
+          <div class="tl-tags"><span class="tl-tag tag-free">Gratuito</span><span class="tl-tag tag-special">Imperdibile</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">13:30</div>
+          <div class="tl-name">🚌 Bus Šiauliai → Vilnius</div>
+          <div class="tl-note">~2.5 ore. Arrivate a Vilnius nel tardo pomeriggio. Cena finale da Lokys — il ristorante medievale con selvaggina lituana.</div>
+          <div class="tl-tags"><span class="tl-tag tag-transport">🚌 ~2.5h</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">19:30</div>
+          <div class="tl-name">🍖 Cena da Lokys</div>
+          <div class="tl-note">Il ristorante più iconico di Vilnius, cantina medievale. Ordinate il "Lokys Regale": assortimento di selvaggina lituana (cinghiale, cervo, castoro). Un'esperienza gastronomica unica.</div>
+          <div class="tl-tags"><span class="tl-tag tag-food">€12–20 p.p.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer">
+      <div class="day-footer-item">🛏️ <strong>Notte:</strong> Vilnius</div>
+      <div class="day-footer-item">🚖 <strong>Bolt/Taxi</strong> per la Collina (~€15 A/R)</div>
+    </div>
+  </div>
+
+  <!-- GIORNO 7 -->
+  <div class="day-card reveal">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">07</div>
+      <div class="day-info">
+        <div class="day-label">Giorno 7 · Vilnius</div>
+        <div class="day-title">Quello che manca + Partenza</div>
+        <div class="day-subtitle">Ultime ore · Souvenir · Pranzo finale · Aeroporto</div>
+      </div>
+      <div class="day-toggle">▼</div>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">09:00</div>
+          <div class="tl-name">🛒 Mercato Halės — ultimo giro</div>
+          <div class="tl-note">Acquistate i souvenir alimentari da portare a casa: miele di bosco, formaggio stagionato, ambra baltica lavorata. I ricordi più autentici sono sempre quelli commestibili.</div>
+          <div class="tl-tags"><span class="tl-tag tag-food">Souvenir</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">Mattina libera</div>
+          <div class="tl-name">🌍 Opzionali se avete tempo</div>
+          <div class="tl-note">Europos Parkas (bus n.66, 30 min): il centro geografico d'Europa con sculture di Dalí e 3.000 televisori nella foresta. Oppure una passeggiata finale nei Giardini Bernardine.</div>
+          <div class="tl-tags"><span class="tl-tag tag-nature">Optional</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">12:00</div>
+          <div class="tl-name">🥟 Ultimo pranzo lituano</div>
+          <div class="tl-note">Da Etno Dvaras o Bernelių Užeiga. Ordinate quello che non avete ancora assaggiato: šaltibarščiai (zuppa rosa fredda), kibinai, blynai. Nessun rimpianto gastronomico!</div>
+          <div class="tl-tags"><span class="tl-tag tag-food">€8–14 p.p.</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">Pomeriggio</div>
+          <div class="tl-name">✈️ Partenza</div>
+          <div class="tl-note">Bus n.1 o taxi dall'aeroporto di Vilnius (VNO). ~15 min dal centro. Portate con voi i ricordi di una notte attorno a un falò, dune di sabbia bianca e 200.000 croci nel vento.</div>
+          <div class="tl-tags"><span class="tl-tag tag-transport">✈️ Vilnius VNO</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="day-footer">
+      <div class="day-footer-item">✈️ <strong>Aeroporto:</strong> Vilnius VNO</div>
+      <div class="day-footer-item">🎁 <strong>Da portare:</strong> miele, ambra, formaggi</div>
+    </div>
+  </div>
+</div>
+
+<!-- TIPS -->
+<section class="tips-section">
+  <div class="tips-inner">
+    <h2 class="tips-title">💡 Consigli pratici</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-icon">🚌</div>
+        <div class="tip-title">Trasporti intercity</div>
+        <div class="tip-text">Prenotate bus e treni su <strong>autobusubilietai.lt</strong> e <strong>ltglink.lt</strong>. Bus ogni 15 min tra Vilnius e Kaunas. Tutti i trasferimenti dell'itinerario sono gestibili senza auto.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">📱</div>
+        <div class="tip-title">App indispensabili</div>
+        <div class="tip-text"><strong>Bolt</strong> per i taxi (molto più economico di Uber). <strong>Google Maps</strong> funziona benissimo. <strong>LTG Link</strong> per i treni lituani. <strong>Autobusubilietai</strong> per i bus.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">💶</div>
+        <div class="tip-title">Soldi e pagamenti</div>
+        <div class="tip-text">Lituania usa l'Euro. Le carte si accettano quasi ovunque. Portate un po' di contanti per i mercati e i piccoli negozi. I prezzi sono molto più bassi dell'Italia!</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🔥</div>
+        <div class="tip-title">Joninės — cosa portare</div>
+        <div class="tip-text">Coperte o telo, giacca leggera (di notte fa fresco anche a giugno), scarpe comode per camminare nell'erba, torcia, repellente zanzare. La festa dura fino alle 4:30!</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🌊</div>
+        <div class="tip-title">Curonian Spit</div>
+        <div class="tip-text">Ticket d'ingresso ~€5 p.p. Il traghetto da Klaipėda parte ogni pochi minuti (€1 circa). Sull'isola ci sono bus locali. Prenotate l'alloggio a Nida con anticipo in estate!</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🌡️</div>
+        <div class="tip-title">Clima a giugno</div>
+        <div class="tip-text">Giugno è il mese migliore: 18–24°C di giorno, 12–15°C di notte. Giornate lunghissime (17+ ore di luce). Portate un impermeabile leggero — qualche pioggia è normale.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD -->
+<section class="food-section">
+  <div class="food-inner">
+    <h2 class="section-title" style="text-align:left">🍽️ Da <span>assaggiare</span></h2>
+    <p style="color:var(--text-soft); font-weight:300; margin-bottom:0.5rem">I piatti tipici lituani che non potete perdere</p>
+    <div class="food-grid">
+      <div class="food-card">
+        <div class="food-emoji">🥟</div>
+        <div class="food-name">Cepelinai</div>
+        <div class="food-where">Etno Dvaras, Bernelių Užeiga</div>
+        <span class="food-price">~€6–8</span>
+      </div>
+      <div class="food-card">
+        <div class="food-emoji">🍞</div>
+        <div class="food-name">Kepta Duona</div>
+        <div class="food-where">Šnekutis</div>
+        <span class="food-price">~€3</span>
+      </div>
+      <div class="food-card">
+        <div class="food-emoji">🥣</div>
+        <div class="food-name">Šaltibarščiai</div>
+        <div class="food-where">Ovunque</div>
+        <span class="food-price">~€3–4</span>
+      </div>
+      <div class="food-card">
+        <div class="food-emoji">🥟</div>
+        <div class="food-name">Kibinai</div>
+        <div class="food-where">Solo a Trakai</div>
+        <span class="food-price">~€2–3</span>
+      </div>
+      <div class="food-card">
+        <div class="food-emoji">🐟</div>
+        <div class="food-name">Pesce affumicato</div>
+        <div class="food-where">Curonian Spit</div>
+        <span class="food-price">~€4–6</span>
+      </div>
+      <div class="food-card">
+        <div class="food-emoji">🍺</div>
+        <div class="food-name">Gira</div>
+        <div class="food-where">Bernelių Užeiga</div>
+        <span class="food-price">~€2</span>
+      </div>
+      <div class="food-card">
+        <div class="food-emoji">🦫</div>
+        <div class="food-name">Selvaggina (Lokys Regale)</div>
+        <div class="food-where">Lokys</div>
+        <span class="food-price">~€15–18</span>
+      </div>
+      <div class="food-card">
+        <div class="food-emoji">🥞</div>
+        <div class="food-name">Bulviniai Blynai</div>
+        <div class="food-where">Ovunque</div>
+        <span class="food-price">~€5–7</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Itinerario creato con ❤️ · Lituania · Giugno 2025 · <span>Buon viaggio! 🇱🇹</span>
+</footer>
+
+<script>
+  // LEAFLET MAP
+  const map = L.map('map', { zoomControl: true, scrollWheelZoom: false })
+    .setView([55.5, 23.5], 6);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  function makeIcon(color, label) {
+    return L.divIcon({
+      className: '',
+      html: `<div style="
+        background:${color};
+        color:white;
+        border-radius:50%;
+        width:28px;height:28px;
+        display:flex;align-items:center;justify-content:center;
+        font-size:11px;font-weight:700;
+        border:2px solid white;
+        box-shadow:0 2px 8px rgba(0,0,0,0.5);
+        font-family:'DM Sans',sans-serif;
+      ">${label}</div>`,
+      iconSize: [28, 28],
+      iconAnchor: [14, 14],
+      popupAnchor: [0, -16]
+    });
+  }
+
+  const stops = [
+    // Giorno 1-2 Vilnius
+    { lat: 54.6736, lng: 25.2861, color: '#4A90D9', day: 'G1', name: '🛒 Mercato Halės', note: 'Colazione autentica. Pylimo g. 58' },
+    { lat: 54.6823, lng: 25.2903, color: '#4A90D9', day: 'G1', name: '📚 Via Literatų', note: 'Galleria d\'arte nei vicoli' },
+    { lat: 54.6800, lng: 25.2958, color: '#4A90D9', day: 'G1', name: '🎨 Repubblica di Užupis', note: 'La repubblica degli artisti' },
+    { lat: 54.6832, lng: 25.2934, color: '#4A90D9', day: 'G1', name: '⛪ Chiesa di Sant\'Anna', note: 'Gioiello gotico. Maironio g. 8' },
+    { lat: 54.6844, lng: 25.2954, color: '#4A90D9', day: 'G1', name: '🌿 Giardini Bernardine', note: 'Il parco più antico di Vilnius (1469)' },
+    { lat: 54.6834, lng: 25.2894, color: '#4A90D9', day: 'G1-2', name: '🥟 Etno Dvaras', note: 'Cantina medievale. Pilies g. 16' },
+    { lat: 54.6863, lng: 25.2873, color: '#4A90D9', day: 'G2', name: '⛪ Piazza della Cattedrale', note: 'Il cuore simbolico della Lituania' },
+    { lat: 54.6862, lng: 25.2890, color: '#4A90D9', day: 'G2', name: '🏛️ Palazzo dei Granduchi', note: 'Il luogo di nascita di Vilnius. Katedros a. 4' },
+    { lat: 54.6868, lng: 25.2906, color: '#4A90D9', day: 'G2', name: '🗼 Torre di Gediminas', note: 'Vista 360° su Vilnius. ~€6' },
+    { lat: 54.6744, lng: 25.2895, color: '#4A90D9', day: 'G2', name: '🚪 Porta dell\'Alba', note: 'Unica porta superstite (1522). Aušros Vartų g. 14' },
+    { lat: 54.6779, lng: 25.2825, color: '#4A90D9', day: 'G1-2', name: '🍺 Šnekutis', note: 'Pub autentico. Šv. Mikalojaus g. 15' },
+    // Giorno 3
+    { lat: 54.6524, lng: 24.9337, color: '#E8521A', day: 'G3', name: '🏰 Castello di Trakai', note: 'Castello medievale su lago. ~€10. 🚂 30 min da Vilnius' },
+    { lat: 54.8839, lng: 24.8515, color: '#E8521A', day: 'G3 🔥', name: '🔥 Joninės a Kernavė', note: 'NOTTE PAGANA DI SAN GIOVANNI! 23 giugno. UNESCO. Gratuito.' },
+    // Giorno 4
+    { lat: 54.8664, lng: 24.2011, color: '#8B5CF6', day: 'G4', name: '🏚️ Museo Rumšiškės', note: 'Museo all\'aperto più grande d\'Europa. 195 ha. ~€7' },
+    { lat: 54.9008, lng: 23.9108, color: '#8B5CF6', day: 'G4', name: '😈 Museo dei Diavoli', note: '3.000 diavoli da tutto il mondo. Kaunas. ~€5' },
+    { lat: 54.8994, lng: 23.8862, color: '#8B5CF6', day: 'G4', name: '🏙️ Kaunas Old Town', note: 'Capitale Europea della Cultura 2022' },
+    // Giorno 5
+    { lat: 55.7053, lng: 21.1227, color: '#10B981', day: 'G5', name: '⛴️ Klaipėda', note: 'Traghetto per la Curonian Spit' },
+    { lat: 55.5356, lng: 21.1172, color: '#10B981', day: 'G5', name: '🧙‍♀️ Collina delle Streghe', note: '80 sculture folk in legno. Juodkrantė' },
+    { lat: 55.3033, lng: 21.0068, color: '#10B981', day: 'G5', name: '🏖️ Nida', note: 'Dune più alte d\'Europa. UNESCO. Pesce affumicato.' },
+    // Giorno 6
+    { lat: 56.0153, lng: 23.4164, color: '#F59E0B', day: 'G6', name: '✝️ Collina delle Croci', note: '200.000 croci. Simbolo della resistenza. Gratuito. 12 km da Šiauliai' },
+  ];
+
+  stops.forEach(s => {
+    const icon = makeIcon(s.color, s.day);
+    L.marker([s.lat, s.lng], { icon })
+      .addTo(map)
+      .bindPopup(`
+        <div style="font-family:'DM Sans',sans-serif;min-width:180px">
+          <div style="font-weight:600;font-size:0.95rem;margin-bottom:4px">${s.name}</div>
+          <div style="font-size:0.8rem;color:#555;line-height:1.5">${s.note}</div>
+          <div style="margin-top:6px;display:inline-block;background:${s.color};color:white;padding:2px 8px;border-radius:10px;font-size:0.72rem;font-weight:600">Giorno ${s.day}</div>
+        </div>
+      `, { maxWidth: 220 });
+  });
+
+  // Scroll reveal
+  function toggleDay(header) {
+    const body = header.nextElementSibling;
+    const toggle = header.querySelector('.day-toggle');
+    const isOpen = body.classList.contains('open');
+    body.classList.toggle('open', !isOpen);
+    toggle.classList.toggle('open', !isOpen);
+  }
+
+  // Open first day by default
+  document.querySelector('.day-header').click();
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
