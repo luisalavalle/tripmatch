@@ -1050,6 +1050,9 @@ body {
    ============================================================ */
 const TRACKING_LIVE = true;
 
+const paeseAperturaTimestamp = {};
+const paeseScrollObservers = {};
+
 function track(eventName, params) {
   if (TRACKING_LIVE && typeof gtag === 'function') {
     gtag('event', eventName, params);
@@ -13478,7 +13481,9 @@ function applyFilters() {
     }
   });
   document.getElementById('country-count').textContent = shown;
+  const wasHidden = noResults.style.display === 'none' || noResults.style.display === '';
   noResults.style.display = shown === 0 ? 'block' : 'none';
+  if (shown === 0 && wasHidden) track('nessun_risultato', { filtri_attivi: JSON.stringify(activeFilters) });
   refreshAllActivitySections();
 }
 
@@ -13634,7 +13639,27 @@ function buildCountryItem(country, idx) {
         panel.classList.remove('open');
       });
     }
-    track(isOpen ? 'paese_chiuso' : 'paese_aperto', { paese: country.name, area: country.area });
+    if (isOpen) {
+      const apertura = paeseAperturaTimestamp[country.name];
+      const delta = apertura ? Math.round((Date.now() - apertura) / 1000) : null;
+      track('paese_chiuso', { paese: country.name, area: country.area, secondi_apertura: delta });
+      delete paeseAperturaTimestamp[country.name];
+      // Disconnetti observer scroll se presente
+      if (paeseScrollObservers[country.name]) {
+        paeseScrollObservers[country.name].disconnect();
+        delete paeseScrollObservers[country.name];
+      }
+      // Disconnetti anche gli observer scroll per-attivita' nelle tab
+      const tabsCont = item.querySelector('[id$="-tabs"]');
+      if (tabsCont) {
+        tabsCont.querySelectorAll('.section-activities').forEach(actDiv => {
+          if (actDiv._scrollObserver) actDiv._scrollObserver.disconnect();
+        });
+      }
+    } else {
+      paeseAperturaTimestamp[country.name] = Date.now();
+      track('paese_aperto', { paese: country.name, area: country.area, filtri_attivi: JSON.stringify(activeFilters) });
+    }
   });
 
   setTimeout(() => {
@@ -13652,6 +13677,61 @@ function buildCountryItem(country, idx) {
       nav.addEventListener('scroll', updateChevron, { passive: true });
       updateChevron();
     }
+
+    // Scroll observer: traccia quando le sezioni della scheda entrano nel viewport
+    // Osserva i div di contenuto delle tab (costruiti da buildTabs).
+    // Le tab sono caricate in modo lazy (solo alla prima apertura), quindi
+    // l'observer viene registrato tramite una funzione richiamabile anche dopo.
+    // Approccio sentinella: inserisce div trasparenti al 25/50/75% dell'altezza
+    // di ogni sezione. Quando una sentinella entra nel viewport, lo scroll ha
+    // raggiunto quella soglia. Funziona anche se la sezione e' piu' alta del viewport.
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const sezione = entry.target.getAttribute('data-scroll-sezione');
+        const percentuale = parseInt(entry.target.getAttribute('data-scroll-pct'), 10);
+        if (!sezione || !percentuale) return;
+        track('paese_scroll_sezione', { paese: country.name, sezione, percentuale });
+        // Dopo il primo scatto la sentinella non serve piu'
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0 });
+
+    function inserisciSentinelle(div, sectionKey) {
+      [25, 50, 75].forEach(pct => {
+        const sentinel = document.createElement('div');
+        sentinel.style.cssText = 'position:absolute;height:0;overflow:hidden;pointer-events:none;width:1px;';
+        sentinel.style.top = pct + '%';
+        sentinel.setAttribute('data-scroll-sezione', sectionKey);
+        sentinel.setAttribute('data-scroll-pct', pct);
+        div.style.position = 'relative';
+        div.appendChild(sentinel);
+        observer.observe(sentinel);
+      });
+    }
+
+    function osservaSezione(div) {
+      if (div.hasAttribute('data-scroll-sezione')) return; // gia' osservata
+      // Le tab attivita' (natura/arte/cultura/relax) usano sentinelle per singola attivita'
+      // e vengono gestite da _aggiornaScrollSentinelle — qui le saltiamo
+      if (div.classList.contains('section-activities')) return;
+      // Paese e Mesi: nessun tracking scroll
+      if (div.classList.contains('section-paese') || div.classList.contains('section-mesi')) return;
+      const sectionKey = div.getAttribute('data-section-key');
+      if (sectionKey) {
+        div.setAttribute('data-scroll-sezione', sectionKey);
+        inserisciSentinelle(div, sectionKey);
+      }
+    }
+
+    // Osserva subito la tab paese (unica presente nel DOM ora)
+    tabsContainer.querySelectorAll(':scope > div').forEach(osservaSezione);
+
+    // Esponi la funzione sul container cosi' buildTabs puo' richiamarla
+    // quando aggiunge nuove tab al DOM
+    tabsContainer._osservaSezione = osservaSezione;
+
+    paeseScrollObservers[country.name] = observer;
   }, 0);
 
   return item;
@@ -13660,10 +13740,10 @@ function buildCountryItem(country, idx) {
 function buildTabs(country, container, inner) {
   const tabs = {
     paese: buildPaese(country),
-    natura: buildActivities(country.natura, 'natura'),
-    arte: buildActivities(country.arte, 'arte'),
-    cultura: buildActivities(country.cultura, 'cultura'),
-    relax: buildActivities(country.relax, 'relax'),
+    natura: buildActivities(country.natura, 'natura', country.name),
+    arte: buildActivities(country.arte, 'arte', country.name),
+    cultura: buildActivities(country.cultura, 'cultura', country.name),
+    relax: buildActivities(country.relax, 'relax', country.name),
     mesi: buildMesi(country),
   };
 
@@ -13682,8 +13762,13 @@ function buildTabs(country, container, inner) {
       navItem.classList.add('active');
 
       container.querySelectorAll(':scope > div').forEach(d => d.style.display = 'none');
-      if (!tabs[tab].parentNode) container.appendChild(tabs[tab]);
+      if (!tabs[tab].parentNode) {
+        container.appendChild(tabs[tab]);
+        if (container._osservaSezione) container._osservaSezione(tabs[tab]);
+      }
       tabs[tab].style.display = 'block';
+      // Aggiorna sentinelle scroll per tab attivita' (prima apertura o cambio tab)
+      if (tabs[tab]._aggiornaScrollSentinelle) tabs[tab]._aggiornaScrollSentinelle();
       activeTab = tab;
 
       // Apply activity filters when tab becomes visible
@@ -13800,6 +13885,7 @@ function buildMesi(country) {
       }
       card.classList.add('selected');
       selectedCard = card;
+      track('mese_dettaglio_aperto', { paese: country.name, mese: m.nome });
 
       // Build detail content
       const cols = [];
@@ -13850,7 +13936,7 @@ function getActiveSectionTags(sectionKey) {
   return sel;
 }
 
-function buildActivities(section, sectionKey) {
+function buildActivities(section, sectionKey, countryName) {
   const div = document.createElement('div');
   div.className = 'section-activities';
   div.setAttribute('data-section-key', sectionKey);
@@ -13958,6 +14044,42 @@ function buildActivities(section, sectionKey) {
     div.appendChild(item);
   });
 
+  // Observer per sentinelle scroll per-attivita'
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const idx = parseInt(entry.target.getAttribute('data-act-idx'), 10);
+      const tot = parseInt(entry.target.getAttribute('data-act-tot'), 10);
+      track('paese_scroll_attivita', { paese: countryName, sezione: sectionKey, vista: idx, di: tot });
+      scrollObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0 });
+
+  // Aggiorna le sentinelle in base agli item attualmente visibili
+  function aggiornaScrollSentinelle() {
+    // Rimuovi sentinelle precedenti
+    div.querySelectorAll('.scroll-sentinel-act').forEach(s => {
+      scrollObserver.unobserve(s);
+      s.remove();
+    });
+    const visibili = Array.from(div.querySelectorAll('.activity-item'))
+      .filter(item => item.style.display !== 'none');
+    const tot = visibili.length;
+    visibili.forEach((item, i) => {
+      const sentinel = document.createElement('div');
+      sentinel.className = 'scroll-sentinel-act';
+      sentinel.style.cssText = 'height:0;overflow:hidden;pointer-events:none;';
+      sentinel.setAttribute('data-act-idx', i + 1);
+      sentinel.setAttribute('data-act-tot', tot);
+      item.appendChild(sentinel);
+      scrollObserver.observe(sentinel);
+    });
+  }
+
+  // Esponi sul div cosi' osservaSezione e il tab-switch possono richiamarla
+  div._aggiornaScrollSentinelle = aggiornaScrollSentinelle;
+  div._scrollObserver = scrollObserver;
+
   // "mostra altri" button placeholder — rebuilt by refreshActivityVisibility
   const btn = document.createElement('button');
   btn.className = 'show-more-btn';
@@ -13966,6 +14088,8 @@ function buildActivities(section, sectionKey) {
     const isExpanded = btn.classList.contains('expanded');
     btn.classList.toggle('expanded');
     refreshActivityVisibility(div, sectionKey, !isExpanded);
+    if (!isExpanded) track('attivita_espanse', { paese: countryName, sezione: sectionKey });
+    aggiornaScrollSentinelle();
   });
   div.appendChild(btn);
 
