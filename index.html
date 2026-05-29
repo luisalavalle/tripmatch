@@ -1066,7 +1066,7 @@ const filterConfig = {
     { key: 'area', label: 'AREA', multi: true, options: ['Tutti', 'Europa', 'Asia', 'Africa', 'America', 'Oceania'] },
     { key: 'paese', label: 'PAESE', multi: true, 
       options: 
-['Tutti', 'Barbados', 'Corea del Sud', 'Croazia', 'Danimarca', 'Estonia', 'Filippine', 'Finlandia', 'Giappone', 'Grecia', 'Irlanda', 'Islanda','Italia', 'Lettonia', 'Lituania', 'Malta', 'Marocco', 'Norvegia', 'Nuova Zelanda', 'Oman', 'Polonia', 'Portogallo', 'Regno Unito', 'Singapore', 'Slovenia', 'Spagna', 'Sri Lanka', 'Svezia', 'Uzbekistan'] },
+['Tutti', 'Barbados', 'Canada', 'Corea del Sud', 'Croazia', 'Danimarca', 'Estonia', 'Filippine', 'Finlandia', 'Francia', 'Germania', 'Giappone', 'Grecia', 'Irlanda', 'Islanda','Italia', 'Lettonia', 'Lituania', 'Malta', 'Marocco', 'Norvegia', 'Nuova Zelanda', 'Oman', 'Polonia', 'Portogallo', 'Regno Unito', 'Singapore', 'Slovenia', 'Spagna', 'Sri Lanka', 'Svezia', 'Uzbekistan'] },
     { key: 'sicurezza', label: 'SICUREZZA', multi: true, options: ['Tutti', 'Eccellente', 'Normali Precauzioni', 'Cautela', 'Attenzione'] },
     { key: 'sanita', label: 'SANITÀ', multi: true, options: ['Tutti', 'Eccellente', 'Standard Europei', 'Con limitazioni', 'Critica'] },
     { key: 'infrastrutture', label: 'INFRASTRUTTURE', multi: true, options: ['Tutti', 'Eccellente', 'Ben sviluppate', 'Funzionali', 'Essenziali'] },
@@ -1468,6 +1468,382 @@ const countries = [
       "feste": "Natale e Capodanno molto sentiti: concerti, fuochi d'artificio, animazione nelle spiagge e resort.",
       "natura": null,
       "turisti": "Alta stagione in piena ripresa. Dicembre è tra i mesi più costosi e affollati, soprattutto sotto Natale e Capodanno."
+    }
+  ]
+},
+{
+  id: `canada`,
+  region: `America`,
+  name: `Canada`,
+  tagline: `Il paese più grande e meno affollato dell'emisfero occidentale, dove le foreste vergini superano l'intera Europa, l'aurora illumina il cielo per 300 notti all'anno e due culture — francese e anglofona — si sfidano a chi cucina meglio: il Canada non è una destinazione, è un continente con il passaporto.`,
+  area: `America`,
+  paese: `Canada`,
+  sicurezza: `Eccellente`,
+  sanita: `Eccellente`,
+  infrastrutture: `Ben sviluppate`,
+  flussi: `Circa 23-25 milioni di arrivi internazionali nel 2024 (Statistics Canada). Mercato principale: USA (oltre il 60% degli arrivi). Poi UK, Francia, Germania, Messico. Italiani in numeri contenuti ma presenti. Alta stagione: luglio-agosto (estate, parchi nazionali); dicembre-marzo per gli sport invernali. Overtourism in alcune aree iconiche (Banff, Jasper) in estate.`,
+  curatorNote: `Valuta: dollaro canadese (CAD). Presa tipo A e B (identiche agli USA, 120V): adattatore necessario per spine europee e convertitore se i dispositivi non sono dual voltage. Guida a destra. Marijuana legale in tutto il Canada dal 2018; regole per acquisto e consumo variano per provincia. Temperature estreme in inverno in molte regioni: equipaggiamento adeguato essenziale.`,
+  sicurezzaDesc: [
+    `Il Canada è tra le destinazioni più sicure al mondo per i turisti: criminalità violenta rara nelle aree di interesse turistico, acqua potabile ovunque, nessuna area interdetta e zero allerte sanitarie o vaccinali per i viaggiatori provenienti dall'Italia.`,
+    `Furti (borseggi, smash-and-grab, furti d'auto) in crescita nelle grandi città ma non paragonabili agli standard mediterranei o sudamericani. Criminalità violenta rara nelle aree turistiche. Allerta USA State Dept: Livello 1 (normali precauzioni, aggiornato giugno 2025). Canada tra i 10 paesi più sicuri al mondo per i turisti (Tourism Review 2025, 10° posto). Nessuna allerta Farnesina. Nessuna area sconsigliata. `,
+    `Rischi epidemiologici: nessuna epidemia attiva. Acqua del rubinetto potabile ovunque tranne in alcune aree remote. Nessun rischio malaria, febbre gialla o dengue.`,
+  ],
+  sanDesc: [
+    `Il Canada offre strutture sanitarie di altissimo livello nelle città, ma il sistema pubblico non copre i visitatori stranieri: l'assicurazione sanitaria di viaggio è indispensabile, i costi privati sono molto elevati, e nelle zone remote la distanza dai centri medici va pianificata con attenzione.`,
+    `Sistema sanitario pubblico (Medicare canadese) tra i migliori al mondo, ma copre solo i residenti permanenti e i cittadini canadesi. Strutture ospedaliere di ottimo livello in tutte le principali città; nelle zone remote (Yukon, Territori Nord-Ovest, aree artiche) le strutture sono limitate e il trasporto medico d'emergenza può richiedere ore. Per i turisti i costi delle cure sono molto elevati. Assicurazione sanitaria di viaggio indispensabile. `,
+  ],
+  infraDesc: [
+    `Le infrastrutture canadesi sono eccellenti nelle aree urbane e lungo i corridoi principali, ma le distanze sono continentali: l'auto è indispensabile fuori dai centri, i voli interni sono la norma per coprire il paese, e nelle zone remote la copertura mobile e i servizi di base si assottigliano sensibilmente.`,
+    `Trasporti: voli interni indispensabili per le distanze (Air Canada, WestJet). VIA Rail per i percorsi est-ovest (Toronto-Montreal-Québec, corridoio est). Bus Greyhound ridotti; meglio Bus Canada, FlixBus. Nelle città: metro/SkyTrain/tramway a Toronto, Vancouver, Montreal. Auto indispensabile fuori dai centri urbani. Si guida a destra.`,
+    `Pagamenti: carte accettate praticamente ovunque; contactless diffusissimo; contanti raramente necessari. Internet: 4G/5G eccellente nelle aree urbane; nelle zone remote e rurali (incluse molte parti di British Columbia, Alberta, Yukon) la copertura è scarsa o assente; Wi-Fi gratuito in aeroporti, caffè, biblioteche; SIM locali (Rogers, Bell, Telstra) disponibili all'arrivo.`,
+    `Corrente: 120V/60 Hz. Adattatore necessario per spine europee (prese tipo A e B identiche agli USA).`,
+  ],
+  linguaDesc: `Inglese e francese lingue ufficiali. Inglese dominante nella maggior parte del paese; francese lingua principale nel Québec (Montreal, Québec City). Per chi parla inglese: nessuna barriera. Per chi non lo parla, il personale turistico è comunque abituato agli stranieri. In Québec la conoscenza del francese è apprezzata. Ospitalità generalmente ottima verso i turisti. Traduttori online funzionano bene per entrambe le lingue.`,
+  sources: [
+    { label: `US State Dept – travel.state.gov (giu. 2025)`, url: '#' },
+    { label: `Tourism Review 2025`, url: '#' },
+    { label: `Government of Canada – publicsafety.gc.ca`, url: '#' },
+    { label: `CDC – wwwnc.cdc.gov`, url: '#' },
+    { label: `Passport Health`, url: '#' },
+    { label: `Statistics Canada`, url: '#' },
+    { label: `viaggiaresicuri.it`, url: '#' },
+  ],
+  lingua: [
+    `inglese`,
+    `francese`,
+  ],
+  tags: {
+      natura: [`#PatrimonioUnesco`, `#DaCartolina`, `#Iconico`, `#Trekking`, `#Hiking`, `#EsperienzaEstrema`, `#NaturaSelvaggia`, `#KayakAdventure`, `#MeravigliaGeologia`, `#PaesaggiEstremi`, `#EsperienzaUnica`, `#AvvistamentoAnimali`, `#Wildlife`, `#Mare`, `#RuraleEArmonica`, `#Avventura`, `#Diving`, `#Snorkeling`],
+      arte: [`#Capolavoro`, `#museiegallerie`, `#arteearchitetturamoderna`, `#PatrimonioUnesco`, `#artetradizionale`, `#sitoarcheologico`, `#perappassionati`, `#architettura`, `#palazzistorici`, `#arteearchitetturasacra`, `#galleriadarte`, `#installazione`, `#streetart`, `#artepubblica`, `#artigianato`],
+      cultura: [`#PatrimonioUnesco`, `#storiaememoria`, `#vitasociale`, `#tradizionilocali`, `#raccontipopolari`, `#ritiecerimonie`, `#danza`, `#cucinaeproduzionelocale`, `#mercati`, `#workshop`],
+      relax: [`#montagna`, `#benessere`, `#esperienzaunica`, `#slow_travel`, `#mare`, `#sport`, `#cenaspeciale`, `#socialità`, `#città`, `#rooftop`, `#cielonotturno`, `#alloggiospeciale`]
+    },
+  natura: { 
+    intro: `Il Canada non è semplicemente grande: è quasi impossibile da contenere nella mente. Secondo paese più vasto del mondo, custodisce il 20% delle foreste vergini rimaste sul pianeta, il 7% dell'acqua dolce mondiale e catene montuose che ancora aspettano un nome. Ma la vera sorpresa non è la scala — è la varietà. Qui convivono la foresta pluviale temperata più grande della Terra (con orsi bianchi che sembrano fantasmi tra gli abeti), la più alta concentrazione di orsi polari accessibile ai viaggiatori, canyon scolpiti dal permafrost che fanno sembrare piccolo il Grand Canyon, e tundre artiche dove le aurore danzano per 300 notti all'anno. Il Canada premia chi va oltre Banff e il Niagara: nelle isole Haida Gwaii — le 'Galapagos del Nord' — la natura evolutiva in isolamento per millenni; nei fiordi della Nahanni, raggiungibili solo in idrovolante, cascate due volte più alte delle Niagara; nelle acque di Tadoussac, dove la balena blu — il più grande animale mai vissuto — emerge a portata di kayak. Questo è un paese che non si visita: si esplora.`, 
+    items: [ 
+    {
+      icon: `🏔️`,
+      name: `Parchi delle Montagne Rocciose Canadesi`,
+      desc: `Banff, Jasper, Yoho, Kootenay e tre parchi provinciali formano insieme il sito naturale UNESCO più grande del Canada — e uno dei più fotografati al mondo. Il lago Louise e il lago Moraine sono così iconici da rischiare di deludere chi cerca solitudine. Il vero volto di questo sito è l'Icefields Parkway, la strada di 230 km tra Banff e Jasper, dove i ghiacciai scendono fino alla carreggiata, i wapiti attraversano la strada all'alba e l'orizzonte non finisce mai. Riconosciuto UNESCO nel 1984 per la sua eccezionale bellezza naturale e per la straordinaria documentazione dei processi geologici delle Montagne Rocciose.`,
+      note: `Banff in estate è straordinariamente affollata: il lago Moraine è accessibile solo con navette riservabili mesi prima. Per vivere il parco davvero, punta sulle escursioni nel backcountry o visita in settembre-ottobre, quando i larici diventano dorati e la folla si dimezza. L'inverno trasforma tutto in un paesaggio da fiaba con meno visitatori e prezzi più bassi.`,
+      tags: [`#PatrimonioUnesco`, `#DaCartolina`, `#Iconico`, `#Trekking`, `#Hiking`],
+    },
+    {
+      icon: `🌊`,
+      name: `Nahanni National Park Reserve — Virginia Falls e i canyon del South Nahanni`,
+      desc: `Primo sito UNESCO della storia canadese (1978), la Riserva Nazionale di Nahanni è la risposta canadese al Grand Canyon — ma senza turisti e senza strade. Il South Nahanni scava canyon profondi 1.000 metri attraverso le Mackenzie Mountains, passa accanto a sorgenti calde che fumano nel gelo artico, e precipita nelle Virginia Falls: quasi 100 metri di caduta libera, il doppio esatto delle cascate del Niagara. Ci arrivi solo in idrovolante o dopo settimane di canoa remota. UNESCO lo ha riconosciuto per il suo 'eccezionale valore universale' geologico, biologico e per la sua integrità assoluta — quasi nessun impatto umano in un'area grande quanto il Belgio.`,
+      note: `Accessibile esclusivamente via charter in idrovolante da Fort Simpson o Yellowknife (costoso). Le spedizioni in canoa durano 8-14 giorni e richiedono guida esperta. Non è un posto per improvvisare: pianifica con almeno 6 mesi di anticipo e affidati a guide certificate Parks Canada.`,
+      tags: [`#PatrimonioUnesco`, `#EsperienzaEstrema`, `#NaturaSelvaggia`, `#KayakAdventure`, `#MeravigliaGeologica`, `#PaesaggiEstremi`],
+    },
+    {
+      icon: `🌌`,
+      name: `Aurora Boreale sulle tundre di Yellowknife`,
+      desc: `Yellowknife si trova esattamente sotto l'ovale aurorale — la fascia magnetica dove le aurore si manifestano con la maggiore intensità e frequenza. Qui non si "vede l'aurora": si assiste a un fenomeno che dura ore, avvolge il cielo come una cortina cangiante dal verde al viola al rosso, in un buio senza inquinamento luminoso che fa sembrare le stelle a portata di mano. La piattezza del territorio amplifica lo spettacolo a 360 gradi. La stagione va da agosto ad aprile, con picchi in inverno.`,
+      note: `Prevedi almeno 5-7 notti per avere buone probabilità — le aurore dipendono dall'attività solare (quasi ogni notte) e dalle condizioni meteo (più rare). Febbraio-marzo offre il miglior equilibrio tra oscurità e temperature (aspettati -30°C). L'alternativa riscaldata: Aurora Village affitta cupole sul ghiaccio dove aspettare lo show avvolti in coperte con tè caldo.`,
+      tags: [`#EsperienzaUnica`, `#NaturaSelvaggia`, `#PaesaggiEstremi`, `#CieloNotturno`],
+    },
+    {
+      icon: `🐻`,
+      name: `Lo Spirit Bear nella Grande Foresta Pluviale degli Orsi`,
+      desc: `La Great Bear Rainforest è la foresta pluviale temperata più grande e intatta del mondo. Il suo abitante più straordinario sembra uscito da un mito: il Kermode bear, o orso dello spirito, un orso nero che nasce bianco per via di un gene recessivo — non albino, solo raro. Si stimano poche centinaia di esemplari. Sacro per il popolo Kitasoo/Xai'xais, che abita queste coste da millenni, l'orso bianco si muove tra cedri millenari e fiumi di salmoni. La fauna circostante è da capogiro: orche, megattere, grizzly, aquile calve.`,
+      note: `Le migliori probabilità di avvistamento sono in agosto-ottobre, durante la migrazione del salmone, quando i fiumi si riempiono di orsi che pescano a portata di sguardo. Raggiungibile via idrovolante o traghetto fino a Bella Bella / Klemtu. Lo Spirit Bear Lodge, gestito direttamente dalla comunità Kitasoo/Xai'xais, è l'unica struttura autentica nell'area: prenota con un anno di anticipo.`,
+      tags: [`#Wildlife`, `#AvvistamentoAnimali`, `#NaturaSelvaggia`, `#EsperienzaUnica`],
+    },
+    {
+      icon: `🐋`,
+      name: `Whale watching a Tadoussac — beluga, balene blu e fin whale nel Saguenay`,
+      desc: `Dove il freddo, nutriente Saguenay incontra le acque del San Lorenzo si crea una delle più dense concentrazioni di krill dell'Atlantico settentrionale. Tredici specie di cetacei transitano o risiedono qui, tra cui la balena blu — il più grande animale mai esistito — e i beluga bianchi, l'unica popolazione stanziale al mondo in acque così meridionali. Si avvistano da terra, in gommone o persino in kayak. Tadoussac è un villaggio tranquillo e autentico, non una meta turistica di massa.`,
+      note: `La stagione migliore è giugno-ottobre; i beluga sono presenti tutto l'anno ma in estate si avvicinano di più. Per i tour in gommone prenota con anticipo in luglio-agosto. Evita il kayak senza esperienza: le correnti del Saguenay sono forti e imprevedibili. I beluga del San Lorenzo sono una popolazione a rischio — rispetta le distanze di sicurezza imposte dalle guide.`,
+      tags: [`#AvvistamentoAnimali`, `#Wildlife`, `#Mare`, `#KayakAdventure`, `#EsperienzaUnica`],
+    },
+    {
+      icon: `🏝️`,
+      name: `Haida Gwaii — le Galapagos del Nord`,
+      desc: `Isolata per millenni dall'oceano Pacifico, l'arcipelago Haida Gwaii ha sviluppato una fauna unica: l'orso nero di Haida Gwaii è il 20% più grande dei suoi consimili continentali; il cervo sitka è endemico; le foreste di abete di Sitka e cedro giallo sfidano qualsiasi idea di foresta temperata. Tutto è più grande, più vecchio, più silenzioso. Il sito UNESCO di SGang Gwaay conserva totem Haida nel mezzo della foresta — raggiungibile solo in barca. Ma Haida Gwaii non è un museo: è un territorio vivo, con una nazione Haida che gestisce attivamente l'ecosistema.`,
+      note: `Da Prince Rupert ci sono traghetti BC ferries (8 ore) o voli da Vancouver. Molte attrazioni naturali richiedono permessi rilasciati dalla nazione Haida — si ottengono facilmente online. Evita luglio-agosto per meno turisti e clima più stabile. Porta sempre abbigliamento impermeabile: il meteo cambia senza preavviso e può rimanere grigio anche in estate.`,
+      tags: [`#NaturaSelvaggia`, `#Wildlife`, `#AvvistamentoAnimali`, `#Trekking`, `#KayakAdventure`, `#EsperienzaUnica`],
+    },
+    {
+      icon: `🐻‍❄️`,
+      name: `Orsi polari a Churchill — la capitale mondiale dell'orso bianco`,
+      desc: `Churchill è l'unico posto al mondo dove è possibile osservare gli orsi polari nel loro habitat naturale in modo accessibile. Ogni ottobre-novembre, centinaia di orsi si radunano sulla costa della Baia di Hudson in attesa che il ghiaccio si formi per iniziare la stagione di caccia. Madri con cuccioli, giovani maschi che si azzuffano, orsi a pochi metri dai 'Tundra Buggy': uno spettacolo impossibile da replicare altrove. D'estate Churchill offre anche avvistamenti di beluga nel fiume Churchill — e il cielo notturno tra i più scuri del Canada.`,
+      note: `Churchill è raggiungibile solo in aereo da Winnipeg o in treno — nessuna strada la collega al resto del paese. I tour in Tundra Buggy costano 2.000-5.000 CAD; prenota con 6-12 mesi di anticipo. Il cambiamento climatico sta progressivamente accorciando la stagione degli orsi: prima vai, meglio è.`,
+      tags: [`#EsperienzaUnica`, `#AvvistamentoAnimali`, `#Wildlife`, `#Iconico`, `#NaturaSelvaggia`, `#PaesaggiEstremi`],
+    },
+    {
+      icon: `🥾`,
+      name: `West Coast Trail — cinque giorni sull'orlo del Pacifico`,
+      desc: `75 km di sentiero tra foresta pluviale e scogliere a picco sull'oceano, costruito originariamente per soccorrere i naufraghi lungo la costa soprannominata 'Graveyard of the Pacific'. Il West Coast Trail è considerato uno dei trekking costieri più belli e impegnativi del mondo — non per dislivello puro, ma per la combinazione di terreno fangoso, scale di corda, ponti sospesi, fiumi da attraversare in barca e improvvise aperture su spiagge deserte dove le orche passano a poche decine di metri dalla riva. L'accesso è contingentato: meno di 8.000 persone all'anno.`,
+      note: `Aperto maggio-settembre, con prenotazione obbligatoria tramite lotteria Parks Canada (apre a febbraio — segnala la data in calendario). Richiede ottima preparazione fisica, attrezzatura tecnica da trekking e autonomia gestionale. Il livello di difficoltà non sta nell'altimetria ma nell'imprevedibilità del terreno: anche i trekker esperti trovano tratti che li sorprendono.`,
+      tags: [`#EsperienzaEstrema`, `#Avventura`, `#Trekking`, `#Mare`, `#NaturaSelvaggia`],
+    },
+    {
+      icon: `🧊`,
+      name: `Iceberg Alley — caccia agli iceberg al largo di Twillingate`,
+      desc: `Ogni primavera, iceberg nati in Groenlandia tre anni prima completano il loro viaggio verso sud lungo la rotta atlantica e sfilano davanti a Twillingate, Newfoundland — schegge di ghiaccio grandi come grattacieli, con sfumature di blu impossibile. I locali li chiamano 'i loro' iceberg. Li seguono in barca, li fotografano al tramonto. Lo spettacolo dura da aprile a giugno, poi gli iceberg si sciolgono nell'Atlantico: ogni anno è diverso, ogni anno è irripetibile.`,
+      note: `Il sito IcebergFinder.com aggiorna gli avvistamenti in tempo reale — consultalo prima di partire per non sprecare il viaggio. La stagione è aprile-giugno con picco a maggio. Twillingate richiede un volo da Toronto o Halifax fino a Gander, poi auto. Prenota i tour in barca appena arrivi: i posti si esauriscono nelle giornate buone.`,
+      tags: [`#EsperienzaUnica`, `#DaCartolina`, `#NaturaSelvaggia`, `#Mare`],
+    },
+  ]
+    },
+  arte: { 
+    intro: `Il Canada non è la prima meta che viene in mente quando si pensa all'arte, eppure chi ci arriva con gli occhi aperti resta sorpreso: questo è il paese che ha prodotto una delle più originali tradizioni visive indigene al mondo — gli intagli Haida su cedro rosso, i totem pole dei popoli della Costa del Pacifico, le stampe Inuit di Kinngait — e che nel Novecento ha saputo inventarsi una propria identità pittorica moderna attraverso il Group of Seven e Emily Carr. Montréal è il cuore pulsante della scena artistica: città bilingue e aperta al mondo, ospita uno dei festival di arte urbana più importanti del pianeta, un museo di belle arti di respiro enciclopedico e una basilica neo-gotica il cui interno è considerato tra i più straordinari di tutto il continente americano. Ciò che rende il Canada diverso da qualsiasi altra destinazione artistica è la presenza dell'arte indigena come forza viva — non museificata, non residuale — che dialoga con la contemporaneità. Un avvertimento onesto: le esperienze più straordinarie richiedono spostamenti che si misurano in giorni, non in ore. Ma proprio questo le rende irripetibili.`, 
+    items: [ 
+    {
+      icon: `🍁`,
+      name: `Group of Seven & Emily Carr alla National Gallery of Canada`,
+      desc: `Qui si capisce perché il Canada ha una propria identità visiva e non è solo una propaggine europea. Il Group of Seven — sette pittori che tra gli anni Venti e Trenta del Novecento decisero di guardare il paesaggio canadese senza filtri coloniali — ha dipinto foreste, laghi e cieli artici con una forza espressiva che ancora oggi toglie il fiato. Accanto a loro, Emily Carr: pittrice solitaria della British Columbia che trasformò i totem pole e le foreste pluviali della costa del Pacifico in visioni quasi mistiche, anticipando l'espressionismo astratto. La National Gallery, progettata da Moshe Safdie, è essa stessa un'opera: le sue volte di vetro sul Parlamento fanno da cornice alla più grande raccolta di arte canadese al mondo.`,
+      note: `Il giovedì sera l'ingresso è gratuito fino alle 20 — l'orario ideale per evitare i gruppi scolastici e vivere le sale in un'atmosfera più raccolta. Non perdere la Cappella Rideau, intero ciclo decorativo ottocentesco ricostruito all'interno del museo.`,
+      tags: [`#Capolavoro`, `#MuseieGallerie`, `#ArteeArchitetturaModerna`],
+    },
+    {
+      icon: `🪵`,
+      name: `SG̱ang Gwaay (Ninstints) — I totem pole che tornano alla terra`,
+      desc: `Arrivare a SG̱ang Gwaay è già un atto di devozione: un volo fino a Sandspit, poi almeno due giorni di navigazione in gommone tra le acque selvagge di Gwaii Haanas. Quello che si trova alla fine è qualcosa che non esiste altrove: i resti di un villaggio Haida del XIX secolo con trentadue poli funerari ancora in piedi, che l'UNESCO ha riconosciuto come 'tra i migliori esempi al mondo' di arte scultorea indigena. Gli Haida li stanno lasciando tornare alla terra — muschio e umidità stanno lentamente riassorbendo gli intagli — perché questa, per loro, è la vita naturale di un'opera. I Guardiani Haida accompagnano i pochi visitatori ammessi (non più di quindici alla volta).`,
+      note: `Accesso molto remoto e costoso (ca. 3.500–5.000 CAD per un tour di 4 giorni). Stagione: maggio-settembre. Prenotazione obbligatoria mesi prima. Il viaggio in sé — oceano aperto, coste frastagiate, silenzio — è già parte dell'opera.`,
+      tags: [`#PatrimonioUnesco`, `#ArteTradizionale`, `#SitoArcheologico`, `#PerAppassionati`],
+    },
+    {
+      icon: `✨`,
+      name: `Basilica Notre-Dame di Montréal — Il cielo stellato in legno`,
+      desc: `Chi entra nella Basilica Notre-Dame per la prima volta raramente riesce a trattenere un'esclamazione. Non è grandiosità gotica nel senso europeo — è qualcosa di più straniante e teatrale: le volte dipinte di blu notte con stelle dorate, pareti in una policromia di rosso, porpora, argento e oro che avvolge il visitatore come un manto cosmico. Il legno intagliato — migliaia di sculture di Louis-Philippe Hébert tra il 1878 e il 1887 — raggiunge una densità ornamentale senza paragoni nel Nordamerica. La Cappella du Sacré-Cœur introduce un dialogo inatteso tra storicismo e avanguardia, con l'altare bronzeo modernista di Charles Daudelin (1980).`,
+      note: `Di giorno è visitabile con guida; la sera, l'installazione multimediale AURA di Moment Factory trasforma la basilica in un'esperienza di luce immersiva. I due biglietti (visita diurna + AURA serale) si integrano perfettamente: fai la visita per capire l'architettura, poi torna di sera per non dimenticarla.`,
+      tags: [`#ArteeArchitetturaSacra`, `#Capolavoro`, `#Installazione`],
+    },
+    {
+      icon: `🖼️`,
+      name: `Musée des beaux-arts de Montréal (MBAM) — L'enciclopedia artistica del Canada`,
+      desc: `Il MBAM è il museo d'arte più antico del Canada e l'unico con una collezione davvero enciclopedica: quasi 47.000 opere dall'antichità ai giorni nostri, da Rembrandt e El Greco agli impressionisti francesi, da Rodin a Picasso, fino all'arte Inuit e québécoise. Ciò che lo rende unico non è la profondità europea — quella si trova anche altrove — bensì la straordinaria sezione di arti decorative e design (sei secoli di mobili, ceramiche, vetri, tessuti) e la nuova presentazione dell'arte Inuit ripensata con la curatrice Inuk asinnajaq.`,
+      note: `L'ingresso è libero la prima domenica del mese — ma anche il mercoledì sera c'è una riduzione. Prevedi almeno mezza giornata. Il passaggio sotterraneo tra il palazzo Beaux-Arts del 1912 e il padiglione modernista di Safdie è una piccola esperienza architettonica in sé.`,
+      tags: [`#MuseieGallerie`, `#Capolavoro`],
+    },
+    {
+      icon: `🏗️`,
+      name: `Habitat 67 — La città impossibile di Moshe Safdie`,
+      desc: `Nel 1967, un giovane studente di architettura di 29 anni presentò all'Expo di Montréal la sua tesi di laurea trasformata in realtà: 354 moduli di cemento prefabbricato impilati come una collina mediterranea sul San Lorenzo, per dimostrare che la vita urbana densa poteva essere bella, ariosa, individuale. Habitat 67 è l'utopia che non ha avuto imitatori — troppo cara, troppo complessa — ma che è rimasta come il manifesto più puro dell'architettura modernista nel mondo. Ogni appartamento è diverso, ogni terrazzo guarda un orizzonte diverso, e l'insieme sembra cresciuto organicamente come un villaggio antico sul mare.`,
+      note: `Tour guidati interni disponibili da maggio a novembre (circa 90 minuti, include l'attico di Safdie — prenotazione necessaria). Il monumento è visibile dall'esterno tutto l'anno, gratuitamente. La vista migliore è dal Vieux-Port, dall'altra parte del San Lorenzo, al tramonto.`,
+      tags: [`#ArteeArchitetturaModerna`, `#Architettura`, `#Capolavoro`, `#PerAppassionati`],
+    },
+    {
+      icon: `🎨`,
+      name: `MURAL Festival — Il Boulevard Saint-Laurent come galleria a cielo aperto`,
+      desc: `Ogni giugno, Montréal si trasforma nell'epicentro mondiale dell'arte urbana: il MURAL Festival porta artisti da tutto il pianeta a dipingere facciate intere nel Plateau-Mont-Royal, trasformando il Boulevard Saint-Laurent in una galleria permanente che cresce ogni anno. Il processo è continuo: Montréal ha una delle più dense scene di street art del mondo, con murales commissionati dall'organizzazione MU che raggiungono proporzioni monumentali. Il ritratto di Leonard Cohen a 21 piani di Gene Pedon su Crescent Street è diventato un simbolo della città stessa.`,
+      note: `Il festival si tiene ogni anno a giugno. I murales sono visitabili tutto l'anno — la mappa Art Public Montréal (artpublicmontreal.ca) è lo strumento giusto per costruirsi un tour autogestito. In giugno durante il festival, molti artisti lavorano in pubblico: assistere alla creazione dal vivo è un'esperienza separata rispetto alla semplice visita delle opere.`,
+      tags: [`#StreetArt`, `#ArtePubblica`],
+    },
+    {
+      icon: `🦅`,
+      name: `Arte Inuit di Kinngait (Cape Dorset) — Il miracolo del Polo`,
+      desc: `Negli anni Cinquanta, in una remota comunità di cacciatori Inuit sull'isola di Baffin, accadde qualcosa di straordinario: un artista torontino convinse alcuni cacciatori a incidere immagini su pietra e a farne stampe. Quello che ne uscì stupì il mondo dell'arte: creature trasformanti, spiriti animali, scene di caccia raccontate con una sintesi formale potente, radicalmente altra rispetto a qualsiasi tradizione visiva occidentale. I Kinngait Studios — attivi dal 1959 — producono ancora oggi collezioni annuali di stampe in edizione limitata che entrano nelle collezioni dei grandi musei.`,
+      note: `Per chi non arriva al Nunavut, le collezioni migliori si vedono al MBAM (Montréal) e alla National Gallery (Ottawa). A Toronto, Feheley Fine Arts è la galleria di riferimento per l'arte Inuit contemporanea, con un archivio che include opere storiche raramente esposte altrove.`,
+      tags: [`#ArteTradizionale`, `#PerAppassionati`, `#Artigianato`],
+    },
+  ]
+    },
+  cultura: { 
+    intro: `Il Canada culturale è quasi sempre associato ai paesaggi, ma chi si ferma a guardare scopre un paese con tre grandi strati di civiltà sovrapposti: le culture delle Prime Nazioni e dei Métis — vivissime e in piena rinascita — la tradizione franco-canadese del Québec, unica al mondo e spesso più 'europea' dell'Europa stessa, e la stratificazione multiculturale delle grandi città anglofone. Nessun altro paese offre una simile varietà culturale su un unico territorio continentale. Il Québec è il cuore pulsante dell'esperienza culturale per il viaggiatore europeo: lingua francese, cucina robusta e stagionale, festivals comunitari radicati e una vivacità urbana (Montréal, Québec City) che non si trova altrove in Nord America. Se scegli di visitare un solo luogo, scegli il Québec — poi lasciati sorprendere da tutto il resto. Le culture delle Prime Nazioni non sono musealizzate: i Powwow sono eventi pubblici autentici, accessibili, spesso gratuiti, distribuiti su tutto il paese da maggio a settembre. Partecipare è il modo più diretto — e rispettoso — per entrare in contatto con una civiltà millenaria ancora viva.`, 
+    items: [ 
+    {
+      icon: `🏛️`,
+      name: `Vieux-Québec — La città che l'Europa costruì in Nord America`,
+      desc: `L'unica città murata a nord del Messico, fondata da Champlain nel 1608, riconosciuta dall'UNESCO nel 1985 come 'culla della civiltà francese in Nord America'. Non è un museo en plein air ma un quartiere vivo, abitato, dove si parla ancora québécois nelle strade acciottolate della Basse-Ville, dove le pareti di pietra grigia trattenono il vapore nei mesi invernali e le terrazze si riempiono d'estate fino a tardi. Camminare dalle mura della Haute-Ville fino a Place Royale — il luogo dove Champlain costruì il primo edificio nel 1608 — è fare un viaggio fisico di quattrocento anni di storia coloniale, militare e linguistica.`,
+      note: `Molto frequentata in estate: preferisci le mattine presto o le settimane di spalla (fine settembre, inizio ottobre). L'accesso alle mura e ai bastioni è libero. In inverno la città si trasforma: il Carnaval de Québec (febbraio) è uno degli eventi culturali più spettacolari del paese e vale da solo il viaggio.`,
+      tags: [`#PatrimonioUnesco`, `#StoriaeMemoria`, `#VitaSociale`, `#TradizioniLocali`],
+    },
+    {
+      icon: `⚓`,
+      name: `L'Anse aux Meadows — Dove i Vichinghi toccarono l'America`,
+      desc: `L'unico insediamento vichingo confermato in Nord America, datato intorno all'anno 1000, fu il primo sito canadese iscritto all'UNESCO nel 1978. Qui Leif Eriksson sbarcò cinque secoli prima di Colombo, e gli otto edifici in torba ricostruiti sui resti originali danno una potenza visiva immediata alla storia. Il programma di storia vivente 'The Viking Encampment' porta in scena fabbri, tessitori e narratori in costume che recitano le saghe nordiche attorno al fuoco — un'esperienza sensoriale che trasforma la storia in qualcosa di palpabile, non scolastico.`,
+      note: `Richiede un viaggio dedicato a Terranova: l'aeroporto più vicino è Deer Lake, da cui seguire la 'Viking Trail' per 5 ore. Il viaggio è parte dell'esperienza — la penisola Great Northern è uno dei paesaggi più selvaggi del Canada orientale. Pianifica almeno 2 notti nella zona per non affrettare la visita.`,
+      tags: [`#PatrimonioUnesco`, `#StoriaeMemoria`, `#RaccontiPopolari`],
+    },
+    {
+      icon: `🥁`,
+      name: `Powwow delle Prime Nazioni — Il cerchio che non si è mai chiuso`,
+      desc: `Un Powwow non è una performance: è un raduno comunitario dove si balla, si canta, si mangia insieme e si onorano gli anziani. Le Prime Nazioni ne organizzano centinaia ogni anno in tutto il paese, molti aperti al pubblico non indigeno. La Grand Entry — l'entrata solenne dei danzatori in regalia, guidata dai portabandiera — è uno dei momenti di bellezza collettiva più potenti che si possano vedere in Canada: colori, suoni dei tamburi, decine di stili di danza che convivono nello stesso cerchio.`,
+      note: `Informarsi in anticipo sull'etichetta: chiedere prima di fotografare, non toccare la regalia, seguire le indicazioni del Maestro delle Cerimonie. Portare denaro contante per i venditori. Molti Powwow sono gratuiti o con quota simbolica. Per trovare gli eventi: il sito Pow Wow Times (powwows.com) aggiorna il calendario nazionale.`,
+      tags: [`#RitieCerimonie`, `#Danza`, `#VitaSociale`, `#TradizioniLocali`, `#Musica`],
+    },
+    {
+      icon: `🍁`,
+      name: `Cabane à sucre — La primavera più dolce del mondo`,
+      desc: `Ogni primavera il Québec si ferma per festeggiare il temps des sucres: la linfa dell'acero scorre di notte quando le temperature oscillano tra gelo e disgelo, e si trasforma in sciroppo nei bollitori a vapore delle cabanes à sucre. Non è una visita a un'azienda agricola: è un banchetto collettivo attorno a lunghi tavoli condivisi, con zuppa di piselli, tourtière, oreilles de crisse e uova in sciroppo d'acero. Fuori ad aspettarti c'è la tire d'érable: lo sciroppo versato sulla neve fresca e arrotolato su un bastoncino di legno. Musica folk dal vivo, slitte trainate da cavalli, bambini che corrono nella neve.`,
+      note: `Stagione: febbraio–fine aprile. Prenota il weekend con almeno 2–3 settimane di anticipo. La Sucrerie de la Montagne (Mont Rigaud, ~1h da Montréal) è tra le più autentiche — gestione familiare, atmosfera genuina, nessuna concessione al turismo di facciata.`,
+      tags: [`#TradizioniLocali`, `#CucinaeProduzioneLocale`, `#VitaSociale`],
+    },
+    {
+      icon: `🎻`,
+      name: `Metis Crossing e il Red River Jig — Il suono di un popolo che ha inventato sé stesso`,
+      desc: `I Métis sono nati dall'incontro tra i trapper europei e le donne delle Prime Nazioni nelle praterie del Canada centrale, e hanno forgiato una cultura radicalmente propria: una lingua (il michif, che mescola francese e cree), una musica (il fiddle irlandese reinterpretato in chiave indigena) e una danza — il Red River Jig — che è la loro firma nel mondo. Metis Crossing, in Alberta, è il primo centro culturale Métis di portata nazionale: workshop di danza, cucina tradizionale, artigianato del porcupine quill — tutto curato dalla comunità stessa, non da operatori turistici.`,
+      note: `Metis Crossing si trova a Smoky Lake, Alberta (2h da Edmonton). I programmi culturali variano stagionalmente — verifica il calendario sul sito prima di partire. La visita è arricchita dall'alloggio sul posto nelle riverside lodges, che permettono di vivere il territorio oltre la singola giornata di tour.`,
+      tags: [`#Danza`, `#VitaSociale`, `#TradizioniLocali`, `#Musica`],
+    },
+    {
+      icon: `🧱`,
+      name: `Saint-Roch a Québec City — La rivoluzione silenziosa di un quartiere operaio`,
+      desc: `A meno di dieci minuti a piedi dal Vieux-Québec turistico, Saint-Roch è la risposta della città reale al quartiere da cartolina. Ex quartiere operaio e industriale, rifiorito dagli anni Novanta come polo creativo, è oggi il luogo dove vivono i québécois che lavorano nel design, nella tecnologia e nelle arti. Distillerie indipendenti, gallerie sperimentali, torrefazioni di caffè speciality, microbrasserie e librerie d'occasione coabitano in edifici di mattone della fine dell'Ottocento. La scena culinaria è la più interessante e autentica di tutta la città.`,
+      note: `Combinabile facilmente con il Marché du Vieux-Port e la Distillerie Stadaconé, entrambi nel raggio di pochi isolati. Il venerdì sera è il momento più vivo. Evita l'estremo est del quartiere e concentrati su rue Saint-Joseph est: è il cuore del quartiere nuovo e il migliore indirizzo per capire dove sta andando il Québec contemporaneo.`,
+      tags: [`#VitaSociale`, `#CucinaeProduzioneLocale`],
+    },
+    {
+      icon: `🐻`,
+      name: `Îles de la Madeleine — La diaspora acadiana suona ancora al vento`,
+      desc: `Tredici isole collegate da sottili istmi sabbiosi in mezzo al Golfo del San Lorenzo, abitate da discendenti degli Acadiani deportati nel 1755 che qui hanno costruito una cultura unica: musica folk atlantica con fisarmonica e violino, cucina di mare iperlocale (astici, granchi, capesante), lavoro del vetro soffiato con i colori dell'oceano, e uno spirito comunitario che ha permesso a 12.000 persone di sopravvivere in isolamento per tre secoli. Il Festival Acadien delle Îles (agosto) è il momento in cui tutta la comunità sale sulla pista da ballo.`,
+      note: `Raggiungibili con un volo da Québec City o Montréal (1h circa) o traghetto notturno da Prince Edward Island (5h). La permanenza minima consigliata è 4-5 giorni. Le isole si vivono lentamente — noleggia una bicicletta e percorri gli istmi sabbiosi: la vista dall'alto sui due mari è uno dei panorami più particolari del Canada.`,
+      tags: [`#TradizioniLocali`, `#CucinaeProduzioneLocale`, `#Danza`, `#VitaSociale`, `#Musica`],
+    },
+  ]
+    },
+  relax: { 
+    intro: `Il Canada è un paese che sa stupire anche chi non cerca avventura: tra terme alpine con vista sulle Rockies, tramonti sull'Atlantico e città dove il cocktail è un'arte, c'è una dolcezza silenziosa che raramente ci si aspetta da questo gigante. La scena urbana di Montréal è una sorpresa per molti europei: rooftop bar animati, bistrot con vini biodinamici, vita notturna autentica e un'identità culinaria unica al mondo — il tutto con prezzi ancora ragionevoli rispetto alle capitali europee. Le hot springs canadesi non sono solo terme: sono vasche naturali immerse in foreste di conifere o canyon rocciosi, spesso con sorgenti tra le più calde del continente, che si raggiungono con facilità e si godono quasi soli fuori stagione. L'aurora boreale non è solo per i temerari: in luoghi come Yellowknife si può osservare il cielo illuminarsi di verde mentre si è comodamente seduti in una cupola riscaldata.`,
+    items: [ 
+    {
+      icon: `🏔️`,
+      name: `Vasche all'alba sulle Rockies — Banff Upper Hot Springs`,
+      desc: `A 1.585 metri di quota, a pochi passi dal centro di Banff, queste terme storiche gestite da Parks Canada offrono vasche all'esterno con acque minerali tra 37 e 40°C e una vista sulle cime innevate del Monte Rundle che sembra dipinta. L'atmosfera è quella di un bagno alpino d'altri tempi, senza effetti spa-resort esagerati: solo acqua calda, aria gelida e montagne. Entrarci al mattino presto, con la luce che cambia sul ghiacciaio, è un momento che si racconta per mesi.`,
+      note: `Niente prenotazioni: accesso in ordine di arrivo. Fuori stagione (ottobre–novembre, marzo) le code quasi scompaiono e la vasca è quasi tua. Porta un costume termico o noleggiane uno 'storico' in loco — i modelli originali in lana hanno il loro fascino.`,
+      tags: [`#Montagna`, `#Benessere`, `#SlowTravel`],
+    },
+    {
+      icon: `🧖`,
+      name: `Termoterapia nordica in foresta — Scandinave Spa Whistler`,
+      desc: `Incastonata tra abeti e cedri sul bordo di Lost Lake Park, questa spa in stile scandinavo propone cicli di caldo e freddo — bagni caldi, saune, docce gelate, vasche di immersione — immersi nella foresta dell'entroterra pacifico: un rituale ancestrale di recupero fisico che i canadesi del British Columbia vivono come una pratica settimanale. Il silenzio obbligatorio nelle aree esterne lo trasforma in qualcosa di molto vicino alla meditazione. In inverno, con la neve sui rami, il contrasto tra il vapore e il freddo è indimenticabile.`,
+      note: `Struttura adults-only, silenzio richiesto nelle aree esterne — una regola che cambia completamente la qualità dell'esperienza rispetto alle spa rumorose. Prenota in anticipo, specialmente nei weekend invernali. Combinabile con una giornata sulle piste di Whistler Blackcomb.`,
+      tags: [`#Benessere`, `#Montagna`, `#SlowTravel`],
+    },
+    {
+      icon: `🌊`,
+      name: `Prima onda sull'Oceano Pacifico — Surf a Tofino`,
+      desc: `Tofino è la capitale del surf in Canada: 35 km di spiagge sabbiose affacciate sul Pacifico, circondate da foresta pluviale temperata, con onde morbide e scuole di surf tra le migliori del Nord America. Anche chi non ha mai messo piede su una tavola riesce a stare in piedi entro poche ore di lezione, e quella sensazione — il Pacifico sotto i piedi, la costa selvaggia tutt'intorno — è una di quelle che cambia la percezione di cosa il Canada sia in grado di offrire. Fuori dall'acqua, il villaggio è piccolo, autentico e pieno di buon cibo di mare.`,
+      note: `Ideale per principianti in estate (giugno–agosto), onde più docili e temperatura dell'acqua più sopportabile. Muta obbligatoria — le scuole locali come Pacific Surf Co. e Tofino Surf School la forniscono. Prenota l'alloggio con mesi di anticipo: il villaggio si esaurisce rapidamente in alta stagione.`,
+      tags: [`#Mare`, `#Sport`, `#SlowTravel`],
+    },
+    {
+      icon: `🍁`,
+      name: `Succo d'acero nella neve — La Cabane à Sucre in Québec`,
+      desc: `Tra febbraio e aprile, le foreste di aceri del Québec si trasformano in palcoscenici di una festa ancestrale: si va alla cabane à sucre, si siede a lunghi tavoli in baite di legno, si mangia prosciutto brasato all'acero, fagioli al forno, tourtière e uova con sciroppo — il tutto innaffiato da birra all'acero o sidro locale mentre un fisarmonicista suona. Il finale è la tire d'érable: sciroppo d'acero versato sulla neve fresca, arrotolato su un bastoncino come un lecca-lecca caldo. Un rito collettivo che nessun europeo si aspetta e che tutti vogliono ripetere.`,
+      note: `Stagione: febbraio–fine aprile. La Sucrerie de la Montagne (Mont Rigaud, ~1h da Montréal) è tra le più autentiche e patrimonio del Québec. Prenota il weekend con almeno 2–3 settimane di anticipo.`,
+      tags: [`#EsperienzaUnica`, `#VitaSociale`, `#SlowTravel`],
+    },
+    {
+      icon: `🥩`,
+      name: `Carne affumicata e poutine da leggenda — Schwartz's Deli, Montréal`,
+      desc: `Dal 1928, Schwartz's è il tempio del 'smoked meat montréalais': manzo marinato per settimane in spezie segrete, affumicato lentamente e servito a fette spesse su pane di segale con senape gialla. Non è un ristorante di design — è un bancone di legno, code fuori dalla porta e tavoli condivisi con sconosciuti — eppure è uno dei sandwiches più celebri del Nord America. Abbinalo alla 'poutine con smoked meat' nello stesso locale per capire in dieci minuti cosa significa comfort food québécois.`,
+      note: `Attesa media: 30–60 minuti in alta stagione. Arriva presto o tardi (dopo le 21). Chiedi 'half fatty on rye with mustard' per l'ordine classico — il grasso del manzo a quella cottura è la parte che non puoi saltare. Cash preferito, ma accettano carte.`,
+      tags: [`#Città`, `#EsperienzaUnica`, `#VitaSociale`],
+    },
+    {
+      icon: `🌌`,
+      name: `Aurora boreale da una cupola riscaldata — Yellowknife, NWT`,
+      desc: `Yellowknife è la capitale mondiale dell'aurora boreale: le luci compaiono in media tre notti su sette da agosto ad aprile. Gli operatori locali hanno trasformato il fenomeno in un'esperienza di comfort puro: Aurora Village e altri offrono cupole riscaldate e teepee sul lago ghiacciato dove si aspetta lo show avvolti in coperte, con tè caldo e guida indigena Dene che racconta le leggende delle luci. Vedere il cielo passare dal nero al verde smeraldo senza avere freddo — questo è il segreto canadese che pochi europei conoscono.`,
+      note: `Miglior periodo: dicembre–marzo per notti più lunghe; agosto–settembre per temperature più miti. Prenota con mesi di anticipo — le cupole si esauriscono rapidamente. Voli diretti da Calgary ed Edmonton.`,
+      tags: [`#CieloNotturno`, `#EsperienzaUnica`, `#AlloggioSpeciale`, `#SlowTravel`],
+    },
+    {
+      icon: `🛁`,
+      name: `Hot springs nelle grotte di calcare — Ainsworth Hot Springs`,
+      desc: `Ainsworth è uno dei posti più stravaganti dove fare il bagno in Canada: le acque termali (36–43°C) si raccolgono in una grotta a ferro di cavallo scavata nella roccia calcarea, dove il vapore sale dalle pareti e mini-cascate calde scorrono direttamente sulle spalle. La struttura ha anche una piscina esterna con vista sul Lago Kootenay e una vasca di immersione fredda per chi ama il contrasto termico. Meno nota di Banff, più autentica e selvaggia: la risposta giusta per chi vuole raccontare di aver fatto il bagno dentro una montagna.`,
+      note: `A 45 minuti da Nelson (BC), facilmente raggiungibile in auto lungo la Highway 31A. Aperto tutto l'anno. Dedica almeno 20 minuti alla grotta per abituarti al caldo intenso prima di immergerti completamente — l'adattamento cambia l'esperienza.`,
+      tags: [`#Benessere`, `#Montagna`, `#SlowTravel`],
+    },
+  ]
+    },
+  "mesi": [
+    {
+      "nome": "Gennaio",
+      "climaTag": "Multiclima",
+      "clima": "Inverno rigido nella maggior parte del paese: -20°C/-10°C nelle Grandi Pianure e Quebec, -5°C/0°C a Toronto, nevoso ovunque. Eccezione: Vancouver e costa BC con 3°C/8°C, pioggia frequente, raramente neve. Nord: temperature artiche sotto -30°C.",
+      "feste": "Capodanno (1 gennaio). Festival invernali locali iniziano a fine mese in varie città.",
+      "natura": "Aurora boreale visibile nei territori del nord (Yukon, Northwest Territories, Nunavut) con alta frequenza nelle notti limpide. Stagione sciistica in piena attività nelle Montagne Rocciose (Banff, Whistler).",
+      "turisti": "Bassa stagione turistica generale, eccetto le stazioni sciistiche (Whistler, Banff, Mont-Tremblant) che sono in piena alta stagione invernale. Città come Toronto e Montreal sono tranquille."
+    },
+    {
+      "nome": "Febbraio",
+      "climaTag": "Multiclima",
+      "clima": "Il mese più freddo per gran parte del paese. Quebec e Ontario ancora sotto zero, spesso -15°C di notte. Vancouver rimane mite (5°C/10°C) con pioggia. Nelle Rocciose neve abbondante e condizioni ottimali per lo sci.",
+      "feste": "Festival d'Hiver de Québec (Quebec City, circa 10 giorni a inizio febbraio) — uno dei più grandi festival invernali del mondo. Carnevale di Québec con sculture di ghiaccio e sport invernali. Family Day in alcune province (Ontario, BC, Alberta) — data variabile.",
+      "natura": "Aurora boreale ancora visibile al nord. Ottima stagione per osservare le foche arpione sull\'isola di Terranova (whelping season). Neve fresca abbondante nelle Rocciose.",
+      "turisti": "Alta stagione sulle piste. Quebec City molto affollata durante il Carnevale. Resto del paese in bassa stagione."
+    },
+    {
+      "nome": "Marzo",
+      "climaTag": "Multiclima",
+      "clima": "Transizione verso la primavera nelle province meridionali: Toronto raggiunge 0°C/5°C, Montreal ancora freddo (-5°C/2°C). Vancouver fiorisce (8°C/13°C). Le Rocciose mantengono neve abbondante fino a fine mese. Nelle Praterie ancora inverno.",
+      "feste": "St. Patrick's Day (17 marzo) celebrato nelle grandi città, specie Toronto e Montreal. Fine stagione sciistica a Whistler verso fine marzo.",
+      "natura": "Inizio delle migrazioni degli uccelli acquatici nelle Praterie. A Vancouver e Victoria, i ciliegi giapponesi iniziano a fiorire a fine mese. Ultimi avvistamenti di aurore boreali prima delle notti più brevi.",
+      "turisti": "Ancora alta stagione sciistica nelle Rocciose (spesso il periodo migliore per neve e sole). Resto del paese in bassa stagione con prezzi contenuti."
+    },
+    {
+      "nome": "Aprile",
+      "climaTag": "Multiclima",
+      "clima": "Primavera in arrivo al sud: Toronto 5°C/13°C con piogge. Montreal si risveglia (2°C/10°C). Vancouver in fiore (10°C/15°C, piogge in diminuzione). Le Rocciose ancora con neve, fine stagione sciistica. Nord ancora freddo.",
+      "feste": "Venerdì Santo e Pasqua (date variabili). Easter Monday festivo federale.",
+      "natura": "Fioriture spettacolari di ciliegi a Vancouver e Victoria (metà aprile picco). Migrazione delle balene beluga verso l\'estuario del San Lorenzo (inizio). Disgelo dei laghi e fiumi nelle Praterie.",
+      "turisti": "Spalla bassa. Vancouver attrae turisti per le fioriture. Le Rocciose chiudono molti impianti sciistici. Ottimo periodo per visitare città come Montreal e Toronto con pochi turisti."
+    },
+    {
+      "nome": "Maggio",
+      "climaTag": "Multiclima",
+      "clima": "Primavera mite nella maggior parte del paese: Toronto 10°C/20°C, Montreal 8°C/18°C, Vancouver 12°C/18°C con sole. Le Rocciose aprono i parchi nazionali ma con neve residua in quota. Terranova ancora fresca (5°C/12°C).",
+      "feste": "Victoria Day (lunedì prima del 25 maggio) — festivo federale con fuochi d'artificio in molte città. Tulip Festival di Ottawa (metà maggio).",
+      "natura": "Migrazione massiccia di uccelli canori. Orsi neri attivi nei parchi nazionali. Balene (beluga, minke) nell\'estuario del San Lorenzo. Fioriture nelle Praterie.",
+      "turisti": "Stagione turistica in apertura. I parchi nazionali (Banff, Jasper) iniziano ad animarsi. Prezzi ancora nella fascia media. Ottawa molto visitata per i tulipani."
+    },
+    {
+      "nome": "Giugno",
+      "climaTag": "Multiclima",
+      "clima": "Estate in arrivo: Toronto e Montreal 15°C/25°C con possibili temporali. Vancouver 15°C/22°C, sempre più soleggiato. Le Rocciose aprono completamente (10°C/22°C in valle). Nord: giornate lunghissime. Terranova 8°C/16°C, fresco.",
+      "feste": "Fête Nationale du Québec (24 giugno) — festa provinciale del Quebec con grandi celebrazioni a Montreal e Quebec City. National Indigenous Peoples Day (21 giugno). Jazz Festival di Montreal (fine giugno, date variabili).",
+      "natura": "Midnight sun inizia nello Yukon e nei Territori del Nord-Ovest (solstizio). Avvistamento di orche nelle acque della BC (Vancouver Island). Balene nel Golfo di San Lorenzo in piena stagione. Fioritura delle praterie.",
+      "turisti": "Inizio dell\'alta stagione. I parchi nazionali si riempiono, specialmente Banff. Montreal vivace per il festival jazz. Prezzi in aumento."
+    },
+    {
+      "nome": "Luglio",
+      "climaTag": "Multiclima",
+      "clima": "Piena estate: Toronto e Montreal 20°C/28°C con umidità e temporali occasionali. Vancouver 18°C/25°C, soleggiato e secco (il mese migliore). Le Rocciose 12°C/25°C. Territori del nord: caldo breve ma intenso (15°C/25°C). Terranova 12°C/20°C.",
+      "feste": "Canada Day (1 luglio) — festa nazionale con fuochi d\'artificio in tutto il paese, grandi eventi a Ottawa, Toronto, Vancouver. Stampede di Calgary (prima o seconda settimana di luglio, 10 giorni) — famoso rodeo e festival western.",
+      "natura": "Picco delle fioriture alpine nelle Rocciose. Avvistamento di orche (Vancouver Island). Caribù nelle migrazioni estive nel nord. Salmon run inizia in alcune zone della BC. Notti brevi nel nord.",
+      "turisti": "Alta stagione assoluta. Banff e Jasper affollatissimi. Vancouver ai massimi. Ottawa celebrata per il Canada Day. Prezzi al picco. Prenotazioni indispensabili per i parchi nazionali."
+    },
+    {
+      "nome": "Agosto",
+      "climaTag": "Multiclima",
+      "clima": "Estate piena continua. Toronto e Montreal calde e umide (20°C/28°C). Vancouver 18°C/25°C, ancora ottimo. Rocciose splendide. Fine agosto: prime avvisaglie autunnali nelle Praterie e nel nord. Terranova 13°C/21°C.",
+      "feste": "Civic Holiday (primo lunedì di agosto in Ontario e altre province — festivo non federale). Fringe Festival di Edmonton (agosto). Diverse fiere agricole nelle Praterie.",
+      "natura": "Salmon run in pieno svolgimento nei fiumi della BC e dello Yukon — spettacolo naturale straordinario. Orsi grizzly visibili nei fiumi mentre cacciano il salmone. Ultima finestra per avvistamento orche. Inizio colorazione foglie nel nord.",
+      "turisti": "Alta stagione, seconda solo a luglio. Parchi nazionali ancora molto affollati. Buon periodo per wildlife watching in BC e Yukon."
+    },
+    {
+      "nome": "Settembre",
+      "climaTag": "Multiclima",
+      "clima": "Transizione autunnale. Toronto e Montreal 12°C/22°C, gradevoli e soleggiati. Vancouver 12°C/20°C, ancora piacevole. Rocciose: notti fredde (sotto 0°C in quota), giorni belli. Nord: autunno già avanzato. Praterie: prime gelate notturne.",
+      "feste": "Labour Day (primo lunedì di settembre) — festivo federale. Toronto International Film Festival (TIFF, prima o seconda settimana di settembre) — evento di rilievo internazionale.",
+      "natura": "Foliage autunnale straordinario in Quebec, Ontario e Nuova Scozia — tra i più spettacolari del mondo. Inizia nella seconda metà del mese. Salmon run ancora attivo. Rialzo avvistamenti aurora boreale nel nord.",
+      "turisti": "Spalla alta (ottimo periodo). I parchi si svuotano dopo l'estate. Il foliage del Quebec attira turisti a fine mese. TIFF porta visitatori a Toronto. Prezzi in calo rispetto all'estate."
+    },
+    {
+      "nome": "Ottobre",
+      "climaTag": "Multiclima",
+      "clima": "Autunno inoltrato: Toronto 7°C/15°C, Montreal 3°C/12°C con prime nevicate possibili a fine mese. Vancouver 8°C/14°C con piogge in aumento. Rocciose: neve in quota, parchi in chiusura parziale. Terranova: venti e piogge.",
+      "feste": "Thanksgiving canadese (secondo lunedì di ottobre) — festivo federale, grandi riunioni familiari. Halloween (31 ottobre) molto sentito, con decorazioni e eventi in tutto il paese.",
+      "natura": "Foliage al picco nelle prime settimane in Quebec e Ontario — colori rossofuoco, arancioni, gialli. Migrazione dei rapaci (Point Pelee, Ontario). Aurora boreale sempre più visibile con notti che si allungano. Fine stagione per gli orsi prima dell\'ibernazione.",
+      "turisti": "Alta stagione del foliage: Quebec e Ontario molto visitati. Resto del paese in bassa stagione. Prezzi contenuti ovunque tranne nelle zone del foliage."
+    },
+    {
+      "nome": "Novembre",
+      "climaTag": "Multiclima",
+      "clima": "Tardo autunno e inizio inverno: Toronto 0°C/8°C, neve possibile. Montreal già invernale (-5°C/3°C). Vancouver 5°C/10°C, grigio e piovoso. Praterie e Rocciose in pieno inverno. Nord: buio che aumenta rapidamente.",
+      "feste": "Remembrance Day (11 novembre) — festivo in molte province, cerimonie commemorative in tutto il paese. Inizio stagione dei mercatini natalizi nelle grandi città.",
+      "natura": "Aurora boreale in alta frequenza nel nord (notti lunghe e buie). Beluga e altri cetacei lasciano il San Lorenzo verso l\'oceano aperto. Primi avvistamenti di orso polare a Churchill (Manitoba) — picco stagionale.",
+      "turisti": "Bassa stagione per la maggior parte del paese. Churchill (Manitoba) è meta di nicchia per gli orsi polari (ottobre-novembre) con alta domanda e prezzi elevati per i tour specializzati."
+    },
+    {
+      "nome": "Dicembre",
+      "climaTag": "Multiclima",
+      "clima": "Inverno su quasi tutto il paese: Toronto -5°C/2°C, Montreal -15°C/-3°C, neve abbondante. Vancouver 3°C/8°C, piovoso ma raramente gelido. Rocciose: piena stagione sciistica in apertura. Nord: buio quasi totale, temperature artiche.",
+      "feste": "Natale (25 dicembre) e Boxing Day (26 dicembre) — festivi federali. Mercatini natalizi a Quebec City, Montreal, Toronto, Vancouver. Capodanno (31 dicembre) con grandi festeggiamenti nelle città principali.",
+      "natura": "Aurora boreale al massimo della visibilità nello Yukon e nei territori del nord (notti lunghe fino a 18-20 ore). Stagione sciistica in apertura a Whistler, Banff, Mont-Tremblant.",
+      "turisti": "Alta stagione nelle stazioni sciistiche (Whistler, Banff). Quebec City molto atmosferica e visitata per Natale. Vancouver e Toronto animate per le feste. Prezzi in aumento nel periodo natalizio."
     }
   ]
 },
@@ -3974,6 +4350,483 @@ const countries = [
       "feste": "Giorno dell'Indipendenza (6 dicembre). Natale (24-26 dicembre) – festività molto sentita, con tradizioni forti legate a Babbo Natale e Rovaniemi.",
       "natura": "Aurore boreali spettacolari. Paesaggio natalizio da cartolina. Renne visibili nelle fattorie della Lapponia.",
       "turisti": "Alta stagione in Lapponia (specialmente Rovaniemi), prezzi altissimi. Helsinki romantica e poco affollata."
+    }
+  ]
+},
+{
+  id: `francia`,
+  region: `Europa`,
+  name: `Francia`,
+  tagline: `Un paese che non smette mai di sorprenderti: dalla luce che filtra sulle vetrate di Chartres ai fenicotteri rosa della Camargue, dai vigneti di Bordeaux alle scogliere di porfido rosso della Bretagna. La Francia è il paese che ha inventato l'arte di vivere — e continua a dimostrarlo ogni giorno.`,
+  area: `Europa`,
+  paese: `Francia`,
+  sicurezza: `Normali Precauzioni`,
+  sanita: `Eccellente`,
+  infrastrutture: `Ben sviluppate`,
+  flussi: `Circa 100 milioni di visitatori internazionali nel 2024 — prima destinazione mondiale. +2% sul 2023; entrate record 71 mld €. Principali mercati: Belgio, Germania, Regno Unito, Italia, Spagna, USA (in forte crescita). La destinazione è calibrata su un pubblico europeo, ma il segmento asiatico cresce (+40% cinesi, +20% giapponesi rispetto al 2023). Mesi di punta: luglio-agosto (estate parigina + spiagge); picchi in dicembre (mercatini). Bassa: gennaio-febbraio. Riapertura Notre-Dame (dicembre 2024) ha intensificato l'affluenza parigina.`,
+  curatorNote: `Valuta: Euro. Prese: Tipo C e Tipo E — non compatibili con le spine italiane tipo L senza adattatore. Adattatore Schuko/Tipo E facilissimo da trovare. Farmaci: nessuna restrizione nota oltre quelle standard UE.`,
+  sicurezzaDesc: [
+    `La Francia è un paese sicuro, ma Parigi concentra livelli di microcriminalità turistica tra i più alti d'Europa: borseggi, frodi e truffe da manuale colpiscono ogni anno decine di migliaia di visitatori, quasi sempre in zone e situazioni prevedibili. Il rischio terrorismo è strutturalmente elevato: il sistema Vigipirate è al massimo livello dalla metà del 2024.`,
+    `Criminalità: furti con destrezza concentrati su metro di Parigi (linee 1, 6, 9; stazioni Châtelet-Les Halles e Gare du Nord), dintorni Torre Eiffel e Louvre. 18.500 episodi di furto ai turisti nel 2025. Borseggiatori spesso in gruppo con tecniche di distrazione. Frodi frequenti: petizione falsa, braccialetto imposto, taxi abusivi. Zone da evitare di sera: XVIII arrondissement e zona 93 di Parigi. Allerte: US State Dept Livello 2 — Prestare maggiore attenzione; sistema antiterrorismo francese Vigipirate al livello massimo 'Urgence Attentat' dal luglio 2024. Intelligence monitora ~8.400 individui in sorveglianza. `,
+    `Rischi naturali: nessuno rilevante per turisti.`,
+    `Rischi epidemiologici: nessuna malattia endemica.`,
+  ],
+  sanDesc: [
+    `La sanità francese è tra le migliori al mondo, accessibile e capillare sul territorio. Per il visitatore europeo munito di TEAM, le cure urgenti sono coperte senza anticipi. Attenzione alle zone rurali e ai costi delle prestazioni non rimborsate.`,
+    `Sistema sanitario (Assurance Maladie) tra i migliori al mondo (OECD 2025). Strutture pubbliche e private di alto livello su tutto il territorio. Carenza di personale in alcune aree rurali (OECD Country Health Profile 2025). TEAM valida. Costi elevati per le cure non coperte. Farmacie capillari (croce verde luminosa). Nessun vaccino obbligatorio per l'ingresso.`,
+  ],
+  infraDesc: [
+    `La Francia dispone di infrastrutture eccellenti, con una rete ferroviaria ad alta velocità tra le migliori al mondo e connettività urbana molto sviluppata. Qualche attenzione va agli scioperi ferroviari — imprevedibili — e alle aree rurali, dove trasporti e copertura internet possono essere limitati.`,
+    `TRASPORTI: Rete TGV tra le più sviluppate al mondo (Parigi-Lione ~2h, Parigi-Marsiglia ~3h). SNCF capillare anche su linee regionali. Metro, tram e bus in tutte le grandi città. Uber operativo quasi ovunque. Voli domestici brevi (<2h30' in treno) vietati dal maggio 2023. Attenzione: scioperi possono bloccare il servizio ferroviario senza preavviso. Si guida a destra.`,
+    `PAGAMENTI: Carte accettate nella quasi totalità degli esercizi; contactless diffusissimo. Contanti utili nei mercati e nei piccoli esercizi rurali.`,
+    `INTERNET: Fibra in espansione (rete in rame in dismissione dal 2025). Wi-Fi disponibile e affidabile nelle città; aree rurali e montagne con copertura ancora limitata.`,
+    `CORRENTE: 230V/50Hz. Rete stabile; blackout rari, possibili in zone rurali durante tempeste.`,
+  ],
+  linguaDesc: `Francese. Inglese parlato bene negli hotel, ristoranti e attrazioni principali di Parigi, Nizza, Cannes, Bordeaux. Nelle aree rurali e città secondarie l'inglese è molto più raro. I francesi, specie le generazioni mature, hanno tradizionalmente resistenza a parlare in inglese, ma il rapporto è migliorato con i giovani. Annunci ferroviari in francese anche sui treni intercity (solo TGV internazionali con traduzione inglese).`,
+  sources: [
+    { label: `U.S. State Department – France Travel Advisory (maggio 2025)`, url: '#' },
+    { label: `U.S. Embassy Paris`, url: '#' },
+    { label: `Préfecture de Police Paris`, url: '#' },
+    { label: `OECD/European Observatory – France Country Health Profile 2025`, url: '#' },
+    { label: `Connexion France`, url: '#' },
+    { label: `Ohayu – Best French Mobile Networks (settembre 2025)`, url: '#' },
+    { label: `Atout France/INSEE`, url: '#' },
+    { label: `Asher Fergusson – US to France Power Adapter Guide`, url: '#' },
+  ],
+  lingua: [
+    `francese`,
+    `ingleseTuristico`,
+  ],
+  tags: {
+      natura: [`#PatrimonioUnesco`, `#MeravigliaGeologia`, `#Hiking`, `#DaCartolina`, `#PaesaggiEstremi`, `#NaturaSelvaggia`, `#Iconico`, `#KayakAdventure`, `#Avventura`, `#AvvistamentoAnimali`, `#Wildlife`, `#Snorkeling`, `#Mare`, `#EsperienzaUnica`, `#RuraleEArmonica`, `#Trekking`, `#EsperienzaEstrema`, `#Diving`],
+      arte: [`#Capolavoro`, `#museiegallerie`, `#architettura`, `#PatrimonioUnesco`, `#palazzistorici`, `#arteearchitetturasacra`, `#sitoarcheologico`, `#arteearchitetturamoderna`, `#galleriadarte`, `#installazione`, `#artepubblica`, `#streetart`, `#artetradizionale`, `#artigianato`, `#giardini`],
+      cultura: [`#PatrimonioUnesco`, `#tradizionilocali`, `#vitasociale`, `#cucinaeproduzionelocale`, `#storiaememoria`, `#workshop`, `#ritiecerimonie`, `#danza`, `#raccontipopolari`, `#mercati`],
+      relax: [`#benessere`, `#esperienzaunica`, `#slow_travel`, `#cenaspeciale`, `#mare`, `#sport`, `#socialità`, `#rooftop`, `#città`, `#montagna`]
+    },
+  natura: { 
+    intro: `La Francia non è solo Parigi e vini: è un continente in miniatura dove convivono 80 vulcani addormentati, il canyon più profondo d'Europa, lagune abitate da fenicotteri rosa e foreste primordiali che non conoscono turisti. Meno di un italiano su dieci sa che la Francia metropolitana ospita il primo e unico sito UNESCO naturale del continente — una catena di vulcani che ha eruttato appena 8.600 anni fa. O che in Corsica esiste un trekking così selvaggio che l'80% di chi lo inizia non lo termina. O ancora che nelle riserve di Scandola nuotano specie marine protette in acque tra le più limpide del Mediterraneo. La natura francese è meravigliosamente sproporzionata rispetto alle aspettative. Porta scarpe robuste e curiosità.`,
+    items: [ 
+    {
+      icon: `🌋`,
+      name: `Chaîne des Puys – Faglia di Limagne`,
+      desc: `Ottanta vulcani allineati in fila per 40 chilometri, come giganti addormentati che respirano ancora: l'ultimo ha eruttato appena 8.600 anni fa. La Chaîne des Puys è l'unico sito esclusivamente naturale della Francia metropolitana riconosciuto dall'UNESCO (2018), scelto per il suo valore tettonico eccezionale: la faglia di Limagne racconta il momento in cui il sottosuolo europeo cercò di spezzarsi, aprendo una voragine che avrebbe potuto generare un oceano. Dalla cima del Puy de Dôme (1.465 m) si domina l'intera catena: un panorama marziano, eppure verde e domestico, con crateri vestiti di foresta e laghi di origine vulcanica perfettamente circolari.`,
+      note: `Il Puy de Dôme è raggiungibile anche in treno a cremagliera (a pagamento), ideale per chi non vuole camminare. In alta stagione estiva è molto frequentato: preferire l'arrivo all'alba. L'accesso in auto alla vetta è vietato. Il Lago Pavin, maar vulcanico nei pressi, è un bonus quasi sempre deserto — uno dei laghi più profondi e spettralmente belli della Francia, la cui temperatura rimane costante a 4°C in profondità tutto l'anno.`,
+      tags: [`#PatrimonioUnesco`, `#MeravigliaGeologica`, `#Hiking`, `#DaCartolina`, `#Trekking`, `#EsperienzaUnica`],
+    },
+    {
+      icon: `🏞️`,
+      name: `Gorges du Verdon — il Grand Canyon d'Europa`,
+      desc: `Settecento metri di profondità, pareti calcaree verticali color avorio, e in fondo un fiume di un verde smeraldo così intenso da sembrare dipinto. Il Verdon ha scavato questo canyon per milioni di anni, creando un paesaggio che non ha equivalenti nel continente europeo. Sulla Corniche Sublime o sul Route des Crêtes si percorrono i bordi di un precipizio con il lago di Sainte-Croix che splende turchese sullo sfondo — uno dei colori più incongruamente belli che la natura sappia produrre. Scendere in kayak significa galleggiare in fondo a un mondo verticale, con pareti che si chiudono sopra la testa e acque smeraldo che riflettono la roccia bianca con effetti di luce diversi ogni ora.`,
+      note: `Il kayak tra le gole è l'esperienza definitiva, ma solo con guide esperte (il canyon è chiuso dalla piena invernale). Il bordo è percorribile in auto, ma i parcheggi sono intasati in luglio-agosto. Il periodo migliore è maggio-giugno o settembre. Pochi visitatori sanno che è possibile dormire nelle gole stesse, in campeggi autorizzati sul greto del fiume: un'esperienza notturna tra pareti di roccia illuminata di luna che vale il viaggio da sola.`,
+      tags: [`#DaCartolina`, `#Iconico`, `#KayakAdventure`, `#MeravigliaGeologica`, `#PaesaggiEstremi`, `#Avventura`, `#Trekking`],
+    },
+    {
+      icon: `🏔️`,
+      name: `Pirenei – Mont Perdu e Circo di Gavarnie`,
+      desc: `Un anfiteatro naturale largo 14 chilometri, pareti a strapiombo di 1.700 metri, la Grande Cascade che precipita per 423 metri — una delle più alte d'Europa. Il Circo di Gavarnie è classificato UNESCO sia per i suoi valori naturali che culturali: la geologia calcarea di questo massiccio racconta 300 milioni di anni di oceano scomparso, e il paesaggio pastorale di villaggi e transumanze è rimasto intatto come secoli fa. Il Mont Perdu (3.352 m) sovrasta tutto, impassibile, tra i due canyon più profondi d'Europa sul versante spagnolo.`,
+      note: `Il sentiero dal villaggio di Gavarnie al circo (andata e ritorno ~10 km, dislivello 400 m) è percorribile da famiglie con bambini. In estate è affollato: partire presto la mattina. L'escursione alla Grande Cascade è separata e più impegnativa. Neve fino a maggio-giugno nelle quote superiori. Pochi sanno che il versante spagnolo ospita i canyon di Añisclo e Ordesa — raggiungibili in giornata dal lato francese — di una bellezza ancora più selvaggia e quasi privi di turisti.`,
+      tags: [`#PatrimonioUnesco`, `#DaCartolina`, `#Hiking`, `#PaesaggiEstremi`, `#NaturaSelvaggia`, `#Trekking`],
+    },
+    {
+      icon: `🦩`,
+      name: `Camargue — dove la terra non sa dove finisce`,
+      desc: `Un delta che respira: l'unica grande area di steppa salata d'Europa, dove il confine tra terra e mare non è mai definitivo. La Camargue muta costantemente, ridisegnata dai sedimenti del Rodano e dalle incursioni del Mediterraneo. Qui vivono 30.000 fenicotteri rosa, branchi di cavalli bianchi selvatici e tori neri che galoppano liberi tra le lagune. Un ecosistema da record — 244 specie di uccelli, 300 specie vegetali — e uno dei più importanti scali migratori tra nord Europa e Africa: ogni anno oltre 150.000 uccelli acquatici vi transitano.`,
+      note: `La Camargue si visita lentamente, preferibilmente in primavera (aprile-maggio) o autunno. D'estate può essere soffocante e piena di zanzare: portare repellente. Le escursioni a cavallo sono il modo migliore per avvicinarsi agli animali senza disturbarli — i guardiani camarghesi (mandriani locali) organizzano uscite all'alba che coincidono con i voli di decollo dei fenicotteri, uno spettacolo che pochi turisti vedono. Il Parco Ornitologico di Pont-de-Gau è il punto di partenza ideale.`,
+      tags: [`#AvvistamentoAnimali`, `#Wildlife`, `#NaturaSelvaggia`, `#Hiking`, `#DaCartolina`, `#RuraleEArmonica`],
+    },
+    {
+      icon: `🌿`,
+      name: `Riserva Naturale di Scandola — il mare più integro del Mediterraneo`,
+      desc: `Scogliere di porfido rosso che precipitano nell'acqua più trasparente del Mediterraneo, grotte marine accessibili solo in kayak o a nuoto, una riserva integrale dove l'uomo non può più mettere piede da decenni. Il risultato: una fauna marina esplosa in biodiversità. Il falco pescatore nidifica regolarmente qui — una rarità nel Mediterraneo, dove la specie è quasi scomparsa come residente stanziale. Sott'acqua, cernie giganti e corvine popolano i fondali con la confidenza di chi non ha mai conosciuto i pescatori. Un'anomalia meravigliosa: a poche ore dall'Italia, un mare che sembra quello di cinquant'anni fa.`,
+      note: `La riserva terrestre è completamente chiusa al pubblico: si visita SOLO via mare, con barca o kayak. Le escursioni partono da Galéria o Porto. Non è possibile fare snorkeling o immersioni all'interno della riserva stessa; i fondali nelle zone limitrofe restano comunque eccezionali. Il mare può essere mosso: verificare le condizioni prima di partire. Pochi sanno che la stagione migliore per le immersioni nelle acque limitrofe è settembre-ottobre: visibilità massima, folla minima.`,
+      tags: [`#NaturaSelvaggia`, `#AvvistamentoAnimali`, `#Wildlife`, `#KayakAdventure`, `#Snorkeling`, `#Mare`, `#Diving`, `#EsperienzaUnica`,`#MeravigliaGeologica`, `#PatrimonioUnesco`],
+    },
+    {
+      icon: `🏜️`,
+      name: `Désert des Agriates — la natura incontaminata che nessuno conosce`,
+      desc: `Il nome inganna: non è un deserto di sabbia, ma 35 chilometri di macchia mediterranea inviolata, colline granitiche coperte di cisto e rosmarino selvatico, e spiagge bianche tra le più belle d'Europa — Saleccia e Lotu — raggiungibili solo a piedi o via mare. Zero strade asfaltate all'interno, zero stabilimenti balneari, zero servizi. Una natura incontaminata europea quasi introvabile, a pochi chilometri dalla Corsica turistica. La stessa isola, un altro pianeta.`,
+      note: `Le spiagge di Saleccia e Lotu sono raggiungibili con barca da Saint-Florent (20 min) oppure a piedi dal Col de Bocca di Vezzu (2-3 ore). In luglio-agosto anche queste spiagge si affollano: preferire settembre. L'acqua è cristallina ma senza servizi di salvataggio: autovalutare le proprie capacità natatorie. Chi percorre il sentiero a piedi trova quasi sempre la spiaggia semivuota anche in piena estate — i turisti da barca arrivano solo a metà mattina.`,
+      tags: [`#NaturaSelvaggia`, `#Mare`, `#Hiking`, `#Avventura`, `#Trekking`],
+    },
+    {
+      icon: `🌄`,
+      name: `Aubrac — l'altopiano fuori dal tempo`,
+      desc: `Un altopiano spazzato dal vento a 1.000-1.400 metri, dove il tempo sembra essersi fermato: mandrie di bovini di razza Aubrac che pascolano libere tra laghi vulcanici, doline, e una luce che in primavera — quando fioriscono le genziane e i narcisi — trasforma ogni collina in un quadro fiammingo. È uno dei paesaggi più integri e meno conosciuti della Francia, attraversato da una variante del Cammino di Santiago che lo rende percorribile a piedi per giorni senza mai incontrare traffico. Praticamente sconosciuto al turismo internazionale.`,
+      note: `Frequentato quasi solo da francesi. In inverno è ricoperto di neve e tagliato fuori: la stagione è maggio-ottobre. I borghi di Nasbinals e Saint-Chély-d'Aubrac offrono pernottamenti semplici e autentici. Non aspettarsi infrastrutture turistiche elaborate. La 'aligot' — purè di patate filante con tomme fresca locale — è uno dei piatti regionali più tipici e sorprendenti della Francia rurale: ordinarlo in una delle locande di paese è un momento gastronomico inaspettato.`,
+      tags: [`#NaturaSelvaggia`, `#RuraleEArmonica`, `#Hiking`, `#Trekking`, `#EsperienzaUnica`,`#CieloNotturno`],
+    },
+    {
+      icon: `🥾`,
+      name: `GR20 — la traversata della Corsica che ridimensiona tutto`,
+      desc: `Il trekking più difficile d'Europa per molti, e sicuramente il più leggendario: 180 chilometri lungo la dorsale granitica della Corsica, 13.000 metri di dislivello, passaggi che richiedono mani e piedi, neve fino a giugno in quota. L'80% di chi lo inizia non lo completa. Chi lo finisce racconta di un'esperienza che ridimensiona tutto il resto.`,
+      note: `Richiede almeno 14-15 giorni per la traversata completa. La sezione nord (Calenzana-Vizzavona) è tecnicamente più impegnativa e paesaggisticamente superiore. I rifugi vanno prenotati con mesi di anticipo per luglio-agosto. Chi non vuole affrontare il percorso intero può optare per singole tappe o per il Petit GR20 (4 giorni). La guida cartacea è fondamentale: le mappe digitali possono non funzionare in quota. Attenzione: la sezione tra Cirque de la Solitude (se riaperta) e Capo Tafunatu è da valutare con cura — in caso di meteo instabile, le varianti basse sono più sicure e spesso altrettanto spettacolari.`,
+      tags: [`#EsperienzaEstrema`, `#Trekking`, `#NaturaSelvaggia`, `#PaesaggiEstremi`, `#Avventura`, `#EsperienzaUnica`],
+    },
+    {
+      icon: `🪸`,
+      name: `Calanques di Marsiglia e Cassis — dove la roccia incontra il Mediterraneo`,
+      desc: `Ventisei insenature calcaree che si aprono sul Mediterraneo come dita bianche nell'acqua turchese: le Calanques sono l'incontro più drammatico che la roccia e il mare siano riusciti a produrre in Europa meridionale. Il Parco Nazionale delle Calanques — creato nel 2012, a due passi da una metropoli di un milione di abitanti — protegge fondali ricchi di Posidonia, che ossigena l'intero Mediterraneo e cresce di appena 1-2 cm l'anno. Un posto dove la natura fa la voce grossa, a portata di metropolitana.`,
+      note: `L'accesso terrestre è limitato in estate (giugno-settembre) per rischio incendi: alcune aree chiudono temporaneamente senza preavviso. Le escursioni in kayak o barca (da Cassis o Marsiglia) offrono l'accesso più completo. Alcune calanques sono raggiungibili solo a nuoto. Le immersioni nei fondali della riserva marina sono regolamentate: contattare diving center autorizzati. La calanque di En-Vau, raggiungibile solo via mare o con 3 ore di cammino, è tra le più spettacolari e decisamente meno frequentata delle altre.`,
+      tags: [`#DaCartolina`, `#Iconico`, `#Mare`, `#KayakAdventure`, `#Snorkeling`, `#Diving`, `#Hiking`, `#MeravigliaGeologica`],
+    },
+    {
+      icon: `🌸`,
+      name: `Plateau de Valensole — quando la Provenza diventa viola`,
+      desc: `Un altopiano che da giugno a luglio diventa viola a perdita d'occhio: la lavanda vera della Provence, quella da olio essenziale, quella che profuma l'aria a chilometri di distanza. A differenza dei campi più fotografati vicino a Sault, il Plateau de Valensole offre visioni più ampie e meno trafficate, con le file di lavanda che si estendono fino all'orizzonte in un silenzio interrotto solo dalle api. La mattina presto, con la luce radente e la foschia che si alza sui campi, è uno dei paesaggi più fotograficamente impietosi d'Europa: impossibile fare una brutta foto.`,
+      note: `La fioritura dura solo 3-4 settimane, tipicamente tra fine giugno e metà luglio (variabile in base all'anno e all'altitudine): verificare le previsioni locali prima di partire. I campi sono proprietà privata: non calpestare le file, non raccogliere piante. Le strade secondarie sono strette e trafficate nei weekend di punta. Il contrasto con le gole del vicino Verdon, raggiungibile in 30 minuti, è quasi impossibile da credere: due mondi opposti nello stesso pomeriggio.`,
+      tags: [`#RuraleEArmonica`, `#DaCartolina`, `#Iconico`],
+    },
+  ]
+    },
+  arte: { 
+    intro: `La Francia non è solo Parigi: è un territorio dove l'arte si stratifica su quarantamila anni di storia umana, dalle grotte paleolitiche della Dordogna ai murales giganteschi di Grenoble, passando per cattedrali gotiche che ancora oggi sembrano sfidare le leggi della fisica. Ciò che sorprende il visitatore attento è la densità: pochi paesi al mondo concentrano in spazi così ridotti capolavori di epoche così distanti. Un giorno a Vézelay, uno a Beaune, uno ad Avignone — e si attraversano secoli di eccellenza artistica senza mai annoiarsi. La Francia è anche il paese che ha ospitato, nutrito e spesso reinventato movimenti artistici globali: l'Impressionismo, il Cubismo, il Nouveau Réalisme, la fotografia come arte. Non è un museo immobile — continua a produrre linguaggi visivi riconoscibili nel mondo. Meno nota è la ricchezza delle province: il Sud con i suoi musei dedicati a Matisse, Picasso, Chagall e Bonnard; la Valle della Loira con i castelli rinascimentali; la Borgogna con i suoi ospizi medievali decorati; l'Alsazia con le vetrate e l'architettura gotica. Chi conosce solo Parigi conosce solo una parte della storia.`, 
+    items: [ 
+    {
+      icon: `🖼️`,
+      name: `Museo del Louvre — una civiltà intera sotto un tetto`,
+      desc: `La Gioconda, la Venere di Milo, la Nike di Samotracia, il fregio di Persepoli: il Louvre non è un museo, è una civiltà intera racchiusa in un palazzo reale. Con 35.000 opere esposte su tre ali, la sfida non è trovare i capolavori — è evitare di esserne sopraffatti. La piramide di Pei (1989) è essa stessa un atto architettonico: una forma geometrica elementare che dialoga con secoli di storia senza competere con essa. Per chi torna, la regola è scegliere ogni volta un'ala sola e ignorare la ressa davanti alla Gioconda.`,
+      note: `Prenotare online è indispensabile. Le Sale dei Grandi Dipinti Italiani, al piano nobile dell'ala Denon, contengono capolavori di Mantegna, Veronese e Caravaggio con un livello di affollamento ridicolmente basso rispetto alla sala adiacente. Mezz'ora lì vale più di due ore in coda davanti alla Gioconda.`,
+      tags: [`#Capolavoro`, `#MuseieGallerie`, `#Architettura`],
+    },
+    {
+      icon: `🌸`,
+      name: `Musée d'Orsay — l'Impressionismo nella sua casa naturale`,
+      desc: `Nessun altro museo al mondo concentra una simile densità di opere impressioniste e post-impressioniste: Monet, Renoir, Degas, Manet, Cézanne, Van Gogh, Gauguin, Seurat, Toulouse-Lautrec. La collezione non è solo ricca — è definitiva. Ospitata in una stazione ferroviaria Belle Époque sapientemente convertita, la visita è già di per sé un'esperienza architettonica. Le Ninfee di Monet, le ballerine di Degas, i meli fioriti di Van Gogh: qui l'arte del XIX secolo raggiunge la sua espressione più alta e più accessibile.`,
+      note: `Spesso in ombra rispetto al Louvre, ma preferito dagli appassionati per la coerenza della collezione e l'atmosfera dello spazio. Il livello superiore, dove si trova la grande collezione post-impressionista, è sistematicamente sottovalutato e meno affollato: è lì che si trovano i Van Gogh e i Cézanne più potenti. Arrivare alle 9:30 e salire direttamente al quinto piano.`,
+      tags: [`#Capolavoro`, `#MuseieGallerie`, `#Architettura`],
+    },
+    {
+      icon: `🏰`,
+      name: `Palazzo e Parco di Versailles — il manifesto del potere assoluto`,
+      desc: `Versailles non è solo la residenza di Luigi XIV: è il manifesto visivo di un'idea di potere declinata in architettura, pittura, scultura, arti decorative e paesaggismo. Iscritto all'UNESCO nel 1979, il complesso vale la visita non per la fama ma per la coerenza estrema del progetto: dalla Galleria degli Specchi — dove Le Brun e Hardouin-Mansart creano un'esperienza totalizzante ancora insuperata — ai giardini di Le Nôtre, geometrie perfette su scala monumentale che hanno definito l'estetica del giardino formale per due secoli.`,
+      note: `Evitare i weekend estivi. La visita al Grand Trianon e al Petit Trianon è spesso più gratificante della ressa nel castello principale — meno folla, scala più umana, e il Petit Trianon di Maria Antonietta racconta un lato opposto e più intimo dello stesso potere. Vaux-le-Vicomte (1661), raggiungibile in giornata, è il progetto originale di Le Nôtre che ispirò Versailles: per molti esperti è più raffinato e certamente meno affollato.`,
+      tags: [`#PatrimonioUnesco`, `#Capolavoro`, `#PalazziStorici`, `#Architettura`, `#Giardini`], 
+    },
+    {
+      icon: `⛪`,
+      name: `Cattedrale di Chartres — 2.600 metri quadri di luce medievale`,
+      desc: `Iscritta all'UNESCO nel 1979 come capolavoro del genio creativo gotico, Chartres è la cattedrale meglio conservata al mondo: le sue 176 vetrate medievali del XII e XIII secolo costituiscono un corpus unico e irripetibile, con una superficie complessiva di quasi 2.600 m². Il blu di Chartres — un pigmento la cui formula è ancora parzialmente misteriosa — è una delle grandi conquiste dell'arte medievale. La luce che filtra attraverso queste vetrate cambia radicalmente a seconda dell'ora e della stagione, rendendo ogni visita diversa. Un posto che fa capire perché per certi versi il Medioevo non era affatto buio.`,
+      note: `Le vetrate sono il vero capolavoro: portare binocoli per apprezzare le scene nei rosoni superiori — la distanza li rende quasi illeggibili a occhio nudo. I tour guidati di Malcolm Miller (il grande storico britannico che ha dedicato la vita a Chartres) sono una rivelazione: anche la versione registrata disponibile sul sito della cattedrale è eccellente. Visitare in mattinata, quando la luce entra da est.`,
+      tags: [`#PatrimonioUnesco`, `#Capolavoro`, `#ArteeArchitetturaSacra`],
+    },
+    {
+      icon: `✨`,
+      name: `Sainte-Chapelle — quando l'architettura gotica raggiunge il sublime`,
+      desc: `Costruita in soli sette anni (1242-1248), la Sainte-Chapelle è la sintesi più perfetta e commovente dell'architettura gotica rayonnant: la navata superiore è quasi interamente composta da vetrate, con 15 finestre alte 15 metri che filtrano la luce in oltre 1.100 scene narrative tratte dall'Antico e Nuovo Testamento. La struttura muraria è ridotta all'essenziale — un guscio leggero che regge un universo di colore e luce. Quando il sole colpisce le vetrate nel pomeriggio, l'effetto è di una bellezza difficile da descrivere a parole. È uno dei pochi luoghi al mondo in cui la prima visione fa venire voglia di sedersi e stare fermi.`,
+      note: `Meno affollata del Louvre ma non da trascurare. I concerti serali nella cappella — Bach, Vivaldi, Mozart — offrono un'esperienza di qualità assoluta: sentire musica barocca immersi in quella luce è una delle combinazioni sensoriali più potenti che Parigi sappia offrire.`,
+      tags: [`#Capolavoro`, `#ArteeArchitetturaSacra`],
+    },
+    {
+      icon: `🏛️`,
+      name: `Hôtel-Dieu di Beaune — il capolavoro nascosto della Borgogna`,
+      desc: `Fondato nel 1443 come ospizio per i poveri, l'Hôtel-Dieu è uno dei capolavori dell'architettura borgognona tardo-gotica, celebre per i suoi tetti policromi in tegole smaltate disposte in motivi geometrici — un'immagine che ha fatto il giro del mondo. Ma il vero tesoro è custodito all'interno: il Polittico del Giudizio Universale di Rogier van der Weyden, commissionato nel 1443, è uno dei più grandi dipinti fiamminghi del Quattrocento e una delle opere su tavola meglio conservate al mondo. Due cose insieme — l'architettura e il dipinto — rendono Beaune una tappa che vale un deviazione significativa.`,
+      note: `Il polittico è ora visibile nei minimi dettagli grazie a un sistema di visione ravvicinata che permette di esaminare i pannelli a pochi centimetri. Raramente affollato come Parigi. Beaune è il cuore della Côte de Beaune: abbinare la visita a una degustazione in una cantina locale è quasi obbligatorio — e molto meno costoso di quanto si pensi.`,
+      tags: [`#Palazzistorici`, `#Architettura`, `#PerAppassionati`],
+    },
+    {
+      icon: `👑`,
+      name: `Palais des Papes di Avignone — il gotico più audace d'Europa`,
+      desc: `Il più grande edificio gotico del Medioevo rimasto intatto è anche uno dei luoghi più carichi di ambiguità artistica d'Europa: maestoso nelle proporzioni, austero nella decorazione esterna, ma straordinariamente ricco all'interno con i cicli di affreschi della Camera del Cervo e della Camera dell'Udienza, opera dei maestri senesi Matteo Giovanetti. Residenza papale per quasi settant'anni (1309-1377), il palazzo racconta l'incontro tra l'estetica gotica nordeuropea e la pittura italiana del Trecento in un contesto architettonico senza eguali.`,
+      note: `L'audioguida è eccellente. La visita serale in estate offre un'atmosfera completamente diversa da quella diurna: la luce artificiale sulle pareti affrescate restituisce qualcosa di più vicino alla fruizione originale. La Collection Lambert, a pochi minuti a piedi, ospita una delle collezioni private di arte contemporanea più importanti d'Europa — un contrasto di secoli che funziona sorprendentemente bene nella stessa giornata.`,
+      tags: [`#PalazziStorici`, `#Architettura`, `#ArteeArchitetturaSacra`, `#PatrimonioUnesco`, `#Capolavoro`], 
+    },
+    {
+      icon: `🦇`,
+      name: `Grotta Chauvet — 35.000 anni di arte che non smette di stupire`,
+      desc: `Trentacinquemila anni fa, nell'oscurità di una grotta dell'Ardèche, qualcuno ha dipinto leoni, rinoceronti, mammut e orsi con una maestria che ancora oggi lascia senza parole gli esperti. La Grotta Chauvet è il più antico corpus di arte rupestre conosciuto, patrimonio UNESCO dal 2014. La grotta originale è chiusa per preservarla, ma la replica — la Caverne du Pont d'Arc — è a sua volta una meraviglia dell'ingegneria, ricostruita centimetro per centimetro su 8.000 mq. Un'esperienza che ridefinisce il senso del tempo e mette in prospettiva qualsiasi altra visita culturale del viaggio.`,
+      note: `La grotta originale è inaccessibile al pubblico. La Caverne du Pont d'Arc si trova a Vallon-Pont-d'Arc ed è aperta al pubblico: prenotare con anticipo, specialmente in estate. Non si tratta di una semplice replica: l'allestimento è considerato nel mondo un modello di valorizzazione del patrimonio. Pochi visitatori sanno che nelle vicinanze si può fare kayak sull'Ardèche attraverso il Pont d'Arc, un arco naturale di 54 metri che è uno degli spettacoli geologici più incongrui di Francia — combinare le due esperienze nella stessa giornata è possibile e consigliato.`,
+      tags: [`#SitoArcheologico`, `#Capolavoro`, `#PatrimonioUnesco`],
+    },
+    {
+      icon: `🏗️`,
+      name: `Centre Pompidou — il museo che ha cambiato le regole dell'architettura`,
+      desc: `Quando aprì nel 1977, il Centre Pompidou fu accolto come una provocazione: tubi colorati in vista, struttura esterna come decorazione, tutto ciò che normalmente si nasconde messo in mostra. Oggi è uno dei dieci edifici più influenti del XX secolo (Renzo Piano e Richard Rogers) e ospita la più grande collezione di arte moderna e contemporanea d'Europa. Oltre 100.000 opere coprono tutti i movimenti dal 1905 a oggi: Fauvismo, Surrealismo, Arte Informale, Arte Concettuale, Arte Povera. Un museo che non invecchia perché continua a sfidare le proprie premesse.`,
+      note: `La terrazza panoramica sul tetto è gratuita con il biglietto museo: una delle viste su Parigi più inaspettate e meno frequentate. La Bibliothèque Publique d'Information è accessibile gratuitamente — e osservare i parigini che leggono e studiano in questo contesto è una piccola finestra sulla vita della città.`,
+      tags: [`#MuseieGallerie`, `#ArteeArchitetturaModerna`, `#Architettura`],
+    },
+    {
+      icon: `🌞`,
+      name: `Fondation Maeght — il museo più bello di cui nessuno parla`,
+      desc: `Nascosta nei pini marittimi dell'entroterra della Costa Azzurra, la Fondation Maeght è uno dei più riusciti esempi di integrazione tra architettura, natura e arte al mondo. Progettata da Josep Lluís Sert nel 1964, ospita una collezione permanente con opere di Miró, Chagall, Giacometti, Calder, Braque e Léger — molte delle quali pensate specificamente per questo spazio. Il labirinto di Miró, il cortile con le sculture di Giacometti, la cappella con i mosaici di Braque: ogni angolo è una scoperta curata con una sensibilità rarissima.`,
+      note: `Raggiungibile in bus da Nizza o Cannes, ma meglio in auto perché il borgo di Saint-Paul-de-Vence merita la passeggiata. Meno nota ai turisti di massa rispetto ai musei parigini, ma di livello assoluto. Il ristorante nel giardino è sopravvalutato: portarsi il pranzo e sedersi tra le sculture è molto meglio.`,
+      tags: [`#MuseieGallerie`, `#GalleriaArte`, `#Installazione`,  `#PerAppassionati`], 
+    },
+    {
+      icon: `🎨`,
+      name: `Il Voyage à Nantes e la Ligne Verte — una città come opera d'arte`,
+      desc: `Una linea verde dipinta sull'asfalto che attraversa 12 chilometri di città collegando oltre 120 installazioni permanenti: sculture, murales monumentali, interventi architettonici e opere site-specific commissionate dagli artisti più interessanti della scena internazionale. Il progetto Le Voyage à Nantes ha trasformato la città in uno dei laboratori di arte pubblica più ambiziosi d'Europa. Tra i momenti imperdibili: le Machines de l'Île — giganteschi animali meccanici steampunk che si muovono nel porto industriale dismesso — e l'Éléphant di 12 metri che porta i visitatori in passeggiate quotidiane.`,
+      note: `Il percorso è percorribile tutto l'anno, ma il festival estivo (luglio-agosto) aggiunge installazioni temporanee di artisti internazionali. Nantes è spesso ignorata dagli italiani in favore di Parigi o della Provenza: è un errore. La città ha una scena culturale e gastronomica di prima qualità, con prezzi nettamente più bassi della capitale.`,
+      tags: [`#Installazione`, `#ArtePubblica`, `#ArteeArchitetturaModerna`, `#StreetArt`], 
+    },
+    {
+      icon: `🌉`,
+      name: `Pont du Gard — l'ingegneria romana che sembra arte`,
+      desc: `Costruito nel I secolo d.C. senza malta — solo enormi blocchi di pietra calcarea tagliati con precisione millimetrica — il Pont du Gard è il più alto acquedotto romano rimasto in piedi al mondo. Ma è anche un'opera di proporzioni talmente calibrate e di una bellezza talmente sobria da essere studiato nelle scuole di architettura come modello di estetica ingegneristica. L'UNESCO lo ha iscritto nel 1985 per il criterio i (capolavoro del genio creativo) e il criterio iii. Vista dal fiume, specie all'alba o al tramonto, l'acquedotto si riflette nell'acqua del Gardon in una simmetria che sembra calcolata — ma è solo fisica.`,
+      note: `Accessibile solo a piedi dall'area parcheggio. L'ingresso al museo è separato dal ponte stesso, che si raggiunge gratuitamente. Il consiglio meno ovvio: portarsi costume e asciugamano. Il Gardon sotto il ponte è balneabile (stagione permettendo) e fare il bagno nell'acqua verde sotto un acquedotto romano di 2.000 anni è un'esperienza assolutamente inaspettata.`,
+      tags: [`#Architettura`, `#PatrimonioUnesco`, `#SitoArcheologico`, `#Capolavoro`],
+    },
+    {
+      icon: `🖌️`,
+      name: `Street art nel 13° arrondissement di Parigi — la culla dello stencil europeo`,
+      desc: `Parigi è la culla dello stencil europeo: Blek le Rat, Ernest Pignon-Ernest e Jef Aérosol hanno inventato qui un linguaggio che ha influenzato Banksy e l'intera scena mondiale. Il 13° arrondissement ospita il più grande progetto di murales urbani istituzionali di Francia — facciate intere di condomini trasformate in opere colossali da artisti come Shepard Fairey, Invader e JR. Nel quartiere di Belleville e lungo Rue Dénoyez sopravvive invece la scena più spontanea e underground, con aggiornamenti quotidiani che rendono ogni visita diversa dalla precedente.`,
+      note: `Invader — l'artista che inserisce personaggi pixelati in ceramica sui muri di tutto il mondo — è francese e Parigi è la sua città d'origine: oltre 1.500 mosaici nascosti aspettano di essere trovati. Esiste un'app ufficiale per trovarli. Facilmente combinabile con una visita alle Gobelins o a una delle boulangeries del quartiere: un pomeriggio che non costa nulla e mostra una Parigi che non c'è nelle guide tradizionali.`,
+      tags: [`#StreetArt`, `#ArtePubblica`, `#ArteeArchitetturaModerna`],
+    },
+    {
+      icon: `🌿`,
+      name: `Giardino di Monet a Giverny — un quadro tridimensionale abitabile`,
+      desc: `Non un giardino che ha ispirato un pittore: un giardino progettato da un pittore come un quadro tridimensionale abitabile. Claude Monet trascorse 43 anni a costruire e modificare il giardino di Giverny come se fosse una tela — i glicini sul ponte giapponese, il laghetto con le ninfee, la successione cromatica dei fiori nelle aiole — con la stessa cura compositiva che metteva nei suoi dipinti. Il risultato è un'opera d'arte vivente che cambia completamente con le stagioni e che ha ispirato le serie pittoriche più famose dell'Impressionismo.`,
+      note: `Da visitare preferibilmente in maggio-giugno per la fioritura delle glicini, o in luglio-agosto per le ninfee. Molto affollato: arrivare all'apertura o acquistare i biglietti per la prima fascia oraria. Il giardino acquatico e quello dei fiori sono separati da una strada: non perdersi il primo per correre al secondo.`,
+      tags: [`#Giardini`, `#Capolavoro`, `#PerAppassionati`],
+    },
+    {
+      icon: `🏙️`,
+      name: `Le Havre — la città ricostruita da Auguste Perret`,
+      desc: `Distrutta quasi completamente dai bombardamenti del 1944, Le Havre fu ricostruita tra il 1945 e il 1964 dall'architetto Auguste Perret secondo un piano urbanistico unitario in cemento armato prefabbricato — all'epoca una scommessa radicale, oggi un'esperienza architettonica unica al mondo. Iscritta all'UNESCO nel 2005 come esempio eccezionale di architettura e urbanistica del dopoguerra, la città non è bella nel senso convenzionale: è coerente, visionaria, e profondamente umana nella sua scala. La chiesa di Saint-Joseph (1951-1957), con la sua torre-lanterna di 107 metri interamente ricoperta di vetrate colorate, è un capolavoro assoluto.`,
+      note: `Spesso ignorata dai turisti stranieri — e forse per questo ancora più autentica. Il MuMa (Museo di Arte Moderna André Malraux) è tra i migliori musei di arte moderna di Francia fuori Parigi, con una collezione impressionista di primo livello e un edificio che si affaccia direttamente sul mare. L'abbinamento con Étretat, le famose scogliere a 30 km, rende Le Havre una base ideale per un weekend normando.`,
+      tags: [`#Architettura`, `#PatrimonioUnesco`, `#MuseieGallerie`,`#PerAppassionati`],
+    },
+  ]
+    },
+  cultura: { 
+    intro: `La Francia è forse il paese che più di ogni altro ha trasformato il quotidiano in cultura: il modo di mangiare, di vestirsi, di costruire città, di celebrare i morti e le stagioni. Chi la visita cercando solo musei e monumenti si perde il meglio: il vero volto della Francia si rivela nei mercati del mattino, nelle brasserie dove si litigano i giornali, nelle processioni alle torce di mezza estate, nei laboratori di artigiani che tramandano saperi medievali. È un paese in cui persino il pane è patrimonio UNESCO. Geograficamente, la Francia è un continente in miniatura: la Bretagna celtica e nebbiosa, l'Alsazia quasi tedesca, la Provenza mediterranea, il Paese Basco pirenaico, la Corsica italiana d'animo, la Normandia del cielo grigio e della storia pesante. Ogni regione ha lingua, cibo, riti e carattere propri — il che significa che 'andare in Francia' è in realtà almeno dieci viaggi diversi. Stagionalità rilevante: i mercati provenzali e bretoni sono più vivaci da aprile a ottobre; il Carnevale di Dunkerque si svolge da gennaio ad aprile (con picco a febbraio); i fest-noz bretons si tengono tutto l'anno, con grandi eventi in novembre.`, 
+    items: [ 
+    {
+      icon: `🥖`,
+      name: `Il pane quotidiano — la baguette come rito sociale`,
+      desc: `Ogni mattina, dodici milioni di francesi varcano la soglia di una boulangerie. La baguette — quattro ingredienti, una forma, un rito secolare — è stata riconosciuta dall'UNESCO nel 2022 non come semplice pane, ma come pratica sociale vivente: il gesto di comprare il pane fresco, la conversazione con il fornaio, la camminata verso casa con la baguette sotto il braccio. Visitare una boulangerie artigianale — possibilmente una che partecipi al concorso annuale della migliore baguette di Parigi — è il primo contatto autentico con l'art de vivre francese. E quasi sempre il più economico.`,
+      note: `Cercare boulangeries con l'indicazione 'artisan boulanger': sono quelle che producono in loco con metodo tradizionale. Evitare quelle che cuociono baguettes industriali surgelate — si riconoscono dalla crosta pallida e dalla mollica gommosa. Il concorso annuale della migliore baguette di Parigi è pubblico: il vincitore viene proclamato ogni anno a gennaio e il suo indirizzo diventa automaticamente uno degli indirizzi più cercati della città.`,
+      tags: [`#PatrimonioUnesco`, `#TradizioniLocali`, `#VitaSociale`, `#CucinaeProduzioneLocale`],
+    },
+    {
+      icon: `🏛️`,
+      name: `Il Compagnonnage — sette secoli di saperi tramandati a mano`,
+      desc: `Da sette secoli, giovani artigiani — falegnami, scalpellini, sarti, fabbri, pasticcieri — intraprendono un 'Tour de France' iniziatico: si spostano di città in città, ospitati dalla comunità locale, per imparare il mestiere nelle sue versioni più alte. Prima di essere accettati come Compagnons, producono un 'capolavoro' sottoposto al giudizio dei maestri. Il Compagnonnage, riconosciuto dall'UNESCO nel 2010, è l'ultimo movimento in Europa a trasmettere saperi artigianali attraverso riti d'iniziazione e viaggi itineranti. A Tours, il Museo del Compagnonnage — ospitato in un'abbazia medievale — ne racconta la storia con dimostrazioni e laboratori aperti al pubblico, dove è possibile assistere ai Compagnons al lavoro e, in certi periodi, partecipare direttamente.`,
+      note: `Il Museo è piccolo ma ricco: prevedere 1-2 ore. In certi periodi dell'anno si accede a laboratori aperti dove i Compagnons trasmettono direttamente il gesto del loro mestiere: lavorazione della pietra, ebanisteria, cesteria. Il sito AOCDTF (compagnons-du-devoir.com) segnala eventi e giornate aperte. Una pratica secolare che si apre a chi è curioso di toccare con mano.`,
+      tags: [`#PatrimonioUnesco`, `#TradizioniLocali`, `#StoriaeMemoria`, `#Workshop`, `#RitieCerimonie`],
+    },
+    {
+      icon: `🎭`,
+      name: `Carnevale di Dunkerque — la festa più selvaggia e autentica d'Europa`,
+      desc: `Nel XVII secolo, gli armatori di Dunkerque organizzavano un banchetto per i marinai prima della partenza per sei mesi di pesca al merluzzo in Islanda — perché molti non sarebbero tornati. Da quel rito è nato il Carnevale di Dunkerque, uno dei più autentici e 'selvaggi' d'Europa. Niente carri allegorici, niente tribune: solo migliaia di 'carnavaleux' mascherati da donna, con sabots di legno e parrucche, che formano catene umane dietro la banda musicale della clique, cantano inni tramandati da generazioni, e aspettano il lancio di aringhe affumicate dal balcone del Municipio. Partecipare significa sciogliersi in una folla che conosce ogni parola di ogni canzone.`,
+      note: `Il travestimento è obbligatorio — senza costume si è l'eccezione, non la regola. Prenotare alloggio con mesi di anticipo. Contiene tradizioni come 'La Nuit des Noirs' che hanno sollevato dibattiti sul blackface: informarsi prima per farsi un'idea propria. Il weekend della 'Bande de Dunkerque' (il più grande evento del carnevale, a febbraio) è il momento di picco.`,
+      tags: [`#RitieCerimonie`, `#Danza`, `#Musica`, `#VitaSociale`, `#TradizioniLocali`],
+    },
+    {
+      icon: `🍽️`,
+      name: `Il pasto gastronomico dei francesi — sedersi a tavola come rito collettivo`,
+      desc: `L'UNESCO ha riconosciuto nel 2010 non una ricetta ma un rito: il pasto gastronomico francese, con la sua sequenza di apéritif, entrée, plat, fromage, dessert e digestif, scandisce ancora oggi i momenti importanti della vita. Sedere a tavola in una brasserie storica — come le Halles Paul Bocuse a Lione, il Bouillon Chartier a Parigi o la Brasserie Bofinger per i classici alsaziani — è partecipare a una conversazione che dura da secoli. Non è mangiare bene: è capire come i francesi intendono il tempo, la convivialità e il piacere.`,
+      note: `Scegliere brasseries e bistrot frequentati dai locali, non ristoranti per turisti. A Lione vale la pena cercare un 'bouchon' tradizionale (certificato dall'associazione Les Authentiques Bouchons Lyonnais). Evitare i ristoranti con menu plastificati illustrati in cinque lingue. Il Bouillon Chartier a Parigi ha liste di attesa ma i prezzi rimasti quelli del 1896 — e il servizio da sala, con camerieri che annotano i conti sulla tovaglia di carta, è uno spettacolo autonomo.`,
+      tags: [`#PatrimonioUnesco`, `#VitaSociale`, `#CucinaeProduzioneLocale`, `#TradizioniLocali`],
+    },
+    {
+      icon: `🪗`,
+      name: `Fest-Noz — la Bretagna che balla ancora`,
+      desc: `Il fest-noz — 'festa di notte' in bretone — è un ballo collettivo che si tiene da secoli dopo le giornate di lavoro collettivo nei campi: tutti in cerchio o in catena, le mani intrecciate, al ritmo del kan ha diskan (canto alternato a cappella) o della coppia biniou-bombarda. Non è uno spettacolo: è una pratica partecipata. Chiunque può entrare in cerchio — qualcuno ti prenderà per mano e ti insegnerà i passi. UNESCO lo ha riconosciuto patrimonio immateriale nel 2012. Con oltre mille fest-noz all'anno in Bretagna, trovarne uno è facile; uscirne senza aver ballato è più difficile di quanto si creda.`,
+      note: `Non serve saper ballare: la trasmissione avviene per imitazione, per contagio fisico. Il Festival Yaouank a Rennes è il più grande d'Europa (novembre). Il momento migliore per l'atmosfera più autentica è i fest-noz dei piccoli villaggi interni della Bretagna, dove la musica e il canto sono ancora eseguiti da musicisti locali senza microfono e senza palco. Cerca: fest-noz locali.`,
+      tags: [`#PatrimonioUnesco`, `#Danza`, `#VitaSociale`, `#Musica`, `#RitieCerimonie`, `#TradizioniLocali`],
+    },
+    {
+      icon: `🌲`,
+      name: `La foresta di Brocéliande e i racconti orali bretoni`,
+      desc: `La Bretagna è la regione d'Europa con il più ricco patrimonio di racconti orali: korrigans (folletti), l'Ankou (la morte personificata), la città di Ys inghiottita dal mare, re Artù e la sua corte. Questi racconti non sono letteratura d'archivio: vivono ancora nelle veillées, nelle serate di conteurs (cantastorie), nei fest-noz dove si mescolano canto e narrazione. La foresta di Brocéliande — nella tradizione il luogo di Merlino e della Fata Morgana — è il cuore fisico di questo immaginario. Visitarla leggendo prima qualcuna di queste storie trasforma una passeggiata in un viaggio nella memoria collettiva celtica.`,
+      note: `I conteurs bretoni si trovano cercando 'veillée conte Bretagne' o 'festival conte Bretagne'. Il sito bretagne.com aggiorna gli eventi. La foresta di Paimpont è visitabile liberamente; il Château de Comper ospita il Centre de l'Imaginaire Arthurien con mostre e spettacoli. Attenzione: Brocéliande è una foresta normale — bella, ma non magica nell'immediato. La magia arriva con la preparazione giusta.`,
+      tags: [`#RaccontiPopolari`, `#TradizioniLocali`, `#StoriaeMemoria`],
+    },
+    {
+      icon: `🪦`,
+      name: `Le spiagge del D-Day — dove la storia pesa ancora`,
+      desc: `Pochi luoghi al mondo offrono un'esperienza storica così fisicamente tangibile. Le spiagge della Normandia 1944 — oggi patrimonio UNESCO — non sono solo un museo: sono la riva dove migliaia di giovani morirono in poche ore. Camminare su Omaha Beach, vedere i resti dei bunker tedeschi alla Pointe du Hoc, stare in piedi nel cimitero americano di Colleville-sur-Mer con le sue 9.387 croci bianche che guardano il mare — è un'esperienza che non richiede preparazione storica per colpire. Bayeux ospita anche l'arazzo dell'XI secolo che racconta la conquista normanna d'Inghilterra: due strati di storia sovrapposti nello stesso luogo.`,
+      note: `Il Mémorial de Caen è il museo più completo per contestualizzare il D-Day. Il 6 giugno si tengono commemorazioni ufficiali molto partecipate — belle ma affollate. Visitare il cimitero tedesco di La Cambe offre una prospettiva più scomoda e necessaria: meno visitatori, più silenzio, un senso diverso della stessa tragedia. La combinazione dei due cimiteri nella stessa mattina è una delle esperienze memoriali più potenti che l'Europa sappia offrire.`,
+      tags: [`#StoriaeMemoria`, `#PatrimonioUnesco`],
+    },
+    {
+      icon: `🧀`,
+      name: `La cultura del formaggio — un patrimonio di saperi regionali`,
+      desc: `La Francia produce oltre 1.200 varietà di formaggi — una per ogni giorno dell'anno, secondo la celebre (e non verificata) frase attribuita a de Gaulle. Ma dietro ogni formaggio c'è una filiera, un territorio, un sapere trasmesso: la forma delle cave in cui il roquefort stagiona, il latte crudo delle mucche montane che produce il comté, la crosta lavata dell'époisses di Borgogna. Visitare una fromagerie artigianale, partecipare a una degustazione guidata o semplicemente sedersi davanti a un plateau de fromages in un bistrot locale è entrare in una mappa sensoriale e geografica della Francia.`,
+      note: `L'industria del formaggio francese ha un'ala altamente industriale e un'ala artigianale in difficoltà. Cercare sempre formaggi 'au lait cru' (a latte crudo) e AOC/AOP per garantire l'autenticità del prodotto. I mercati del sabato mattina nelle città della Borgogna (Beaune, Dijon, Chalon-sur-Saône) sono tra i migliori posti al mondo per trovare produttori diretti con formaggi che non si trovano altrove.`,
+      tags: [`#CucinaeProduzioneLocale`, `#TradizioniLocali`, `#VitaSociale`],
+    },
+    {
+      icon: `🌸`,
+      name: `Grasse — la capitale mondiale del profumo`,
+      desc: `Grasse produce dal XVI secolo le essenze più pregiate del mondo: il gelsomino, la rosa centifolia, la mimosa. I savoir-faire del Pays de Grasse — dal lavoro in campo fino all'enfleurage e alla distillazione — sono patrimonio UNESCO dal 2018. Le tre grandi maisons storiche (Fragonard, Galimard, Molinard) aprono le fabbriche alle visite guidate: si attraversano distillerie in attività, laboratori di imbottigliamento, organi olfattivi con centinaia di essenze. È un'immersione sensoriale nel senso più letterale: l'odore di Grasse ti rimane addosso.`,
+      note: `Le visite guidate alle fabbriche sono gratuite, ma la creazione del proprio profumo personalizzato negli atelier costa tra i 31 e i 99€. In alta stagione prenotare obbligatoriamente. Evitare i tour bus: la visita vale molto di più da soli o in piccoli gruppi. Pochi sanno che la stagione della raccolta del gelsomino (agosto-settembre) prevede attività di picking aperte ai visitatori — un'esperienza olfattiva e sensoriale difficilmente replicabile altrove.`,
+      tags: [`#PatrimonioUnesco`, `#TradizioniLocali`, `#Workshop`],
+    },
+    {
+      icon: `👨‍🍳`,
+      name: `Cours de cuisine française — la grammatica di una cultura`,
+      desc: `Fare un corso di cucina in Francia non è solo imparare una ricetta: è capire la grammatica di una cultura. La sequenza del pasto, la cura per le tecniche di base (il fond, la liaison, la liaison au beurre), il rispetto per la stagionalità degli ingredienti — tutto questo racconta come i francesi pensano al cibo come forma d'arte applicata. I laboratori più accessibili per chi è alla prima esperienza sono quelli con formula market-to-table: si va al mercato con lo chef, si scelgono gli ingredienti, si cucina e si mangia. Molti sono disponibili in italiano o inglese.`,
+      note: `Il Cordon Bleu è prestigioso ma caro e molto strutturato. Per un'esperienza più intima e meno turistica, cercare piccoli atelier locali su piattaforme come Airbnb Experiences o con ricerca diretta. I laboratori con visita al mercato sono i più immersivi. A Lione, i laboratori nei bouchons tradizionali spesso includono una cena vera al termine — e l'abbinamento vini con i piatti preparati è parte del corso.`,
+      tags: [`#Workshop`, `#CucinaeProduzioneLocale`, `#TradizioniLocali`, `#VitaSociale`],
+    },
+    {
+      icon: `⚖️`,
+      name: `Strasburgo — dove Francia e Germania si fondono senza scegliere`,
+      desc: `Strasburgo è stata tedesca e francese più volte nella storia: il suo dialetto locale (l'alsaziano) è ancora parlato dagli anziani, la sua architettura è a metà strada tra i fachwerkhaus tedeschi e i bistrot francesi, la sua cucina mescola choucroute e vini d'Alsace in un'identità unica. La Grande-Île — il centro storico — è patrimonio UNESCO. Il valore culturale più profondo non è l'architettura ma questo: capire come un popolo abbia assorbito secoli di frontiere contese senza perdere la propria identità, e come cucina, lingua e architettura siano diventate atti di resistenza e di sintesi.`,
+      note: `Il Mercato di Natale (Christkindelsmärik, il più antico di Francia, fine novembre–dicembre) è bellissimo ma affollatissimo. Il centro storico è vivibile tutto l'anno; la primavera e l'autunno offrono meno turisti e più autenticità. Strasburgo ospita il Parlamento Europeo: i giorni in cui il Parlamento è in sessione plenaria (generalmente un mercoledì su quattro) permettono di assistere gratuitamente ai dibattiti — un'esperienza politica e linguistica unica.`,
+      tags: [`#VitaSociale`, `#StoriaeMemoria`, `#Tradizionilocali`, `#CucinaeProduzioneLocale`,`#Mercati`],
+    },
+  ]
+    },
+  relax: { 
+    intro: `La Francia è il paese del saper vivere, e questo si sente in ogni dettaglio: dall'onda perfetta di Biarritz al bagno in una botte di vino nei vigneti di Bordeaux, dalla thalassoterapia sulla costa atlantica al rooftop con la Torre Eiffel che scintilla all'orizzonte. Meno noto agli italiani è quanto la Francia sappia essere un paradiso del benessere vero: non generici centri spa, ma cure termali centenarie, terapia con l'acqua di mare, vinoterapia inventata proprio qui — esperienze con una storia, un territorio, un sapore specifico. La Corsica offre spiagge che farebbero invidia ai Caraibi, con acque turchesi e una selvaggia tranquillità — e senza dover prendere un volo intercontinentale. Il Pays Basque francese — Biarritz, Saint-Jean-de-Luz, Bayonne — è una delle destinazioni più sottovalutate d'Europa per chi cerca surf accessibile, gastronomia autentica e un'atmosfera da piccola città cosmopolita senza il caos delle mete più famose.`, 
+    items: [ 
+    {
+      icon: `🍇`,
+      name: `Vinothérapie Spa di Caudalie — immergersi letteralmente nel vino`,
+      desc: `La prima spa di vinoterapia al mondo, nata nel 1999 nei vigneti del Château Smith Haut Lafitte: ci si immerge in una botte di legno piena di estratti di vinaccia di Cabernet, l'acqua termale calda attinta a 540 metri di profondità scioglie ogni tensione, e si esce con la pelle rinnovata e un racconto da fare per settimane. Non è solo benessere: è un rito francese unico, inventato qui e imitato in tutto il mondo. Tra vigneti a perdita d'occhio, hammam, piscina coperta e un ristorante due stelle Michelin, una giornata a Caudalie è una delle esperienze più memorabili che la Francia sappia offrire.`,
+      note: `Il rituale 'des Sources' (bagno in botte + massaggio + trattamento viso) è il più completo e vale ogni centesimo. Prenota con mesi di anticipo per i weekend. È possibile accedere alla spa anche senza soggiornare in hotel, acquistando un day pass o un trattamento. Il vigneto attiguo (Smith Haut Lafitte) è visitabile con degustazione: abbinare la visita alla cantina la mattina e la spa il pomeriggio è il formato ideale per una giornata a Bordeaux fuori dalla città.`,
+      tags: [`#Benessere`, `#EsperienzaUnica`, `#SlowTravel`, `#CenaSpeciale`, `#AlloggioSpeciale`],
+    },
+    {
+      icon: `🌊`,
+      name: `Thalassoterapia sull'Atlantico — curarsi con l'oceano, in Bretagna`,
+      desc: `La Francia ha inventato la thalassoterapia moderna e resta il posto al mondo dove farla meglio: acqua di mare riscaldata a 34°C, alghe, fanghi marini, docce a getti potenti, piscine marine riscaldate — tutto a portata di Atlantico. A Carnac, in Bretagna, i centri di thalassoterapia si fondono con un paesaggio di dune e megaliti che già da soli fanno scendere il cortisolo. A La Baule, il centro Longevity Barrière ha spinto il concetto ancora più in là con approcci scientifici alla longevità. È la spa che conosci — ma elevata a sistema, con un oceano che ci entra dentro.`,
+      note: `Un mini-soggiorno di 2-3 notti con cure incluse è il formato ideale. La bassa stagione (ottobre-aprile) offre prezzi molto più accessibili e meno folla. La Bretagna vale il viaggio anche solo per il paesaggio. I centri di thalasso più storici (Thermes Marins de Saint-Malo, Thalassa Sea & Spa a Quiberon) hanno pacchetti combinati con trattamenti medici veri — utile se si ha un obiettivo specifico oltre al relax generico.`,
+      tags: [`#Benessere`, `#Mare`, `#SlowTravel`],
+    },
+    {
+      icon: `🏄`,
+      name: `Prima lezione di surf sulla Côte des Basques, Biarritz`,
+      desc: `La Côte des Basques è il luogo dove il surf europeo è nato, negli anni Cinquanta, e ancora oggi è la spiaggia più votata dai surfisti principianti: onde lunghe, morbide e prevedibili, con le Alpi Basche sullo sfondo e un lungomare in stile Belle Époque. Scuole come Jo Moraiz (attiva dal 1966) ti mettono su una tavola in mezz'ora con istruttori che sanno come rendere il momento puro divertimento — muta e tavola incluse, paura non prevista. Uscire dall'acqua dopo aver cavalcato la prima onda — anche piccola, anche per tre secondi — è una sensazione che non dimentichi.`,
+      note: `Il periodo migliore è primavera e inizio autunno: meno folla, onde regolari. Dopo la lezione, l'aperitivo ai bar del Port des Pêcheurs con pintxos baschi è il modo perfetto di chiudere la giornata. Biarritz è raggiungibile in aereo diretto da molte città europee. Pochi sanno che esiste un'area surf riservata ai principianti a orari fissi, separata dalle zone dei professionisti: chiedere alla scuola di surfing quale spiaggia usare e quando.`,
+      tags: [`#Mare`, `#Sport`, `#VitaSociale`],
+    },
+    {
+      icon: `🐚`,
+      name: `Ostriche ai piedi dell'oceano — il mercato di Cancale al tramonto`,
+      desc: `A Cancale, il paese bretone che si affaccia sulla Baia di Mont Saint-Michel, le ostriche si mangiano direttamente sul molo — acquistate dai produttori al mercato, aperte al momento, servite con una spruzzata di limone e un bicchiere di Muscadet bianco ghiacciato. Le acque della Baia di Mont Saint-Michel, con le loro forti correnti di marea, danno alle ostriche di Cancale un sapore iodato e minerale che non si trova altrove in Francia. Non è una cena di lusso: è un rituale popolare, economico, autenticissimo — e con una delle viste più spettacolari della Bretagna come cornice.`,
+      note: `Il mercato delle ostriche è aperto tutti i giorni, ma il weekend è più vivace. Si mangia in piedi sul lungomare, come i locali — i gusci vanno buttati nelle apposite casse sul molo, non in mare. Porta con te una giacca: la brezza atlantica è presente anche d'estate. Le ostriche di Cancale si trovano in tre calibri: le n°2 (medie) sono il formato più equilibrato tra sapore e dimensione.`,
+      tags: [`#Mare`, `#SlowTravel`, `#VitaSociale`],
+    },
+    {
+      icon: `🏖️`,
+      name: `Palombaggia, Corsica — la spiaggia che sembra i Caraibi`,
+      desc: `Palombaggia è spesso votata tra le dieci spiagge più belle d'Europa, e non è una di quelle valutazioni inflazionate: sabbia bianchissima e finissima, acque turchesi trasparenti fino a 4 metri di profondità, pini a ombrello che fanno ombra naturale alle spalle. Ci sono bar e ristoranti in spiaggia senza che nulla risulti invadente, e si può fare snorkeling facile direttamente dalla riva. Dirlo a chi non c'è mai stato provoca sempre incredulità: "In Francia?" Già. In Francia.`,
+      note: `Arriva prima delle 9 in luglio e agosto: il parcheggio si riempie rapidamente. La Corsica si raggiunge in traghetto da Genova, Livorno o Civitavecchia, o in volo da molti aeroporti italiani. Il periodo ideale è settembre: mare caldo, meno folla, prezzi ridotti. Le spiagge di Palombaggia e Santa Giulia (confinanti) hanno carattere diverso: Palombaggia è più selvaggia, Santa Giulia è più riparata e adatta alle famiglie con bambini piccoli.`,
+      tags: [`#Mare`, `#SlowTravel`, `#Natura`],
+    },
+    {
+      icon: `🗼`,
+      name: `Aperitivo con la Torre Eiffel che scintilla — i rooftop di Parigi`,
+      desc: `Parigi ha abbracciato la cultura dei rooftop con una passione che non smette di crescere. Il Wanderlust, sul tetto della Cité de la Mode et du Design (Quai d'Austerlitz), è una terrazza di 1600 m² che guarda la Senna al tramonto e si trasforma in dancefloor con i migliori DJ la notte. Il Girafe, al Trocadéro, ha la vista frontale sulla Torre Eiffel — meglio del biglietto per salirci. Il Perchoir, sulle terrazze del BHV Marais, porta l'atmosfera mediterranea nel cuore della città. Un cocktail, la città che cambia colore: questo è il tipo di serata che fa tornare a casa con il sorriso per giorni.`,
+      note: `Wanderlust è gratuito per l'aperitivo nei giorni feriali, con consumazione. Per Girafe prenota il tavolo almeno una settimana prima in stagione. Il Perchoir ha più sedi — quella nel Marais è la più centrale e di tendenza. Pochi sanno che il rooftop del Grand Palais Éphémère offre una vista sulla Senna e sugli Invalides quasi altrettanto spettacolare, con meno affollamento e prezzi più accessibili.`,
+      tags: [`#Rooftop`, `#Città`, `#VitaSociale`],
+    },
+    {
+      icon: `🌿`,
+      name: `Terme di Saint-Gervais-les-Bains — scaldarsi ai piedi del Monte Bianco`,
+      desc: `Acque minerali che emergono dalle profondità sotto il Monte Bianco, in un parco verde di dieci ettari con piscine interne ed esterne, saune, hammam e workshop di rilassamento sensoriale: le Thermes de Saint-Gervais sono uno dei segreti meglio custoditi delle Alpi francesi. L'idea di scaldarsi in una piscina termale mentre si guarda il tetto d'Europa è una di quelle esperienze che ti fanno dimenticare completamente dove sei nel tempo. La stazione è raggiungibile da Ginevra in meno di un'ora.`,
+      note: `Combinabile con una passeggiata facile nella valle di Chamonix o con un giro in funivia — nessuno sforzo fisico, solo paesaggio. La struttura è aperta tutto l'anno. In inverno, l'effetto della piscina esterna con la neve intorno è spettacolare. Pochi sanno che il piccolo treno del Mont-Blanc Express — che parte da Saint-Gervais verso Chamonix e poi su fino a Martigny in Svizzera — è uno dei tragitti ferroviari più belli delle Alpi, percorribile con un normale biglietto SNCF.`,
+      tags: [`#Benessere`, `#Montagna`, `#SlowTravel`],
+    },
+    {
+      icon: `🦞`,
+      name: `Cena basca all'imbrunire — pintxos e vino a Saint-Jean-de-Luz`,
+      desc: `Saint-Jean-de-Luz è una delle città costiere più belle della Francia: una baia perfetta a forma di mezzaluna, una spiaggia protetta dalle dighe, case basco-francesi bianche e rosse, e una gastronomia che è un incrocio felice tra la cucina del Midi e quella dei Paesi Baschi spagnoli. La sera ci si siede ai bar con pintxos — i cugini baschi dei tapas, preparati sul momento con ingredienti locali — e si ordina una bottiglia di Txakoli o un rosato della zona. Nessun posto al mondo fa questa cosa con questa qualità e in questo contesto.`,
+      note: `I migliori pintxos si trovano nei bar del centro storico, lungo la rue Gambetta. La sera è la giornata migliore per girovagare e mangiare un po' dappertutto. Da non perdere il gâteau basque, la torta locale con crema o confettura di ciliegie di Itxassou. Pochi sanno che Saint-Jean-de-Luz ospita ogni luglio la Fête du Thon — la festa del tonno — dove quintali di 'bonito' vengono grigliati all'aperto: un'esperienza popolare e gastronomica difficile da dimenticare.`,
+      tags: [`#Mare`, `#CenaSpeciale`, `#VitaSociale`, `#Città`],
+    },
+  ]
+    },
+  "mesi": [
+    {
+      "nome": "Gennaio",
+      "climaTag": "Freddo con zone miti",
+      "clima": "Inverno in gran parte del paese: Parigi e nord intorno a 3–7°C, spesso grigio e umido. Il sud (Costa Azzurra, Provenza) è mite (10–14°C). Neve frequente sulle Alpi e Pirenei.",
+      "feste": "Capodanno (1 gen). Epifania — tradizione della Galette des Rois nei bar e pasticcerie per tutto il mese.",
+      "natura": "Stagione sciistica al massimo sulle Alpi (Chamonix, Courchevel, Val d'Isère) e Pirenei.",
+      "turisti": "Bassa stagione nelle città e sulla costa; alta stagione nelle stazioni sciistiche alpine. Parigi e Louvre sono visitabili con code ridotte."
+    },
+    {
+      "nome": "Febbraio",
+      "climaTag": "Freddo con zone miti",
+      "clima": "Simile a gennaio. Parigi 4–9°C. Costa Azzurra 10–14°C, soleggiata. Neve abbondante in montagna.",
+      "feste": "Carnevale di Nizza (metà febbraio, 2 settimane — date da verificare anno per anno). Vacances de Février: ferie scolastiche nazionali che aumentano il traffico sulle piste.",
+      "natura": "Mandorli in fiore in Provenza verso fine mese. Sci ancora ottimale.",
+      "turisti": "Stazioni sciistiche affollate per le vacanze invernali. Nizza animata per il Carnevale. Resto del paese tranquillo."
+    },
+    {
+      "nome": "Marzo",
+      "climaTag": "Mite",
+      "clima": "Inizio primavera: Parigi 8–13°C, ancora variabile con piogge. Costa Azzurra 14–17°C. La neve in montagna inizia a diminuire a bassa quota.",
+      "feste": null,
+      "natura": "Ciliegi e magnolie in fiore a Parigi. Fine stagione sciistica a bassa quota.",
+      "turisti": "Spalla bassa: buon momento per visitare Parigi, Louvre e Versailles senza code eccessive."
+    },
+    {
+      "nome": "Aprile",
+      "climaTag": "Mite",
+      "clima": "Primavera piena: Parigi 11–17°C, soleggiato con piogge alternabili. Provenza 15–20°C. Costa Azzurra 17–20°C.",
+      "feste": "Pasqua e Lunedì dell'Angelo (date variabili). Poisson d'Avril (1 apr) — tradizione folkloristica.",
+      "natura": "Fioritura dei campi di colza in Normandia e nel Centro. Lavanda ancora non fiorita (troppo presto).",
+      "turisti": "Crescente: Parigi si riempie per la primavera, soprattutto a Pasqua. I siti turistici principali iniziano ad affollarsi."
+    },
+    {
+      "nome": "Maggio",
+      "climaTag": "Mite",
+      "clima": "Piacevole ovunque: Parigi 14–20°C, Provenza 18–24°C, Costa Azzurra 20–23°C. Precipitazioni moderate al nord.",
+      "feste": "Festa del Lavoro (1 mag). Vittoria in Europa — 8 maggio (giorno festivo). Ascensione (data variabile). Pentecoste e Lunedì di Pentecoste (data variabile). Festival di Cannes (metà maggio — date da verificare).",
+      "natura": "Lavanda in boccio in Provenza (non ancora in piena fioritura). Vigneti in verde brillante in Borgogna e Alsazia.",
+      "turisti": "Alta stagione in rapida crescita. Molti ponti festivi portano i francesi a viaggiare internamente; Parigi affollata. Cannes richiama visitatori internazionali."
+    },
+    {
+      "nome": "Giugno",
+      "climaTag": "Caldo secco",
+      "clima": "Estate alle porte: Parigi 18–24°C, Provenza 25–30°C, Costa Azzurra 25–28°C. Giornate lunghe.",
+      "feste": "Fête de la Musique (21 giu) — musica gratuita in ogni città. D-Day: commemorazioni in Normandia (6 giu).",
+      "natura": "Piena fioritura della lavanda in Provenza (da fine giugno, più intensa a luglio). Solstizio d'estate.",
+      "turisti": "Alta stagione. Le destinazioni di punta (Provenza, Costa Azzurra, Parigi) si riempiono rapidamente. Prenotare in anticipo."
+    },
+    {
+      "nome": "Luglio",
+      "climaTag": "Caldo secco",
+      "clima": "Estate piena: Parigi 20–26°C, Provenza e Costa Azzurra 28–33°C. Secco al sud, occasionali temporali al nord.",
+      "feste": "Festa Nazionale (14 luglio) — fuochi d'artificio alla Tour Eiffel e sfilata militare sugli Champs-Élysées. Tour de France (fine giugno–fine luglio — date da verificare).",
+      "natura": "Lavanda in piena fioritura nel Luberon e sul Plateau de Valensole (spettacolo massimo). Spiagge della Normandia frequentatissime.",
+      "turisti": "Picco assoluto. Parigi registra il massimo di turisti internazionali; Costa Azzurra e Bretagna affollate con i vacanzieri francesi. Prezzi al massimo."
+    },
+    {
+      "nome": "Agosto",
+      "climaTag": "Caldo secco",
+      "clima": "Estate piena, simile a luglio. Ondate di calore possibili al sud (35°C+). Parigi 22–27°C. Costa Azzurra 28–32°C.",
+      "feste": "Ferragosto (15 ago) — festa dell'Assunzione, giorno festivo. Molti negozi e ristoranti parigini chiudono per ferie.",
+      "natura": "Lavanda in fase finale, campi di girasoli al centro-sud.",
+      "turisti": "Parigi paradossalmente più tranquilla (molti residenti via), ma invasa da turisti stranieri. Le coste (Bretagna, Normandia, Riviera) sono al massimo affollamento. Evitare agosto se si vuole pace."
+    },
+    {
+      "nome": "Settembre",
+      "climaTag": "Mite",
+      "clima": "Inizio autunno: Parigi 16–22°C, piacevole. Provenza 22–27°C ancora estiva. Costa Azzurra 24–27°C. Mar Mediterraneo ancora caldo per il bagno.",
+      "feste": "Giornate Europee del Patrimonio (terzo weekend di settembre) — accesso gratuito o speciale a monumenti normalmente chiusi.",
+      "natura": "Vendemmia in Borgogna, Champagne, Alsazia, Bordeaux — spettacolo autentico e olfattivo.",
+      "turisti": "Spalla alta, molto consigliata: meno affollamento di agosto, clima ancora ottimo, prezzi in calo. Ottimo momento per quasi tutto."
+    },
+    {
+      "nome": "Ottobre",
+      "climaTag": "Mite",
+      "clima": "Autunno: Parigi 10–16°C, aumentano le piogge. Provenza 16–20°C. Costa Azzurra ancora mite (20–23°C).",
+      "feste": "Halloween (31 ott) — sempre più celebrato, specialmente nelle grandi città.",
+      "natura": "Colori autunnali nei boschi della Valle della Loira e in Alsazia. Foreste di Fontainebleau in splendido arancio.",
+      "turisti": "Bassa stagione in crescita: buon momento per Parigi, musei accessibili. Turisti calanti, prezzi migliori."
+    },
+    {
+      "nome": "Novembre",
+      "climaTag": "Freddo umido",
+      "clima": "Autunno avanzato: Parigi 6–11°C, grigio e piovoso. Sud più sopportabile (12–16°C). Neve inizia ad accumularsi in montagna.",
+      "feste": "Ognissanti (1 nov) — giorno festivo. Armistizio dell'11 novembre — giorno festivo, cerimonie al Arc de Triomphe. Beaujolais Nouveau (terzo giovedì di novembre).",
+      "natura": "Apertura della stagione sciistica nelle stazioni alpine più alte.",
+      "turisti": "Bassa stagione. Parigi con meno turisti: ottima occasione per musei e ristoranti. Stazioni sciistiche ancora chiuse o in apertura."
+    },
+    {
+      "nome": "Dicembre",
+      "climaTag": "Freddo con zone miti",
+      "clima": "Inverno: Parigi 3–8°C, umido. Alsazia fredda e nevosa. Costa Azzurra 10–13°C, relativamente mite.",
+      "feste": "Mercatini di Natale (specialmente a Strasburgo, il più famoso d'Europa — dal 25 nov circa). Natale (25 dic). Capodanno (31 dic) — festeggiamenti sugli Champs-Élysées.",
+      "natura": "Stagione sciistica ufficialmente aperta nelle Alpi.",
+      "turisti": "Parigi e Strasburgo molto animate per i mercatini. Stazioni sciistiche in apertura. Bassa stagione turistica nelle città costiere."
     }
   ]
 },
@@ -6672,7 +7525,7 @@ const countries = [
   sanita: `Con limitazioni`,
   infrastrutture: `Ben sviluppate`,
   flussi: `Circa 2,38 milioni di turisti internazionali con pernottamento nel 2024 (+21% nel Q1 2025: la destinazione europea con crescita più rapida). Principali mercati: Lettonia, Polonia, Germania, Ucraina, Estonia, UK. Destinazione prevalentemente baltica ed est-europea; offerta calibrata su quel pubblico. Picco: luglio-agosto (Palanga e Neringa al completo). Bassa stagione: novembre-febbraio (freddo intenso, giornate cortissime). Settembre ottimo compromesso qualità/affollamento.`,
-  curatorNote: `Valuta: euro. Presa elettrica: compatibile con le spine italiane standard. Roaming UE incluso nelle SIM italiane. Carta d'identità sufficiente per i cittadini italiani. Nessun vaccino obbligatorio. App LT72 del governo lituano consigliata per aggiornamenti su emergenze. Attenzione al russo: non usarlo come lingua franca per la sensibilità politica attuale.`,
+  curatorNote: `Valuta: euro. Presa elettrica: compatibile con le spine italiane standard. Roaming UE incluso nelle SIM italiane. Carta d'identità sufficiente per i cittadini italiani. Nessun vaccino obbligatorio. App LT72 del governo lituano consigliata per aggiornamenti su emergenze meteo in inverno. Attenzione al russo: non usarlo come lingua franca per la sensibilità politica attuale.`,
   sicurezzaDesc: [
     `Un paese sicuro e tranquillo, con criminalità bassa e nessuna allerta ministeriale attiva: la Lituania si percorre senza particolari preoccupazioni, con l'unica cautela reale rappresentata dalle zecche nelle foreste primaverili ed estive (rischio TBE concreto) e dall'evitare la zona di confine con la Bielorussia.`,
     `Criminalità bassa, inferiore alla media europea. Reati violenti rari, spesso legati a stupefacenti o alcolismo. Microcriminalità (borseggi, furti) nelle aree affollate e locali notturni delle grandi città; periferie e zone rurali notturne richiedono normale prudenza.`, 
